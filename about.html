@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Why Running Matters | Vijayawada Runners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .quote-banner-box {
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.12) 0%, rgba(37, 99, 235, 0.12) 100%);
+      border: 1.5px solid var(--border-highlight);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      text-align: center;
+      margin: 40px auto;
+      max-width: 900px;
+      position: relative;
+    }
+    .quote-banner-box h3 {
+      font-size: 1.6rem;
+      color: var(--text-heading);
+      margin-bottom: 8px;
+    }
+    .quote-banner-box p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .why-run-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 36px;
+    }
+    .why-run-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 30px 26px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .why-run-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary-red);
+    }
+    .why-run-card .icon-pill {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+    }
+    .why-run-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--text-heading);
+    }
+    .why-run-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+    .why-run-card .stat-badge {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-color);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    @media (max-width: 960px) {
+      .why-run-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="theme-light">
+
+  <!-- Streamlined Modern Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-area" title="Vijayawada Runners - Go Long : Go Strong">
+        <img src="images/logo.png" alt="Vijayawada Runners" class="brand-logo-img">
+      </a>
+      <nav class="nav-links-menu" id="desktop-nav-menu">
+        <a href="index.html" class="nav-item-link">Home</a>
+        <a href="about.html" class="nav-item-link active">About</a>
+        <a href="marathon.html" class="nav-item-link">Race Day</a>
+        <a href="chapters.html" class="nav-item-link">Chapters</a>
+        <a href="pacers.html" class="nav-item-link">Pacers</a>
+        <a href="results.html" class="nav-item-link">Results</a>
+        <a href="gallery.html" class="nav-item-link">Gallery</a>
+        <a href="contact.html" class="nav-item-link">Contact</a>
+      </nav>
+      <!-- Register CTA & Mobile Toggle -->
+      <div class="nav-action-buttons">
+        <a href="marathon.html#register" class="btn-register-nav"><i class="fa-solid fa-ticket"></i> Register</a>
+        <button class="menu-toggle-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="hero-athletic" style="padding: 70px 0 50px;">
+    <div class="container" style="text-align: center; max-width: 860px;">
+      <span class="hero-tag-badge"><i class="fa-solid fa-medal"></i> Where Every Stride Tells a Story</span>
+      <h1 class="hero-headline" style="font-size: 3rem; margin-bottom: 14px;">About Vijayawada Runners</h1>
+      <p class="hero-sub" style="margin: 0 auto; font-size: 1.15rem; max-width: 760px;">
+        A passionate community of running enthusiasts dedicated to promoting health, vitality, and wellness across our vibrant city of Vijayawada.
+      </p>
+    </div>
+  </section>
+
+  <!-- Slogan Callout Box -->
+  <section class="container" style="padding-top: 10px;">
+    <div class="quote-banner-box">
+      <span style="font-size: 2.2rem; color: var(--primary-red); display: block; margin-bottom: 6px;"><i class="fa-solid fa-quote-left"></i></span>
+      <h3>"Run for your health, run for joy, run for a cause, and most importantly run for yourself."</h3>
+      <p>— Official Philosophy of Vijayawada Runners • Go Long : Go Strong</p>
+    </div>
+  </section>
+
+  <!-- Section 1: Who We Are & Our Heritage -->
+  <section class="section-wrapper" style="padding-top: 20px;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:48px; align-items:center;">
+        <div>
+          <span class="section-badge-red">Our Heritage & Roots</span>
+          <h2 class="section-title">Founded 8 Years Ago to Spark a Fitness Revolution</h2>
+          <p style="color:var(--text-muted); margin-bottom:16px; font-size:1rem; line-height:1.7;">
+            <strong>Vijayawada Runners</strong> was born out of a simple, powerful vision: bringing together early morning fitness enthusiasts at BRTS Road and Bandar Road (PWD Grounds) to make running an everyday celebration of vitality and good health.
+          </p>
+          <p style="color:var(--text-muted); margin-bottom:16px; font-size:1rem; line-height:1.7;">
+            Founded 8 years ago, our group has grown from a dozen passionate runners into a premier road running organization across Andhra Pradesh. Over the years, we have mobilized thousands of citizens—from corporate professionals and university students to homemakers and retired seniors—to discover the transformative joy of long-distance running.
+          </p>
+          <p style="color:var(--text-muted); margin-bottom:24px; font-size:1rem; line-height:1.7;">
+            Whether you are taking your very first jogging strides or preparing to smash a personal best in a 21.1K Half Marathon, Vijayawada Runners invites you to be part of our family. <strong>Zero membership fees, zero intimidation—just pure community energy!</strong>
+          </p>
+
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <a href="chapters.html" class="btn-red"><i class="fa-solid fa-location-dot"></i> Find Your Local Chapter</a>
+            <a href="marathon.html" class="btn-blue"><i class="fa-solid fa-flag-checkered"></i> Annual Marathon Event</a>
+          </div>
+        </div>
+
+        <!-- Milestones Box -->
+        <div style="background:var(--bg-card); border:2px solid var(--border-color); border-radius:var(--radius-lg); padding:36px; box-shadow:var(--shadow-md);">
+          <h3 style="font-size:1.35rem; color:var(--text-heading); margin-bottom:22px; display:flex; align-items:center; gap:10px;">
+            <i class="fa-solid fa-timeline" style="color:var(--primary-red);"></i> Journey of Excellence
+          </h3>
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="background:var(--primary-red-glow); color:var(--primary-red); font-weight:900; font-size:0.95rem; padding:6px 12px; border-radius:8px;">8 Yrs Ago</span>
+              <div>
+                <h4 style="font-size:1rem; margin-bottom:3px; color:var(--text-heading);">Foundation of the Club</h4>
+                <p style="font-size:0.87rem; color:var(--text-muted);">First informal weekend group runs initiated on BRTS Road & Bandar Road.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="background:var(--primary-blue-glow); color:var(--primary-blue); font-weight:900; font-size:0.95rem; padding:6px 12px; border-radius:8px;">2018</span>
+              <div>
+                <h4 style="font-size:1rem; margin-bottom:3px; color:var(--text-heading);">First Flagship Marathon</h4>
+                <p style="font-size:0.87rem; color:var(--text-muted);">Inaugural edition with 1,800+ participants racing across Prakasam Barrage.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="background:var(--primary-red-glow); color:var(--primary-red); font-weight:900; font-size:0.95rem; padding:6px 12px; border-radius:8px;">2024</span>
+              <div>
+                <h4 style="font-size:1rem; margin-bottom:3px; color:var(--text-heading);">9th Edition Marathon</h4>
+                <p style="font-size:0.87rem; color:var(--text-muted);">Over 4,500 runners gathered on Nov 17th with electronic timing & certified routes.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="background:linear-gradient(135deg, #dc2626, #2563eb); color:#fff; font-weight:900; font-size:0.95rem; padding:6px 12px; border-radius:8px;">2026</span>
+              <div>
+                <h4 style="font-size:1rem; margin-bottom:3px; color:var(--text-heading);">10th Landmark Jubilee</h4>
+                <p style="font-size:0.87rem; color:var(--text-muted);">Targeting 6,000+ runners, state-level athletes, and city-wide health festivals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Our Two-Fold Core Mission (from vijayawadarunners.com) -->
+  <section class="section-wrapper" style="background: var(--bg-card-subtle); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge-blue">Core Purpose</span>
+        <h2 class="section-title">Our Guiding Mission & Values</h2>
+        <p class="section-subtitle">
+          Driven by the conviction that good health is everyone's birthright, Vijayawada Runners anchors two foundational pillars.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:26px;">
+        <div class="hub-card">
+          <div class="hub-icon-box" style="background:var(--primary-red-glow); color:var(--primary-red);">
+            <i class="fa-solid fa-person-running"></i>
+          </div>
+          <h3>1. Accessible Running For All</h3>
+          <p>
+            To encourage running as an accessible, zero-cost form of exercise for all residents of Vijayawada. You don't need expensive gym subscriptions—just a pair of shoes and an open road.
+          </p>
+        </div>
+
+        <div class="hub-card">
+          <div class="hub-icon-box" style="background:var(--primary-blue-glow); color:var(--primary-blue);">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3>2. Promoting Community Wellness</h3>
+          <p>
+            To actively combat lifestyle illnesses, diabetes, and hypertension by fostering preventive cardiovascular health, active aging, and energetic morning habits.
+          </p>
+        </div>
+
+        <div class="hub-card">
+          <div class="hub-icon-box" style="background:rgba(16, 185, 129, 0.15); color:#10b981;">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h3>3. Zero-Ego Community Spirit</h3>
+          <p>
+            No runner is left behind. Our experienced pacing mentors guide novices, organize safe water points, lead warm-up routines, and celebrate every participant's personal victory.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WHY RUNNING IS MORE IMPORTANT IN YOUR LIFE (IN-DEPTH SCIENTIFIC & LIFE BENEFITS) -->
+  <section class="section-wrapper">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge-red">Life-Changing Power</span>
+        <h2 class="section-title">Why Running is More Important in Your Life</h2>
+        <p class="section-subtitle">
+          Running is far more than a physical sport. It is mental therapy, cardiovascular armor, and a daily anchor of discipline that elevates every aspect of your existence.
+        </p>
+      </div>
+
+      <div class="why-run-grid">
+        <!-- Pillar 1: Heart Longevity -->
+        <div class="why-run-card">
+          <div class="icon-pill" style="background:rgba(220, 38, 38, 0.15); color:#dc2626;">
+            <i class="fa-solid fa-heart-circle-check"></i>
+          </div>
+          <h3>1. Cardiovascular Armor & Longevity</h3>
+          <p>
+            Running is medical science's most potent natural medicine for your heart. Regular endurance running strengthens the myocardium, lowers resting heart rate, reduces blood pressure, and improves arterial elasticity.
+          </p>
+          <p>
+            Medical studies demonstrate that regular running reduces the risk of cardiovascular disease by <strong>up to 45%</strong> and adds an estimated <strong>3 to 5 years</strong> of healthy life expectancy.
+          </p>
+          <div class="stat-badge">
+            <i class="fa-solid fa-chart-line"></i> 45% Lower Cardiac Risk • +3-5 Years Longevity
+          </div>
+        </div>
+
+        <!-- Pillar 2: Mental Health & Runner's High -->
+        <div class="why-run-card">
+          <div class="icon-pill" style="background:rgba(37, 99, 235, 0.15); color:#2563eb;">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3>2. Mental Health & The "Runner's High"</h3>
+          <p>
+            When you run, your brain triggers a powerful neurochemical cascade of endorphins, dopamine, and endocannabinoids. This is the physiological phenomenon known as the <em>Runner's High</em>.
+          </p>
+          <p>
+            Running acts as a clinically proven antidote to modern workplace anxiety, depression, and digital fatigue. It clears mental clutter and gives you an indestructible positive mindset for the day ahead.
+          </p>
+          <div class="stat-badge">
+            <i class="fa-solid fa-sun"></i> Boosts Endorphins & Natural Antidepressants
+          </div>
+        </div>
+
+        <!-- Pillar 3: Metabolic Fire & Energy -->
+        <div class="why-run-card">
+          <div class="icon-pill" style="background:rgba(245, 158, 11, 0.15); color:#d97706;">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3>3. Metabolic Stamina & Weight Control</h3>
+          <p>
+            Long-distance running supercharges your metabolism not just during the run, but for hours afterward through <strong>Excess Post-Exercise Oxygen Consumption (EPOC)</strong>.
+          </p>
+          <p>
+            It sharpens insulin sensitivity, helps control visceral fat around vital organs, optimizes blood sugar levels, and provides steady, clean energy throughout the workday without midday crashes.
+          </p>
+          <div class="stat-badge">
+            <i class="fa-solid fa-bolt"></i> Sustained All-Day Energy & Caloric Burn
+          </div>
+        </div>
+
+        <!-- Pillar 4: Joint & Bone Strength -->
+        <div class="why-run-card">
+          <div class="icon-pill" style="background:rgba(16, 185, 129, 0.15); color:#10b981;">
+            <i class="fa-solid fa-bone"></i>
+          </div>
+          <h3>4. Bone Density & Youthful Joints</h3>
+          <p>
+            Contrary to popular myths that running damages knees, peer-reviewed sports medicine shows recreational runners actually have <em>lower rates of knee osteoarthritis</em> than sedentary individuals.
+          </p>
+          <p>
+            The rhythmic impact stimulates bone remodeling, increases mineral density to prevent osteoporosis, and continually circulates nourishing synovial fluid through your cartilage.
+          </p>
+          <div class="stat-badge">
+            <i class="fa-solid fa-shield-halved"></i> Strengthens Bone Mass & Cartilage Health
+          </div>
+        </div>
+
+        <!-- Pillar 5: Mental Discipline & Life Resilience -->
+        <div class="why-run-card">
+          <div class="icon-pill" style="background:rgba(147, 51, 234, 0.15); color:#9333ea;">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <h3>5. Unstoppable Discipline & Resilience</h3>
+          <p>
+            Running teaches you that discomfort is temporary. When your alarm sounds at 5:00 AM and your feet step onto the chilly tarmac, you conquer the resistance within yourself.
+          </p>
+          <p>
+            Overcoming the 5th kilometer or the 18th kilometer builds an unshakable psychological resilience: <em>"If I can conquer the road before sunrise, there is no obstacle at work or in life that can break my resolve."</em>
+          </p>
+          <div class="stat-badge">
+            <i class="fa-solid fa-mountain"></i> Builds True Grit, Focus & Self-Mastery
+          </div>
+        </div>
+
+        <!-- Pillar 6: Digital Detox & Uplifting Community -->
+        <div class="why-run-card">
+          <div class="icon-pill" style="background:rgba(236, 72, 153, 0.15); color:#db2777;">
+            <i class="fa-solid fa-users-rays"></i>
+          </div>
+          <h3>6. Digital Detox & Deep Camaraderie</h3>
+          <p>
+            In a world dominated by smartphone screens, endless notifications, and sedentary isolation, morning running reconnects you to the real world—the morning river breeze, the sunrise, and your city.
+          </p>
+          <p>
+            At Vijayawada Runners, you run alongside people of all walks of life. No hierarchies, no judgment—only high-fives, encouraging cheers, and lifelong friendships forged on the asphalt.
+          </p>
+          <div class="stat-badge">
+            <i class="fa-solid fa-user-group"></i> Lifelong Friendships & Daily Rejuvenation
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Our Weekly Community Routine -->
+  <section class="section-wrapper" style="background:var(--bg-card-subtle); border-top:1px solid var(--border-color);">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 0.95fr 1.05fr; gap:40px; align-items:center;">
+        <div style="background:var(--bg-card); border:2px solid var(--border-color); border-radius:var(--radius-lg); padding:32px; box-shadow:var(--shadow-md);">
+          <span class="section-badge-red">Join The Weekend Stride</span>
+          <h3 style="font-size:1.6rem; color:var(--text-heading); margin-bottom:14px;">Weekly Morning Group Runs</h3>
+          <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:20px; line-height:1.65;">
+            Every Saturday and Sunday at <strong>5:00 AM sharp</strong>, members of Vijayawada Runners assemble across key city corridors. Runs are divided into comfortable pacing groups (Walk-Jog, 5K, 10K, and 15K+ Long Slow Distance runs).
+          </p>
+          <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+            <li style="display:flex; align-items:center; gap:10px; color:var(--text-main); font-size:0.95rem;">
+              <i class="fa-solid fa-circle-check" style="color:var(--primary-red);"></i> <strong>BRTS Road Chapter:</strong> Fast flat tempo stretches & speed training.
+            </li>
+            <li style="display:flex; align-items:center; gap:10px; color:var(--text-main); font-size:0.95rem;">
+              <i class="fa-solid fa-circle-check" style="color:var(--primary-blue);"></i> <strong>Bandar Road / PWD Grounds:</strong> Beginner Couch-to-5K & walking pods.
+            </li>
+            <li style="display:flex; align-items:center; gap:10px; color:var(--text-main); font-size:0.95rem;">
+              <i class="fa-solid fa-circle-check" style="color:var(--primary-red);"></i> <strong>Krishna Riverfront Barrage:</strong> Scenic weekend endurance long runs.
+            </li>
+          </ul>
+          <a href="chapters.html" class="btn-red"><i class="fa-brands fa-whatsapp"></i> Join Your Neighborhood Hub</a>
+        </div>
+
+        <div>
+          <span class="section-badge-blue">The Movement</span>
+          <h2 class="section-title">Where Every Stride Tells a Story</h2>
+          <p style="color:var(--text-muted); font-size:1rem; margin-bottom:16px; line-height:1.7;">
+            We believe that running is the greatest equalizer in human history. When we step onto the road at dawn, titles and designations vanish. It doesn't matter what car you drive or what title is on your business card. What matters is the courage to begin, the breath in your lungs, and the spirit to keep moving forward.
+          </p>
+          <p style="color:var(--text-muted); font-size:1rem; margin-bottom:24px; line-height:1.7;">
+            As we prepare for our landmark <strong>10th Edition of the Vijayawada Marathon</strong>, we warmly invite you, your family, your colleagues, and your friends to lace up your running shoes and join our community. Your journey starts with a single step!
+          </p>
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <a href="marathon.html#register" class="btn-register-nav" style="padding:12px 28px; font-size:1rem;">
+              <i class="fa-solid fa-ticket"></i> Register For 2026 Marathon
+            </a>
+            <a href="contact.html" class="btn-blue">
+              <i class="fa-solid fa-phone"></i> Contact Race Organizers
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRE-FOOTER ATHLETIC CALLOUT -->
+  <section class="pre-footer-cta reveal-on-scroll">
+    <div class="container pre-footer-container">
+      <div class="pre-footer-text">
+        <span class="pre-footer-badge"><i class="fa-solid fa-person-running"></i> Ready to Lace Up?</span>
+        <h3>Join Vijayawada's Largest Running Movement</h3>
+        <p>Free weekend morning runs every Saturday & Sunday at 5:00 AM • Zero membership fees • Open to everyone from walkers to marathoners!</p>
+      </div>
+      <div class="pre-footer-actions">
+        <a href="chapters.html" class="btn-footer-whatsapp"><i class="fa-brands fa-whatsapp"></i> Join WhatsApp Chapters</a>
+        <a href="marathon.html#register" class="btn-register-nav"><i class="fa-solid fa-ticket"></i> Register for VRHM 2026</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASTER ATHLETIC RED & BLUE FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo-link">
+            <img src="images/logo.png" alt="Vijayawada Runners" class="footer-logo-img">
+          </a>
+          <p class="footer-motto">
+            <strong>"Go Long : Go Strong"</strong><br>
+            A registered non-profit community trust empowering cardiovascular fitness, active longevity, and marathon culture across Andhra Pradesh since 2016.
+          </p>
+          <div class="footer-social-strip">
+            <a href="#" class="social-icon-btn strava" title="Strava Club"><i class="fa-brands fa-strava"></i></a>
+            <a href="#" class="social-icon-btn instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://chat.whatsapp.com/demo" target="_blank" class="social-icon-btn whatsapp" title="WhatsApp Hub"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-icon-btn youtube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links: Race Day -->
+        <div class="footer-col">
+          <h5><i class="fa-solid fa-trophy" style="color:var(--primary-red); margin-right:6px;"></i> Race Day</h5>
+          <div class="footer-links-list">
+            <a href="marathon.html">VRHM 2026 Overview</a>
+            <a href="marathon.html#categories">21.1K / 10K / 5K Categories</a>
+            <a href="pacers.html">Official Pacer Buses</a>
+            <a href="pacers.html#calc">Interactive Pace Calculator</a>
+            <a href="results.html">RFID Timing & Leaderboard</a>
+            <a href="results.html#certificate">Finisher Certificates</a>
+          </div>
+        </div>
+
+        <!-- Quick Links: Neighborhood Hubs -->
+        <div class="footer-col">
+          <h5><i class="fa-solid fa-location-dot" style="color:var(--primary-blue); margin-right:6px;"></i> City Chapters</h5>
+          <div class="footer-links-list">
+            <a href="chapters.html">BRTS Road Chapter</a>
+            <a href="chapters.html">Bandar Road / PWD Grounds</a>
+            <a href="chapters.html">Krishna Riverfront Barrage</a>
+            <a href="chapters.html">Loyola & Gunadala Pacers</a>
+            <a href="chapters.html">Bhavanipuram Flyers</a>
+            <a href="about.html">Our 8-Year Origin Story</a>
+          </div>
+        </div>
+
+        <!-- Secretariat & Contact -->
+        <div class="footer-col">
+          <h5><i class="fa-solid fa-headset" style="color:var(--primary-red); margin-right:6px;"></i> Race Secretariat</h5>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Indira Gandhi Municipal Corporation (IGMC) Stadium, MG Road, Vijayawada - 520010</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 98480 12345 / 98480 23456</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>contact@vijayawadarunners.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Group Runs: Sat & Sun • 5:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 <strong>Vijayawada Runners Foundation</strong>. All Rights Reserved. • <em>"Where Every Stride Tells a Story"</em>
+        </div>
+        <div class="footer-legal-links">
+          <a href="about.html">About Us</a>
+          <span>•</span>
+          <a href="marathon.html#register">Register</a>
+          <span>•</span>
+          <a href="contact.html">Support Desk</a>
+          <span>•</span>
+          <a href="contact.html#faq">FAQs & Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
