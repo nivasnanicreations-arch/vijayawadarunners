@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('theme-light');
   document.body.classList.remove('theme-crimson');
 
+  initPreloader();
   initRunnerAnimationControls();
   initCountdownTimer();
   initPaceCalculator();
@@ -26,6 +27,87 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initHeaderScrollAnimation();
 });
+
+/* ===================================================================
+   0. ATHLETIC RUNNER PRELOADER (0% TO 100% SPRINT & WEBSITE REVEAL)
+   =================================================================== */
+function initPreloader() {
+  const preloader = document.getElementById('vr-preloader');
+  if (!preloader) return;
+
+  const barFill = document.getElementById('preloader-bar-fill');
+  const runnerCarrier = document.getElementById('preloader-runner-carrier');
+  const percentText = document.getElementById('preloader-percent-num');
+  const statusText = document.getElementById('preloader-status-text');
+
+  document.body.classList.add('preloader-active');
+
+  let current = 0;
+  const target = 100;
+  const totalDuration = 1800; // 1.8 seconds smooth athletic sprint
+  const startTime = performance.now();
+  let completed = false;
+
+  function update(now) {
+    if (completed) return;
+
+    const elapsed = now - startTime;
+    const progress = Math.min(1, elapsed / totalDuration);
+
+    // Dynamic pacing easing (smooth stride acceleration & finish deceleration)
+    const eased = 1 - Math.pow(1 - progress, 2.4);
+    current = Math.min(100, Math.floor(eased * target));
+
+    if (barFill) barFill.style.width = current + '%';
+    if (runnerCarrier) runnerCarrier.style.left = current + '%';
+    if (percentText) percentText.textContent = current + '%';
+
+    if (statusText) {
+      if (current < 25) {
+        statusText.textContent = 'Lacing Up...';
+      } else if (current < 60) {
+        statusText.textContent = 'Crossing Krishna River...';
+      } else if (current < 92) {
+        statusText.textContent = 'Sprint To Finish Line...';
+      } else {
+        statusText.textContent = 'Ready To Run! 🏁';
+      }
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      finish();
+    }
+  }
+
+  function finish() {
+    if (completed) return;
+    completed = true;
+
+    if (percentText) percentText.textContent = '100%';
+    if (barFill) barFill.style.width = '100%';
+    if (runnerCarrier) runnerCarrier.style.left = '100%';
+    if (statusText) statusText.textContent = 'Ready To Run! 🏁';
+
+    // Brief milestone pause at 100%, then smooth fade reveal of homepage
+    setTimeout(() => {
+      preloader.classList.add('vr-preloader-hidden');
+      document.body.classList.remove('preloader-active');
+
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 700);
+    }, 280);
+  }
+
+  requestAnimationFrame(update);
+
+  // Safety fallback after 2.5 seconds
+  setTimeout(() => {
+    if (!completed) finish();
+  }, 2500);
+}
 
 function initHeaderScrollAnimation() {
   const header = document.querySelector('.main-header');

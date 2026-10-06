@@ -14,6 +14,45 @@
 </head>
 <body class="theme-light">
 
+  <!-- ===================================================================
+       ATHLETIC RUNNER PRELOADER SCREEN (0% TO 100% SPRINT ENTRANCE)
+       =================================================================== -->
+  <div id="vr-preloader" class="vr-preloader-screen" aria-label="Loading Vijayawada Runners">
+    <div class="vr-preloader-content">
+      <!-- Centered Official Logo -->
+      <div class="vr-preloader-logo-wrap">
+        <img src="images/logo.png" alt="Vijayawada Runners" class="vr-preloader-logo">
+      </div>
+
+      <!-- Athletic Brand Name & Slogan -->
+      <div class="vr-preloader-brand-text">
+        <h2 class="vr-preloader-title">VIJAYAWADA RUNNERS</h2>
+        <p class="vr-preloader-tagline">Go Long : Go Strong</p>
+      </div>
+
+      <!-- Animated Running Man & Progress Track -->
+      <div class="vr-preloader-track-box">
+        <!-- Runner Carrier that moves from 0% to 100% -->
+        <div class="vr-preloader-runner-carrier" id="preloader-runner-carrier">
+          <div class="vr-runner-sprite">
+            <i class="fa-solid fa-person-running"></i>
+          </div>
+        </div>
+
+        <!-- Progress Bar Fill -->
+        <div class="vr-preloader-bar-bg">
+          <div class="vr-preloader-bar-fill" id="preloader-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Percentage Counter & Running Milestone -->
+      <div class="vr-preloader-status-row">
+        <span class="vr-preloader-percent" id="preloader-percent-num">0%</span>
+        <span class="vr-preloader-message" id="preloader-status-text">Lacing Up...</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Streamlined Modern Navigation Header -->
   <header class="main-header">
     <div class="container nav-container">
