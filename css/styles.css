@@ -426,145 +426,43 @@ a:hover {
 }
 
 /* ===================================================================
-   HERO RUNNER 3-IMAGE COMPACT SLIDER (REDUCED SIZE, BALANCED 50/50)
+   HERO TRANSPARENT SPEED PARTICLE RUNNER (50% / 50% CLEAN BALANCED SHOWCASE)
    =================================================================== */
-.runner-carousel-wrapper {
+.hero-transparent-runner-box {
   position: relative;
   width: 100%;
-  max-width: 410px;
-  height: 350px;
-  background: #ffffff;
-  border-radius: 20px;
-  border: 2px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 0 16px 36px rgba(220, 38, 38, 0.12), 0 8px 20px rgba(37, 99, 235, 0.1);
-  overflow: hidden;
+  max-width: 440px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.runner-carousel-wrapper:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 42px rgba(220, 38, 38, 0.18), 0 10px 24px rgba(37, 99, 235, 0.15);
-  border-color: rgba(220, 38, 38, 0.35);
-}
-
-.runner-carousel-track {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.runner-carousel-slide {
+.hero-transparent-runner-box::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 18px 22px 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.95);
-  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(220, 38, 38, 0.1) 45%, transparent 70%);
+  filter: blur(24px);
+  z-index: 0;
   pointer-events: none;
 }
 
-.runner-carousel-slide.active {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  pointer-events: auto;
-}
-
-.runner-slide-img {
-  max-width: 100%;
-  max-height: 275px;
-  width: auto;
+.hero-particle-runner-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   height: auto;
+  max-height: 380px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 14px 28px rgba(37, 99, 235, 0.18)) drop-shadow(0 8px 16px rgba(220, 38, 38, 0.15));
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Slide Arrow Buttons */
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1.5px solid rgba(37, 99, 235, 0.25);
-  color: #1d4ed8;
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
-}
-
-.carousel-arrow:hover {
-  background: #dc2626;
-  border-color: #dc2626;
-  color: #ffffff;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-prev {
-  left: 10px;
-}
-
-.carousel-next {
-  right: 10px;
-}
-
-/* Carousel Dots Indicator */
-.runner-carousel-dots {
-  position: absolute;
-  bottom: 12px;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  z-index: 10;
-}
-
-.carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #bfdbfe;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  padding: 0;
-}
-
-.carousel-dot:hover {
-  background: #60a5fa;
-}
-
-.carousel-dot.active {
-  width: 24px;
-  background: #dc2626;
-}
-
-body.theme-light .runner-carousel-wrapper {
-  background: #ffffff !important;
-  border-color: rgba(37, 99, 235, 0.2) !important;
+.hero-particle-runner-img:hover {
+  transform: scale(1.04) translateY(-4px);
 }
 
 /* 3D Runner Card Container */
