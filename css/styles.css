@@ -425,6 +425,34 @@ a:hover {
   margin-bottom: 36px;
 }
 
+/* Hero Single Runner Image Showcase */
+.hero-runner-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(220, 38, 38, 0.22), 0 10px 25px rgba(37, 99, 235, 0.18);
+  border: 3px solid rgba(220, 38, 38, 0.4);
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-runner-image-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 55px rgba(220, 38, 38, 0.32), 0 14px 30px rgba(37, 99, 235, 0.25);
+}
+
+.hero-runner-img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
 /* 3D Runner Card Container */
 .runner-stage-card {
   position: relative;
@@ -533,6 +561,35 @@ a:hover {
   text-transform: uppercase;
   color: #cbd5e1;
   font-weight: 700;
+}
+
+/* Dedicated High-Contrast Countdown Claim Button */
+.countdown-claim-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 28px !important;
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  border-radius: var(--radius-full) !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+  text-decoration: none !important;
+  transition: var(--transition) !important;
+}
+
+.countdown-claim-btn:hover {
+  background: #b91c1c !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.55) !important;
+}
+
+.countdown-claim-btn * {
+  color: #ffffff !important;
 }
 
 /* ===================================================================
