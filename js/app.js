@@ -27,13 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function initRunnerAnimationControls() {
   const speedBtns = document.querySelectorAll('.btn-pace-speed');
-  const runnerEl = document.querySelector('.real-runner-stage') || document.querySelector('.runner-boy-svg');
-  const roadDashes = document.querySelector('.road-dashes');
+  const runnerImg = document.querySelector('.runner-photo-img') || document.querySelector('.real-runner-stage') || document.querySelector('.runner-boy-svg');
   const speedPaceDisplay = document.getElementById('runner-live-pace');
   const speedKmhDisplay = document.getElementById('runner-live-kmh');
   const speedCadenceDisplay = document.getElementById('runner-live-cadence');
 
-  if (!runnerEl || !roadDashes) return;
+  if (!speedBtns.length) return;
 
   speedBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -43,21 +42,18 @@ function initRunnerAnimationControls() {
       const mode = btn.getAttribute('data-speed');
 
       if (mode === 'sprint') {
-        runnerEl.style.animationDuration = '0.3s';
-        roadDashes.style.animationDuration = '0.22s';
+        if (runnerImg) runnerImg.style.transform = 'scale(1.06)';
         if (speedPaceDisplay) speedPaceDisplay.textContent = '3:20 /km';
         if (speedKmhDisplay) speedKmhDisplay.textContent = '18.0 km/h';
         if (speedCadenceDisplay) speedCadenceDisplay.textContent = '195 SPM';
-      } else if (mode === 'jog') {
-        runnerEl.style.animationDuration = '0.85s';
-        roadDashes.style.animationDuration = '0.85s';
+      } else if (mode === 'walk' || mode === 'jog') {
+        if (runnerImg) runnerImg.style.transform = 'scale(1.0)';
         if (speedPaceDisplay) speedPaceDisplay.textContent = '6:30 /km';
         if (speedKmhDisplay) speedKmhDisplay.textContent = '9.2 km/h';
         if (speedCadenceDisplay) speedCadenceDisplay.textContent = '162 SPM';
       } else {
         // Marathon default
-        runnerEl.style.animationDuration = '0.55s';
-        roadDashes.style.animationDuration = '0.45s';
+        if (runnerImg) runnerImg.style.transform = 'scale(1.03)';
         if (speedPaceDisplay) speedPaceDisplay.textContent = '4:58 /km';
         if (speedKmhDisplay) speedKmhDisplay.textContent = '12.1 km/h';
         if (speedCadenceDisplay) speedCadenceDisplay.textContent = '178 SPM';
