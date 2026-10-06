@@ -88,10 +88,40 @@
         </div>
       </div>
 
-      <!-- Right Column: Transparent Particle Speed Runner (50% Split) -->
+      <!-- Right Column: Interactive Athletic Runner Slider (Reduced Size & 3 Slides) -->
       <div class="hero-stage-col" style="display:flex; justify-content:center; align-items:center;">
-        <div class="hero-transparent-runner-box">
-          <img src="images/runner-particles.png" alt="Vijayawada Athletic Runner" class="hero-particle-runner-img">
+        <div class="runner-carousel-wrapper" id="hero-runner-carousel">
+          <div class="runner-carousel-track">
+            <!-- Slide 1: Red & Blue Speed Particle Runner -->
+            <div class="runner-carousel-slide active" data-slide="0">
+              <img src="images/runner-particles.png" alt="Speed Particle Marathon Runner" class="runner-slide-img">
+            </div>
+
+            <!-- Slide 2: Dynamic Watercolor Kinetic Runner -->
+            <div class="runner-carousel-slide" data-slide="1">
+              <img src="images/runner-art.jpg" alt="Artistic Kinetic Runner" class="runner-slide-img">
+            </div>
+
+            <!-- Slide 3: Blue Wave Ribbon Endurance Runner -->
+            <div class="runner-carousel-slide" data-slide="2">
+              <img src="images/runner-ribbon.jpg" alt="Endurance Ribbon Runner" class="runner-slide-img">
+            </div>
+          </div>
+
+          <!-- Carousel Controls: Prev / Next Buttons -->
+          <button type="button" class="carousel-arrow carousel-prev" id="runner-carousel-prev" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button type="button" class="carousel-arrow carousel-next" id="runner-carousel-next" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Carousel Dots Pagination -->
+          <div class="runner-carousel-dots" id="runner-carousel-dots">
+            <button type="button" class="carousel-dot active" data-slide-to="0" aria-label="Slide 1"></button>
+            <button type="button" class="carousel-dot" data-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" class="carousel-dot" data-slide-to="2" aria-label="Slide 3"></button>
+          </div>
         </div>
       </div>
     </div>
