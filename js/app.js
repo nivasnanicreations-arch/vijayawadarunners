@@ -24,7 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initRegistrationModal();
   initScrollAnimations();
+  initHeaderScrollAnimation();
 });
+
+function initHeaderScrollAnimation() {
+  const header = document.querySelector('.main-header');
+  if (!header) return;
+
+  const onScroll = () => {
+    if (window.scrollY > 20) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 function initRunnerAnimationControls() {
   const speedBtns = document.querySelectorAll('.btn-pace-speed');
   const runnerImg = document.querySelector('.runner-photo-img') || document.querySelector('.real-runner-stage') || document.querySelector('.runner-boy-svg');
