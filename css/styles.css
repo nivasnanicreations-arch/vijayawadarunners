@@ -445,100 +445,48 @@ a:hover {
 /* ===================================================================
    HERO SECTION (VIBRANT ATHLETIC SHOWCASE - MATCHING POSTER REFERENCE)
    =================================================================== */
-/* ===================================================================
-   HERO SECTION (SPORTS TECH BENTO HUB ARCHITECTURE)
-   =================================================================== */
 .hero-athletic {
   position: relative;
   background: #ffffff;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(220, 38, 38, 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 90% 40%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
-    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  padding: 60px 0 70px;
+  padding: 65px 0 75px;
   overflow: hidden;
   border-bottom: 1px solid var(--border-color);
 }
 
 .hero-athletic-grid {
   display: grid;
-  grid-template-columns: 1.02fr 1.18fr;
-  gap: 40px;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
   align-items: center;
   position: relative;
   z-index: 2;
 }
 
-/* Live Event Badge */
-.hero-live-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #eff6ff;
-  border: 1.5px solid rgba(37, 99, 235, 0.22);
-  padding: 8px 18px;
-  border-radius: var(--radius-full);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #1d4ed8;
-  margin-bottom: 22px;
-  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.08);
-}
-
-.live-dot-pulse {
-  width: 8px;
-  height: 8px;
-  background: #dc2626;
-  border-radius: 50%;
-  display: inline-block;
-  box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
-  animation: liveDotPulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-}
-
-@keyframes liveDotPulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
-}
-
-.hero-live-badge strong {
-  color: #dc2626;
-  font-weight: 900;
-}
-
-.badge-sep {
-  color: rgba(37, 99, 235, 0.4);
-}
-
-.badge-date {
-  color: #dc2626;
-  font-weight: 800;
-}
-
 .hero-headline {
-  font-size: clamp(2.3rem, 3.6vw, 3.3rem);
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
   font-weight: 900;
   line-height: 1.14;
   color: #dc2626;
   letter-spacing: -0.5px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .hero-headline .text-red {
   color: #dc2626;
+  text-shadow: none;
 }
 
 .hero-headline .text-blue {
   color: #1d4ed8;
+  text-shadow: none;
 }
 
 .hero-sub {
-  font-size: 1.12rem;
+  font-size: 1.15rem;
   color: #1e3a8a;
   line-height: 1.65;
-  margin-bottom: 30px;
-  max-width: 530px;
+  margin-bottom: 32px;
+  max-width: 540px;
 }
 
 .hero-buttons {
@@ -546,349 +494,40 @@ a:hover {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
-}
-
-/* Club Telemetry Row */
-.hero-telemetry-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding-top: 24px;
-  border-top: 1.5px solid rgba(37, 99, 235, 0.15);
-}
-
-.telemetry-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.telemetry-num {
-  font-family: var(--font-heading);
-  font-size: 1.75rem;
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-}
-
-.telemetry-label {
-  font-size: 0.8rem;
-  color: #1d4ed8;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 2px;
+  margin-bottom: 34px;
 }
 
 /* ===================================================================
-   RIGHT COLUMN: SPORTS TECH BENTO STAGE
+   HERO ATHLETIC RUNNER ARTWORK SHOWCASE
    =================================================================== */
-.hero-bento-stage {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  width: 100%;
-}
-
-/* Card 1: Featured Runner Stage Card */
-.bento-runner-card {
-  position: relative;
-  background: #ffffff;
-  border: 1.5px solid rgba(37, 99, 235, 0.18);
-  border-radius: 24px;
-  padding: 28px 24px 18px;
-  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-}
-
-.bento-runner-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.14);
-  border-color: rgba(220, 38, 38, 0.3);
-}
-
-.bento-runner-ambient {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(220, 38, 38, 0.08) 50%, transparent 75%);
-  filter: blur(28px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.bento-runner-img-wrap {
-  position: relative;
-  z-index: 1;
+.hero-stage-col {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
+  position: relative;
 }
 
-.bento-runner-art {
+.hero-runner-showcase {
+  position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-runner-main-art {
+  width: 100%;
   height: auto;
-  max-height: 290px;
+  max-height: 520px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 14px 28px rgba(37, 99, 235, 0.16));
+  filter: drop-shadow(0 16px 36px rgba(37, 99, 235, 0.14)) drop-shadow(0 8px 18px rgba(220, 38, 38, 0.12));
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.bento-runner-card:hover .bento-runner-art {
-  transform: scale(1.03);
-}
-
-/* Floating Telemetry Badges */
-.bento-tag {
-  position: absolute;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 8px 14px;
-  border-radius: var(--radius-full);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.3px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease;
-}
-
-.bento-tag.tag-route {
-  top: 16px;
-  left: 18px;
-  border: 1.5px solid rgba(37, 99, 235, 0.25);
-  color: #1d4ed8;
-  animation: floatRoute 4s ease-in-out infinite;
-}
-
-.bento-tag.tag-pacers {
-  bottom: 54px;
-  right: 18px;
-  border: 1.5px solid rgba(220, 38, 38, 0.3);
-  color: #dc2626;
-  animation: floatPacers 4s ease-in-out infinite 2s;
-}
-
-@keyframes floatRoute {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-@keyframes floatPacers {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-/* Course Elevation Strip inside Card */
-.bento-course-strip {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding-top: 14px;
-  margin-top: 6px;
-  border-top: 1px dashed rgba(37, 99, 235, 0.2);
-  flex-wrap: wrap;
-}
-
-.course-chip {
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.course-chip.chip-flag {
-  color: #dc2626;
-  font-weight: 800;
-}
-
-/* Lower Bento Subgrid (2 Micro-Cards) */
-.bento-subgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.bento-micro-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 18px 20px;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
-  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, border-color 0.28s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-decoration: none;
-}
-
-.bento-micro-card.card-meetup {
-  border: 1.5px solid rgba(37, 99, 235, 0.2);
-}
-
-.bento-micro-card.card-countdown {
-  border: 1.5px solid rgba(220, 38, 38, 0.22);
-}
-
-.bento-micro-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.12);
-}
-
-.bento-micro-card.card-meetup:hover {
-  border-color: #2563eb;
-}
-
-.bento-micro-card.card-countdown:hover {
-  border-color: #dc2626;
-}
-
-.micro-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.micro-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
-
-.micro-badge.badge-blue {
-  background: #eff6ff;
-  color: #1d4ed8;
-  border: 1px solid rgba(37, 99, 235, 0.2);
-}
-
-.micro-badge.badge-red {
-  background: #fef2f2;
-  color: #dc2626;
-  border: 1px solid rgba(220, 38, 38, 0.2);
-}
-
-.micro-time-chip,
-.micro-date-chip {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #dc2626;
-}
-
-.micro-date-chip {
-  color: #1d4ed8;
-}
-
-.micro-title {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #1d4ed8;
-  margin-bottom: 4px;
-  line-height: 1.25;
-}
-
-.micro-desc {
-  font-size: 0.8rem;
-  color: #1e3a8a;
-  line-height: 1.45;
-  margin-bottom: 12px;
-}
-
-.micro-footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.micro-link-text {
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: #2563eb;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.bento-micro-card:hover .micro-link-text {
-  color: #dc2626;
-  transform: translateX(3px);
-}
-
-/* Bento Countdown Digits */
-.bento-countdown-digits {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  margin-bottom: 10px;
-}
-
-.bento-digit-box {
-  background: #eff6ff;
-  border: 1px solid rgba(37, 99, 235, 0.18);
-  border-radius: 8px;
-  padding: 6px 4px;
-  text-align: center;
-}
-
-.bento-digit-box strong {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 900;
-  color: #dc2626 !important;
-  line-height: 1;
-}
-
-.bento-digit-box span {
-  font-size: 0.65rem;
-  color: #1d4ed8;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.micro-btn-claim {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-  color: #ffffff !important;
-  padding: 7px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 800;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
-}
-
-.micro-btn-claim:hover {
-  transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.5);
-  color: #ffffff !important;
+.hero-runner-main-art:hover {
+  transform: scale(1.025);
 }
 
 /* 3D Runner Card Container */
@@ -1596,11 +1235,6 @@ a:hover {
 @media (max-width: 1024px) {
   .hero-athletic-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .hero-bento-stage {
-    width: 100%;
-    margin-top: 10px;
   }
   .hubs-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1658,73 +1292,6 @@ a:hover {
   .countdown-strip-grid {
     flex-direction: column;
     text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .bento-subgrid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .hero-telemetry-row {
-    gap: 12px;
-  }
-  .telemetry-num {
-    font-size: 1.45rem;
-  }
-  .bento-runner-art {
-    max-height: 240px;
-  }
-  .bento-tag {
-    font-size: 0.72rem;
-    padding: 6px 12px;
-  }
-  .bento-tag.tag-pacers {
-    bottom: 52px;
-    right: 12px;
-  }
-  .bento-tag.tag-route {
-    top: 12px;
-    left: 12px;
-  }
-}
-
-@media (max-width: 520px) {
-  .hero-live-badge {
-    font-size: 0.74rem;
-    padding: 6px 14px;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    gap: 6px;
-  }
-  .badge-sep {
-    display: none;
-  }
-  .hero-telemetry-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    text-align: center;
-  }
-  .telemetry-num {
-    font-size: 1.25rem;
-  }
-  .telemetry-label {
-    font-size: 0.7rem;
-  }
-  .bento-course-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .bento-countdown-digits {
-    gap: 4px;
-  }
-  .bento-digit-box {
-    padding: 5px 2px;
-  }
-  .bento-digit-box strong {
-    font-size: 1.05rem;
   }
 }
 
@@ -2135,43 +1702,6 @@ body.theme-light .hero-tag-badge {
   background: rgba(220, 38, 38, 0.08) !important;
   border-color: rgba(220, 38, 38, 0.3) !important;
   color: #dc2626 !important;
-}
-
-body.theme-light .hero-live-badge {
-  background: #eff6ff !important;
-  border-color: rgba(37, 99, 235, 0.25) !important;
-  color: #1d4ed8 !important;
-}
-
-body.theme-light .telemetry-label {
-  color: #1d4ed8 !important;
-}
-
-body.theme-light .bento-runner-card {
-  background: #ffffff !important;
-  border-color: rgba(37, 99, 235, 0.2) !important;
-  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.08) !important;
-}
-
-body.theme-light .bento-micro-card {
-  background: #ffffff !important;
-}
-
-body.theme-light .micro-title {
-  color: #1d4ed8 !important;
-}
-
-body.theme-light .micro-desc {
-  color: #1e3a8a !important;
-}
-
-body.theme-light .bento-digit-box {
-  background: #eff6ff !important;
-  border-color: rgba(37, 99, 235, 0.2) !important;
-}
-
-body.theme-light .bento-digit-box span {
-  color: #1d4ed8 !important;
 }
 
 /* 4. Navigation Bar: Royal Blue Links with Athletic Red Hover & Clean Underline */

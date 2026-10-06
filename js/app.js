@@ -92,27 +92,17 @@ function initCountdownTimer() {
   const minsEl = document.getElementById('count-mins');
   const secsEl = document.getElementById('count-secs');
 
-  // Bento Hub countdown widgets
-  const bentoDaysEl = document.getElementById('bento-count-days');
-  const bentoHoursEl = document.getElementById('bento-count-hours');
-  const bentoMinsEl = document.getElementById('bento-count-mins');
-  const bentoSecsEl = document.getElementById('bento-count-secs');
-
-  if (!daysEl && !bentoDaysEl) return;
+  if (!daysEl) return;
 
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = targetDate.getTime() - now;
 
     if (distance < 0) {
-      if (daysEl) daysEl.textContent = '00';
-      if (hoursEl) hoursEl.textContent = '00';
-      if (minsEl) minsEl.textContent = '00';
-      if (secsEl) secsEl.textContent = '00';
-      if (bentoDaysEl) bentoDaysEl.textContent = '00';
-      if (bentoHoursEl) bentoHoursEl.textContent = '00';
-      if (bentoMinsEl) bentoMinsEl.textContent = '00';
-      if (bentoSecsEl) bentoSecsEl.textContent = '00';
+      daysEl.textContent = '00';
+      hoursEl.textContent = '00';
+      minsEl.textContent = '00';
+      secsEl.textContent = '00';
       return;
     }
 
@@ -121,20 +111,10 @@ function initCountdownTimer() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const strDays = String(days).padStart(2, '0');
-    const strHours = String(hours).padStart(2, '0');
-    const strMins = String(minutes).padStart(2, '0');
-    const strSecs = String(seconds).padStart(2, '0');
-
-    if (daysEl) daysEl.textContent = strDays;
-    if (hoursEl) hoursEl.textContent = strHours;
-    if (minsEl) minsEl.textContent = strMins;
-    if (secsEl) secsEl.textContent = strSecs;
-
-    if (bentoDaysEl) bentoDaysEl.textContent = strDays;
-    if (bentoHoursEl) bentoHoursEl.textContent = strHours;
-    if (bentoMinsEl) bentoMinsEl.textContent = strMins;
-    if (bentoSecsEl) bentoSecsEl.textContent = strSecs;
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minsEl.textContent = String(minutes).padStart(2, '0');
+    secsEl.textContent = String(seconds).padStart(2, '0');
   }
 
   updateCountdown();
