@@ -127,6 +127,10 @@ function initLightbox() {
   const tabBtns = document.querySelectorAll('.tab-btn');
   const photoCards = document.querySelectorAll('.photo-card');
 
+  if (lightbox) {
+    lightbox.setAttribute('hidden', '');
+  }
+
   if (tabBtns.length && photoCards.length) {
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -164,6 +168,10 @@ function initLightbox() {
     }
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) lightbox.setAttribute('hidden', '');
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.setAttribute('hidden', '');
     });
   }
 }

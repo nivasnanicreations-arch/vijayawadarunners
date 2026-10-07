@@ -1430,12 +1430,13 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Modal */
-.register-modal[hidden] {
-  display: none;
+/* Modals & Lightbox */
+.register-modal[hidden],
+.gallery-lightbox[hidden] {
+  display: none !important;
 }
 
-.register-modal {
+.register-modal:not([hidden]) {
   position: fixed;
   z-index: 2000;
   inset: 0;
@@ -1463,6 +1464,48 @@ footer {
   border: none;
   color: #ffffff;
   font-size: 20px;
+  cursor: pointer;
+}
+
+.gallery-lightbox:not([hidden]) {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.94);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-lightbox figure {
+  max-width: 90vw;
+  max-height: 85vh;
+  text-align: center;
+}
+
+.gallery-lightbox img {
+  max-height: 75vh;
+  margin: 0 auto;
+  border: 1px solid #333;
+}
+
+.gallery-lightbox figcaption {
+  font-family: var(--display);
+  font-size: 18px;
+  color: #fff;
+  margin-top: 14px;
+  text-transform: uppercase;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
   cursor: pointer;
 }
 
