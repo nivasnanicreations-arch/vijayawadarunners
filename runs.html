@@ -3,255 +3,192 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Race Categories & Group Runs — 5 KM, 10 KM, and 21.1 KM Half Marathon with Vijayawada Runners.">
-  <title>Runs & Race Categories | Vijayawada Runners</title>
+  <meta name="description" content="Race Categories — 5 KM Fun Run, 10 KM Timed Run, and 21.1 KM Half Marathon with Vijayawada Runners.">
+  <title>Races & Distances — Vijayawada Marathon 2026</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css?v=harinath2">
+  <link rel="stylesheet" href="css/styles.css?v=warm2026">
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- FIXED NAVBAR HEADER -->
-  <nav class="navbar scrolled">
-    <div class="shell" style="display:flex; align-items:center; justify-content:space-between; width:100%;">
-      <a class="official-brand" href="index.html" aria-label="Vijayawada Runners home">
-        <img src="images/logo-transparent.png" alt="Vijayawada Runners — Go Long : Go Strong">
+  <!-- STICKY SITE HEADER -->
+  <header class="site-header is-scrolled" id="siteHeader">
+    <div class="shell header-container">
+      <a class="header-logo-wrap" href="index.html" aria-label="Vijayawada Runners — Go Long Go Strong">
+        <img class="header-logo-img" src="images/logo-transparent.png" alt="Vijayawada Runners Logo">
+        <div class="header-logo-text">
+          <strong>Vijayawada Runners</strong>
+          <small>10th Edition · 2026</small>
+        </div>
       </a>
-      
-      <div class="nav-links-wrap">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link active" href="runs.html">Runs</a>
-        <a class="nav-link" href="events.html">Events</a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a class="nav-link" href="index.html#home">Home</a>
+        <a class="nav-link" href="index.html#story">Our Story</a>
+        <a class="nav-link active" href="runs.html">Races</a>
+        <a class="nav-link" href="index.html#experience">Experience</a>
+        <a class="nav-link" href="index.html#routes">Routes</a>
+        <a class="nav-link" href="index.html#community">Community</a>
+        <a class="nav-link" href="index.html#faqs">FAQs</a>
         <a class="nav-link" href="gallery.html">Gallery</a>
-        <a class="nav-link" href="contact.html">Join Us</a>
-        <a class="btn-accent" href="contact.html">Join the Community <span>↗</span></a>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="header-actions">
+        <a class="btn-header-cta" href="index.html#register">
+          REGISTER NOW <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a class="btn-header-sponsor" href="index.html#sponsors">
+          SPONSOR / PARTNER
+        </a>
       </div>
     </div>
-  </nav>
+  </header>
 
   <main>
     <!-- PAGE BANNER -->
     <section class="page-banner">
       <div class="shell">
-        <div class="section-number">02 / RACE CATEGORIES &amp; TRAINING</div>
-        <h1 class="display-title">
-          CHOOSE YOUR RACE.<br><span>CLAIM YOUR PACE.</span>
+        <div class="meta-tag">THREE DISTANCES · ONE FINISH LINE</div>
+        <h1 class="section-title">
+          CHOOSE YOUR RACE.<br>
+          <em>CLAIM YOUR PACE.</em>
         </h1>
         <p class="banner-lead">
-          Three certified marathon race distances along the flat, fast Krishna riverfront, plus structured free weekly group runs across Vijayawada.
+          Three certified marathon race distances along the flat, fast Krishna riverfront on Sunday, 6 December 2026.
         </p>
       </div>
     </section>
 
     <!-- 3 CERTIFIED RACE TIERS -->
-    <section class="section-pad">
+    <section class="section-pad section-bg-ivory">
       <div class="shell">
-        <div class="section-number">MARATHON DISTANCES</div>
-        <h2 class="display-title" style="font-size:clamp(36px,4.5vw,60px); margin-bottom:20px;">
-          10TH EDITION <span>CATEGORIES</span>
-        </h2>
-        <p style="color:#b5b5b5; max-width:650px; margin-bottom:40px;">
-          All categories include chip-timed RFID bibs, official technical dri-fit jerseys, heavy commemorative die-cast finisher medals, and hot breakfast.
-        </p>
-
-        <div class="race-grid">
-          <!-- 5 KM Card -->
-          <div class="race-card">
-            <div class="race-distance">5 KM</div>
-            <div class="race-type">Everyone &amp; Families (Untimed/Timed)</div>
-            <div class="race-fee">₹850</div>
-
-            <ul class="race-perks">
-              <li>Flag-off: 6:30 AM (Cut-off: 1h 15m)</li>
-              <li>Official Event Dri-FIT T-Shirt</li>
-              <li>10th Edition Commemorative Finisher Medal</li>
-              <li>Fast&amp;Up Hydration Stations Every 1.5 KM</li>
-              <li>Hot South Indian Breakfast Box</li>
-              <li>Downloadable E-Finisher Certificate</li>
+        <div class="race-cards-editorial-grid">
+          <!-- CARD 01: 5 KM -->
+          <article class="race-editorial-card">
+            <span class="race-giant-number" aria-hidden="true">5</span>
+            <div class="race-card-label">EVERYONE · FUN RUN</div>
+            <h3 class="race-card-distance">5 KM</h3>
+            <p class="race-card-desc">
+              A welcoming distance for first-time participants, families and casual runners. Celebrate the spirit of morning fitness.
+            </p>
+            <ul class="race-spec-list">
+              <li><i class="fa-solid fa-check"></i> Flat, scenic sunrise river loop</li>
+              <li><i class="fa-solid fa-check"></i> Commemorative 10th edition medal &amp; bib</li>
+              <li><i class="fa-solid fa-check"></i> Post-race refreshments &amp; digital certificate</li>
+              <li><i class="fa-solid fa-check"></i> Open to all age groups and walkers</li>
             </ul>
+            <a class="btn-race-card" href="index.html#register">
+              REGISTER FOR 5 KM <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
 
-            <button type="button" class="btn-accent" data-register style="width:100%;">
-              Register 5 KM <span>↗</span>
-            </button>
-          </div>
-
-          <!-- 10 KM Card -->
-          <div class="race-card">
-            <div class="race-distance">10 KM</div>
-            <div class="race-type">Running Enthusiasts (Timed Speed Run)</div>
-            <div class="race-fee">₹1,150</div>
-
-            <ul class="race-perks">
-              <li>Flag-off: 5:45 AM (Cut-off: 1h 45m)</li>
-              <li>RFID Timing Chip with 5K Split Mat</li>
-              <li>Official Event Dri-FIT T-Shirt</li>
-              <li>Heavy Die-Cast Finisher Medal</li>
-              <li>Eligible for Age-Category Cash Prizes</li>
-              <li>Instant WhatsApp Timing &amp; Photo Link</li>
+          <!-- CARD 02: 10 KM -->
+          <article class="race-editorial-card">
+            <span class="race-giant-number" aria-hidden="true">10</span>
+            <div class="race-card-label">RUNNING ENTHUSIASTS · TIMED</div>
+            <h3 class="race-card-distance">10 KM</h3>
+            <p class="race-card-desc">
+              A stronger challenge for runners ready to push their pace and endurance. RFID electronic timing included.
+            </p>
+            <ul class="race-spec-list">
+              <li><i class="fa-solid fa-check"></i> Certified 10 KM timed road route</li>
+              <li><i class="fa-solid fa-check"></i> Electronic RFID bib timing with split metrics</li>
+              <li><i class="fa-solid fa-check"></i> Official technical race running tee &amp; medal</li>
+              <li><i class="fa-solid fa-check"></i> On-route hydration every 2.5 KM &amp; pacing flags</li>
             </ul>
+            <a class="btn-race-card" href="index.html#register">
+              REGISTER FOR 10 KM <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
 
-            <button type="button" class="btn-accent" data-register style="width:100%; background:var(--brand-blue); border-color:var(--brand-blue);">
-              Register 10 KM <span>↗</span>
-            </button>
-          </div>
-
-          <!-- 21.1 KM Card (Featured) -->
-          <div class="race-card featured">
-            <span class="race-badge">FLAGSHIP HALF MARATHON</span>
-            <div class="race-distance">21.1 KM</div>
-            <div class="race-type">Endurance Athletes (AIMS Certified)</div>
-            <div class="race-fee">₹1,450</div>
-
-            <ul class="race-perks">
-              <li>Flag-off: 5:00 AM (Cut-off: 3h 30m)</li>
-              <li>AIMS Certified International Qualifier Course</li>
-              <li>Official Pacer Buses (2:00, 2:15, 2:30, 2:45)</li>
-              <li>Top 3 Cash Prizes Across 3 Age Brackets</li>
-              <li>Exclusive 10th Milestone Heavy Metal Medal</li>
-              <li>Dedicated Physio Recovery &amp; Ice Baths</li>
+          <!-- CARD 03: 21 KM (HALF MARATHON) -->
+          <article class="race-editorial-card featured">
+            <div class="race-ribbon-featured">FLAGSHIP DISTANCE</div>
+            <span class="race-giant-number" aria-hidden="true">21</span>
+            <div class="race-card-label">HALF MARATHON · COMPETITIVE</div>
+            <h3 class="race-card-distance">21.1 KM</h3>
+            <p class="race-card-desc">
+              For runners ready to test endurance, discipline and race-day mindset. The ultimate Vijayawada road racing glory.
+            </p>
+            <ul class="race-spec-list">
+              <li><i class="fa-solid fa-check"></i> Course crossing Prakasam Barrage</li>
+              <li><i class="fa-solid fa-check"></i> Precision RFID chip timing &amp; instant SMS results</li>
+              <li><i class="fa-solid fa-check"></i> Heavy 10th milestone finisher medal &amp; runner tee</li>
+              <li><i class="fa-solid fa-check"></i> Electrolyte stations, medical aid &amp; official pacers</li>
             </ul>
-
-            <button type="button" class="btn-accent" data-register style="width:100%;">
-              Register 21.1 KM <span>↗</span>
-            </button>
-          </div>
+            <a class="btn-race-card" href="index.html#register">
+              REGISTER FOR 21 KM <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- FREE COMMUNITY RUNS & CITY CHAPTERS -->
-    <section class="section-pad" style="background:var(--charcoal); border-top:1px solid var(--line);">
-      <div class="shell">
-        <div class="section-number">WEEKLY MORNING RUNS</div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:50px; align-items:center;">
-          <div>
-            <h2 class="display-title" style="font-size:clamp(34px,4vw,56px);">
-              WEEKEND RUNS<br><span>ACROSS 6 CHAPTERS.</span>
-            </h2>
-            <p style="color:#c9c9c9; font-size:16px; line-height:1.75; margin-bottom:24px;">
-              Don't wait for race day to run! Every Saturday and Sunday at 5:00 AM, hundreds of runners gather across 6 active zones in Vijayawada for paced training, recovery runs, and post-run tea.
-            </p>
-            <div style="display:flex; gap:16px;">
-              <a class="btn-accent" href="contact.html">Join a Chapter WhatsApp Group <span>↗</span></a>
-            </div>
-          </div>
-
-          <div style="background:#171c26; border:1px solid var(--line); padding:32px;">
-            <h3 style="font-family:var(--display); font-size:22px; font-weight:800; color:#fff; margin-bottom:18px; text-transform:uppercase;">
-              Active Locations &amp; Timings
-            </h3>
-            <ul style="list-style:none; padding:0; margin:0;">
-              <li style="padding:12px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;">
-                <strong>1. Prakasam Barrage / Riverfront</strong>
-                <span style="color:var(--brand-red); font-weight:700;">Sun · 5:00 AM</span>
-              </li>
-              <li style="padding:12px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;">
-                <strong>2. MG Road / IGMC Stadium</strong>
-                <span style="color:var(--brand-red); font-weight:700;">Sat &amp; Sun · 5:15 AM</span>
-              </li>
-              <li style="padding:12px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;">
-                <strong>3. Benz Circle &amp; Ring Road</strong>
-                <span style="color:var(--brand-red); font-weight:700;">Sun · 5:30 AM</span>
-              </li>
-              <li style="padding:12px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;">
-                <strong>4. Bhavanipuram / Kummaripalem</strong>
-                <span style="color:var(--brand-red); font-weight:700;">Sun · 5:30 AM</span>
-              </li>
-              <li style="padding:12px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;">
-                <strong>5. Gunadala / Ramavarappadu</strong>
-                <span style="color:var(--brand-red); font-weight:700;">Sun · 5:15 AM</span>
-              </li>
-              <li style="padding:12px 0; display:flex; justify-content:space-between;">
-                <strong>6. Tadepalli / Amaravati Canal Road</strong>
-                <span style="color:var(--brand-red); font-weight:700;">Sat · 5:00 AM</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <!-- PRE-FOOTER -->
+    <section class="section-pad final-cta-section">
+      <div class="shell" style="text-align:center;">
+        <div class="meta-tag">6 DECEMBER 2026</div>
+        <h2 class="final-cta-title">
+          YOUR NEXT FINISH LINE <span>STARTS HERE.</span>
+        </h2>
+        <a class="btn-primary" href="index.html#register" style="padding:15px 36px;">
+          REGISTER NOW <span class="arrow">→</span>
+        </a>
       </div>
     </section>
   </main>
 
   <!-- MASTER FOOTER -->
-  <footer>
+  <footer class="site-footer">
     <div class="shell">
-      <div style="display:grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap:40px;">
+      <div class="footer-grid">
         <div>
-          <a class="footer-brand" href="index.html">
-            <img src="images/logo-transparent.png" alt="Vijayawada Runners">
-          </a>
-          <p class="footer-note">A stronger, healthier and more connected city—one stride at a time.</p>
+          <div class="footer-brand-title">VIJAYAWADA RUNNERS</div>
+          <div class="footer-brand-slogan">GO LONG • GO STRONG</div>
+          <p style="color: #A3968C; font-size: 0.95rem; line-height: 1.6;">
+            A registered non-profit running community promoting cardiovascular fitness, marathon endurance, and community camaraderie across Andhra Pradesh since 2016.
+          </p>
         </div>
-        <div class="footer-col">
-          <h3>EXPLORE</h3>
-          <a href="about.html">About Movement</a>
-          <a href="runs.html">Race Categories</a>
-          <a href="events.html">Marathon 2026</a>
+
+        <div class="footer-nav-col">
+          <h4>MARATHON 2026</h4>
+          <a href="index.html#home">Home</a>
+          <a href="index.html#story">10th Edition Story</a>
+          <a href="index.html#races">Choose Distance</a>
+          <a href="index.html#routes">Course Routes</a>
+          <a href="index.html#experience">Race Day Experience</a>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>INFORMATION</h4>
+          <a href="index.html#event-info">Event Essentials</a>
+          <a href="index.html#safety">Safety &amp; Support</a>
+          <a href="index.html#faqs">Frequently Asked Questions</a>
           <a href="gallery.html">Photo Archive</a>
         </div>
-        <div class="footer-col">
-          <h3>CONNECT</h3>
-          <div class="social-row">
-            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="mailto:info@vijayawadarunners.com"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h3>HEADQUARTERS</h3>
-          <p style="color:#8c8c8c; font-size:14px; line-height:1.6;">
-            Vijayawada Runners Club<br>
-            MG Road / Prakasam Barrage<br>
-            Vijayawada, Andhra Pradesh, India
+
+        <div class="footer-nav-col">
+          <h4>CONTACT</h4>
+          <p style="color:#DCCBBC; font-size:0.92rem; line-height:1.6;">
+            <strong>Venue:</strong> [TO BE ANNOUNCED]<br>
+            Vijayawada, Andhra Pradesh, India<br>
+            <strong>Email:</strong> info@vijayawadarunners.com
           </p>
         </div>
       </div>
-      <div class="footer-base">
-        <span>© 2026 VIJAYAWADA RUNNERS. ALL RIGHTS RESERVED.</span>
-        <span>GO LONG · GO STRONG</span>
+
+      <div class="footer-bottom-line">
+        <div>© 2026 Vijayawada Runners Society. All rights reserved.</div>
+        <div>Vijayawada Marathon 2026 · 10th Landmark Edition</div>
       </div>
     </div>
   </footer>
 
-  <!-- REGISTER INTEREST MODAL -->
-  <div class="register-modal" role="dialog" aria-modal="true" hidden>
-    <div class="register-card">
-      <button class="register-close" aria-label="Close registration">&times;</button>
-      <span class="section-number">YOUR FIRST STEP</span>
-      <h2 style="font-family:var(--display); font-size:36px; font-weight:900; margin-bottom:12px; text-transform:uppercase;">
-        REGISTER YOUR<br><span>INTEREST.</span>
-      </h2>
-      <p style="color:#b5b5b5; font-size:14px; margin-bottom:24px;">
-        Share a few details. The community team will connect directly with you on WhatsApp.
-      </p>
-      <form id="interestForm">
-        <label class="form-label-custom">Full name</label>
-        <input class="form-input-custom" name="name" required placeholder="Your full name">
-
-        <label class="form-label-custom">Mobile number</label>
-        <input class="form-input-custom" name="phone" type="tel" required placeholder="+91 Phone number">
-
-        <label class="form-label-custom">I'm interested in</label>
-        <select class="form-input-custom" name="interest">
-          <option value="21K Half Marathon">21.1 KM Half Marathon</option>
-          <option value="10K Timed Run">10 KM Timed Race</option>
-          <option value="5K Fun Run">5 KM Fun Run</option>
-          <option value="Weekly Group Runs">Weekly Sunrise Group Runs</option>
-        </select>
-
-        <button class="btn-accent" style="width:100%; padding:14px;" type="submit">
-          Continue on WhatsApp <i class="fa-brands fa-whatsapp"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <script src="js/main.js?v=harinath2"></script>
+  <script src="js/main.js?v=warm2026"></script>
 </body>
 </html>
