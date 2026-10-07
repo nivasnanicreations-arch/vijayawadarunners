@@ -89,17 +89,93 @@
     </div>
   </section>
 
-  <!-- Gallery Grid -->
-  <section class="section-wrapper">
+  <!-- Gallery Grid with Year Tabs -->
+  <section class="section-wrapper" id="photo-archive">
     <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-item">
+      <div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:34px; flex-wrap:wrap;" id="gallery-year-tabs">
+        <button type="button" class="route-tab-btn is-active" data-year="all">All Editions</button>
+        <button type="button" class="route-tab-btn" data-year="2025">2025 (9th Edition)</button>
+        <button type="button" class="route-tab-btn" data-year="2024">2024 (8th Edition)</button>
+        <button type="button" class="route-tab-btn" data-year="2023">2023 (7th Edition)</button>
+        <button type="button" class="route-tab-btn" data-year="2022">2022 (6th Edition)</button>
+        <button type="button" class="route-tab-btn" data-year="2019">2019 (3rd Edition)</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-items-container">
+        <div class="gallery-item" data-item-year="2025">
           <div class="gallery-thumb" style="background:linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
             <i class="fa-solid fa-bridge-water"></i>
           </div>
           <div class="gallery-caption">
+            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2025 Edition</span>
             <h4>Sunrise Over Prakasam Barrage</h4>
             <p>21.1K runners crossing the iconic barrage sluice gates at 5:45 AM.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-item-year="2025">
+          <div class="gallery-thumb" style="background:linear-gradient(135deg, #991b1b 0%, #ef4444 100%);">
+            <i class="fa-solid fa-flag-checkered"></i>
+          </div>
+          <div class="gallery-caption">
+            <span style="font-size:0.75rem; font-weight:800; color:#1d4ed8; text-transform:uppercase;">2025 Edition</span>
+            <h4>Finish Line Glory &amp; Cheers</h4>
+            <p>First-time marathoners celebrating their proud finish at IGMC Stadium.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-item-year="2024">
+          <div class="gallery-thumb" style="overflow:hidden;">
+            <img src="images/real_human_runner.jpg" alt="Real Indian Marathon Runner" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
+          </div>
+          <div class="gallery-caption">
+            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2024 Edition</span>
+            <h4>Elite Half Marathon Stride</h4>
+            <p>Runner #2101 powering through the 21.1K course in official Red &amp; Blue kit.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-item-year="2024">
+          <div class="gallery-thumb" style="background:linear-gradient(135deg, #059669 0%, #10b981 100%);">
+            <i class="fa-solid fa-recycle"></i>
+          </div>
+          <div class="gallery-caption">
+            <span style="font-size:0.75rem; font-weight:800; color:#1d4ed8; text-transform:uppercase;">2024 Edition</span>
+            <h4>#RunClean River Ploggers</h4>
+            <p>Volunteers collecting plastic waste to ensure a zero-pollution marathon.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-item-year="2023">
+          <div class="gallery-thumb" style="background:linear-gradient(135deg, #d97706 0%, #f59e0b 100%);">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <div class="gallery-caption">
+            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2023 Edition</span>
+            <h4>Die-Cast Commemorative Medals</h4>
+            <p>Heavy bespoke metallic medals celebrating endurance &amp; grit.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-item-year="2022">
+          <div class="gallery-thumb" style="background:linear-gradient(135deg, #1e3a8a 0%, #dc2626 100%);">
+            <i class="fa-solid fa-bowl-food"></i>
+          </div>
+          <div class="gallery-caption">
+            <span style="font-size:0.75rem; font-weight:800; color:#1d4ed8; text-transform:uppercase;">2022 Edition</span>
+            <h4>Post-Run Andhra Breakfast Buffet</h4>
+            <p>Hot idlis, spicy upma, steaming filter coffee, and recovery stretching.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-item-year="2019">
+          <div class="gallery-thumb" style="background:linear-gradient(135deg, #4338ca 0%, #6366f1 100%);">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="gallery-caption">
+            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2019 Edition</span>
+            <h4>Inaugural 21.1K Podium Celebrations</h4>
+            <p>The dawn of Vijayawada's first certified Half Marathon distance.</p>
           </div>
         </div>
 
@@ -262,5 +338,44 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearBtns = document.querySelectorAll('#gallery-year-tabs .route-tab-btn');
+      const galleryItems = document.querySelectorAll('#gallery-items-container .gallery-item');
+
+      function filterYear(year) {
+        yearBtns.forEach(btn => {
+          if (btn.getAttribute('data-year') === year) {
+            btn.classList.add('is-active');
+          } else {
+            btn.classList.remove('is-active');
+          }
+        });
+
+        galleryItems.forEach(item => {
+          const itemYear = item.getAttribute('data-item-year');
+          if (year === 'all' || itemYear === year) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      yearBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const year = btn.getAttribute('data-year');
+          filterYear(year);
+          window.location.hash = year === 'all' ? '' : year;
+        });
+      });
+
+      // Check hash on load
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['2025', '2024', '2023', '2022', '2019'].includes(hash)) {
+        filterYear(hash);
+      }
+    });
+  </script>
 </body>
 </html>

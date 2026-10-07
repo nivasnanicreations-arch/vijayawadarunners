@@ -1962,4 +1962,825 @@ body.theme-light .footer-legal-links a:hover {
   color: #ffffff !important;
 }
 
+/* ===================================================================
+   VIJAYAWADA MARATHON 2026 (10TH EDITION) - REFERENCE DESIGN STYLES
+   Inspired by gtrultra.com & harinathstudio.com/bez/
+   =================================================================== */
+
+/* Section Index Numbers & Editorial Kickers */
+.section-index-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1.5px solid rgba(220, 38, 38, 0.25);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+.section-index-badge.badge-blue {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+/* Pace Marquee Ribbon */
+.pace-marquee-strip {
+  width: 100%;
+  background: linear-gradient(90deg, #dc2626 0%, #1d4ed8 50%, #dc2626 100%);
+  color: #ffffff;
+  padding: 14px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.pace-marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  animation: paceMarqueeScroll 28s linear infinite;
+}
+
+.pace-marquee-track span {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.pace-marquee-track b {
+  color: #fef08a;
+  font-size: 1rem;
+}
+
+@keyframes paceMarqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hero Key Info Bar */
+.hero-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 18px 0 24px;
+}
+
+.hero-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  border: 1.5px solid rgba(37, 99, 235, 0.25);
+  color: #1d4ed8;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.hero-meta-chip.chip-red {
+  background: #fef2f2;
+  border-color: rgba(220, 38, 38, 0.25);
+  color: #dc2626;
+}
+
+/* 01. 10th Edition - Our Story */
+.story-wrapper-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.story-lead-card {
+  background: #ffffff;
+  border: 2px solid rgba(37, 99, 235, 0.15);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.story-lead-card h3 {
+  font-size: 1.85rem;
+  color: #dc2626;
+  margin-bottom: 14px;
+}
+
+.story-lead-card p {
+  color: #1e3a8a;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.story-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1.5px solid rgba(37, 99, 235, 0.15);
+}
+
+.story-stat-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #dc2626;
+  line-height: 1;
+}
+
+.story-stat-item span {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.journey-timeline-box {
+  background: #eff6ff;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  border-radius: 20px;
+  padding: 32px 28px;
+}
+
+.journey-step {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 22px;
+  border-left: 2px solid #2563eb;
+}
+
+.journey-step:last-child {
+  margin-bottom: 0;
+  border-left-color: #dc2626;
+}
+
+.journey-step::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 2px solid #ffffff;
+}
+
+.journey-step:last-child::before {
+  background: #dc2626;
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.25);
+}
+
+.journey-step h4 {
+  font-size: 1.1rem;
+  color: #1d4ed8;
+  margin-bottom: 2px;
+}
+
+.journey-step p {
+  font-size: 0.88rem;
+  color: #1e3a8a;
+  line-height: 1.45;
+}
+
+/* 02. Choose Your Race */
+.race-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.race-tier-card {
+  background: #ffffff;
+  border: 2px solid rgba(37, 99, 235, 0.18);
+  border-radius: 22px;
+  padding: 34px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.race-tier-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: #2563eb;
+}
+
+.race-tier-card.featured-race {
+  border-color: #dc2626;
+  box-shadow: 0 10px 32px rgba(220, 38, 38, 0.15);
+}
+
+.race-featured-badge {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+}
+
+.race-dist-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #dc2626;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.race-tagline {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  margin-bottom: 14px;
+}
+
+.race-fee-display {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.race-specs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 26px;
+  flex-grow: 1;
+}
+
+.race-specs-list li {
+  font-size: 0.9rem;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.race-specs-list li i {
+  color: #dc2626;
+  width: 16px;
+  text-align: center;
+}
+
+.race-tier-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 03. The Marathon Experience */
+.experience-timings-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.timing-box {
+  background: #ffffff;
+  border: 1.5px solid rgba(37, 99, 235, 0.18);
+  border-radius: 16px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.timing-time {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #dc2626;
+  line-height: 1;
+}
+
+.timing-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* Route Map Interactive Carousel */
+.route-carousel-box {
+  background: #ffffff;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 36px;
+}
+
+.route-carousel-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.route-tab-btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 800;
+  border: 2px solid rgba(37, 99, 235, 0.25);
+  background: #eff6ff;
+  color: #1d4ed8;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.route-tab-btn.is-active,
+.route-tab-btn:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+
+.route-slide {
+  display: none;
+}
+
+.route-slide.is-active {
+  display: block;
+}
+
+.route-map-canvas {
+  width: 100%;
+  height: 320px;
+  background: #0f172a;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.route-telemetry-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  background: #eff6ff;
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+
+.telemetry-cell strong {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #dc2626;
+}
+
+.telemetry-cell span {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  text-transform: uppercase;
+}
+
+.experience-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.exp-feature-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(37, 99, 235, 0.18);
+  border-radius: 18px;
+  padding: 26px 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.exp-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.exp-feature-card h4 {
+  font-size: 1.2rem;
+  color: #1d4ed8;
+  margin-bottom: 8px;
+}
+
+.exp-feature-card p {
+  font-size: 0.9rem;
+  color: #1e3a8a;
+  line-height: 1.55;
+}
+
+/* 04. Event Information & Prize Money */
+.info-logistics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.logistics-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(37, 99, 235, 0.2);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.logistics-card h4 {
+  font-size: 1.15rem;
+  color: #dc2626;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logistics-card p {
+  font-size: 0.95rem;
+  color: #1e3a8a;
+  line-height: 1.5;
+}
+
+/* Prize Money Table Card */
+.prize-table-box {
+  background: #ffffff;
+  border: 2px solid rgba(220, 38, 38, 0.25);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+.prize-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.prize-table th {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 800;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+}
+
+.prize-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(37, 99, 235, 0.12);
+  color: #1e3a8a;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.prize-table td strong {
+  color: #dc2626;
+  font-weight: 800;
+}
+
+/* FAQ Accordion Item */
+.faq-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-card-item {
+  background: #ffffff;
+  border: 1.5px solid rgba(37, 99, 235, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-card-item.is-open {
+  border-color: #dc2626;
+}
+
+.faq-card-header {
+  padding: 18px 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 1.02rem;
+  color: #1d4ed8;
+}
+
+.faq-card-header:hover {
+  color: #dc2626;
+}
+
+.faq-card-body {
+  display: none;
+  padding: 0 22px 18px;
+  color: #1e3a8a;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.faq-card-item.is-open .faq-card-body {
+  display: block;
+}
+
+/* 05. Safety & Runner Support */
+.safety-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.safety-pillar-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(37, 99, 235, 0.18);
+  border-radius: 18px;
+  padding: 24px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease;
+}
+
+.safety-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: #dc2626;
+}
+
+.safety-pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 14px;
+}
+
+.safety-pillar-card h4 {
+  font-size: 1.05rem;
+  color: #dc2626;
+  margin-bottom: 6px;
+}
+
+.safety-pillar-card p {
+  font-size: 0.82rem;
+  color: #1e3a8a;
+  line-height: 1.45;
+}
+
+/* 06. Our Community & Legacy */
+.legacy-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.legacy-box {
+  background: #ffffff;
+  border: 2px solid rgba(37, 99, 235, 0.18);
+  border-radius: 22px;
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+}
+
+.legacy-box h3 {
+  font-size: 1.65rem;
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+
+.legacy-box p {
+  color: #1e3a8a;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.year-shortcut-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.year-shortcut-chip {
+  padding: 6px 14px;
+  background: #eff6ff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.year-shortcut-chip:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+
+/* 07. Sponsors & Partners Social Strip */
+.sponsor-social-connect {
+  background: #eff6ff;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.social-connect-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-badge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.social-badge-btn.instagram {
+  background: linear-gradient(135deg, #e1306c 0%, #fd1d1d 100%);
+  color: #ffffff;
+}
+
+.social-badge-btn.facebook {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+/* Interactive Modal Dialogs (Register & Sponsor) */
+.custom-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.custom-modal-overlay.is-active {
+  display: flex;
+}
+
+.custom-modal-card {
+  background: #ffffff;
+  border: 2px solid #2563eb;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 580px;
+  padding: 34px 28px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.custom-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: #eff6ff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #dc2626;
+  font-size: 1.1rem;
+}
+
+/* Floating WhatsApp Chat Pill */
+.floating-whatsapp-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 990;
+  background: #25d366;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-whatsapp-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55);
+  color: #ffffff;
+}
+
+/* Responsive Media Queries for New Sections */
+@media (max-width: 1024px) {
+  .story-wrapper-grid,
+  .legacy-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .race-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .experience-timings-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .experience-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-logistics-grid {
+    grid-template-columns: 1fr;
+  }
+  .safety-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .route-telemetry-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-timings-strip,
+  .safety-pillars-grid,
+  .story-stats-grid,
+  .route-telemetry-strip {
+    grid-template-columns: 1fr;
+  }
+  .sponsor-social-connect {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
 
