@@ -10,12 +10,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Permanent Clean Light Theme Enforcement
-  try {
-    localStorage.removeItem('vr_theme');
-  } catch (e) {}
-  document.body.classList.add('theme-light');
-  document.body.classList.remove('theme-crimson');
 
   initRunnerAnimationControls();
   initCountdownTimer();
