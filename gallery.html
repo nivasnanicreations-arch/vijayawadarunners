@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photography Wall | Vijayawada Marathon 2026 Archive</title>
+  <meta name="description" content="Decade photo archive of Vijayawada Marathon. Explore historic finish-line moments, riverfront sunrises, runner camaraderie, and Prakasam Barrage memories.">
+  <link rel="canonical" href="https://vijayawadarunners.com/gallery.html">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="film-grain" aria-hidden="true"></div>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  
+  
+
+  <!-- FLOATING MINIMAL HEADER (Logo Only) -->
+  <header class="main-header scrolled" id="top-header">
+    <a href="index.html" class="header-brand" aria-label="Vijayawada Runners Homepage">
+      <img src="images/logo-transparent.png" alt="Vijayawada Runners Official Logo" class="brand-logo-img">
+    </a>
+
+    <nav class="header-nav" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">The Walk</a>
+      <a href="legacy.html" class="nav-link">10 Years</a>
+      <a href="races.html" class="nav-link">Races</a>
+      <a href="route.html" class="nav-link">Route</a>
+      <a href="community.html" class="nav-link">Community</a>
+      <a href="safety.html" class="nav-link">Safety</a>
+      <a href="raceday.html" class="nav-link">Race Day</a>
+      <a href="gallery.html" class="nav-link active">Gallery</a>
+      <a href="partners.html" class="nav-link">Partners</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      
+
+      <a href="#register" class="btn-header-cta open-register-modal">
+        <span>Enter The Race</span>
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Mobile Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">The Walk <span>01</span></a>
+      <a href="legacy.html" class="mobile-drawer-link">10 Years Legacy <span>02</span></a>
+      <a href="races.html" class="mobile-drawer-link">Race Distances <span>03</span></a>
+      <a href="route.html" class="mobile-drawer-link">Route & Experience <span>04</span></a>
+      <a href="community.html" class="mobile-drawer-link">Our Community <span>05</span></a>
+      <a href="safety.html" class="mobile-drawer-link">Safety & Medical <span>06</span></a>
+      <a href="raceday.html" class="mobile-drawer-link">Race Day Board <span>07</span></a>
+      <a href="gallery.html" class="mobile-drawer-link" style="color: var(--c-sunrise-orange);">Photography Wall <span>08</span></a>
+      <a href="partners.html" class="mobile-drawer-link">Official Partners <span>09</span></a>
+      <a href="faq.html" class="mobile-drawer-link">Frequently Asked <span>10</span></a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <button class="btn-hero-primary open-register-modal" style="width: 100%; justify-content: center;">
+        Register Now →
+      </button>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>Photography Wall</span>
+        </div>
+        <h1 class="page-hero-title">MOMENTS ETCHED IN<br>MORNING LIGHT.</h1>
+        <p class="page-hero-desc">
+          A visual record of grit, smiles, tears, and triumphant finishes captured across a decade of running beside the sacred Krishna River.
+        </p>
+      </div>
+    </section>
+
+    <!-- Photography Wall Section -->
+    <section class="gallery-section" style="padding-top: 60px;">
+      <div class="container">
+        
+        <!-- Filter Bar -->
+        <div class="gallery-filter-bar">
+          <button class="filter-pill active" data-year="all">All Editions</button>
+          <button class="filter-pill" data-year="2026">2026 Preview</button>
+          <button class="filter-pill" data-year="2025">2025 Edition</button>
+          <button class="filter-pill" data-year="2024">2024 Edition</button>
+          <button class="filter-pill" data-year="2023">2023 Edition</button>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="photo-wall-grid">
+          
+          <div class="photo-wall-card" data-year="2026">
+            <img src="images/hero-dawn-walker.jpg" alt="Lone runner walking down empty highway toward sunrise horizon">
+            <div class="photo-wall-hover">
+              <div>
+                <span class="photo-hover-tag">2026 PREVIEW</span>
+                <h4>Before The City Wakes</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-wall-card" data-year="2025">
+            <img src="images/finish-line-sunrise.jpg" alt="Runners triumphantly crossing the finish line in golden sunlight at Prakasam Barrage">
+            <div class="photo-wall-hover">
+              <div>
+                <span class="photo-hover-tag">2025 EDITION</span>
+                <h4>Crossing The Line Together</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-wall-card" data-year="2024">
+            <img src="images/gallery-crowd-sunrise.jpg" alt="Cheering community celebrating at Prakasam Barrage finish line">
+            <div class="photo-wall-hover">
+              <div>
+                <span class="photo-hover-tag">2024 EDITION</span>
+                <h4>Prakasam Barrage Finishers</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-wall-card" data-year="2024">
+            <img src="images/hero-riverside.png" alt="Runners pacing together on the riverfront at dawn">
+            <div class="photo-wall-hover">
+              <div>
+                <span class="photo-hover-tag">2024 EDITION</span>
+                <h4>Riverfront Dawn Pack</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-wall-card" data-year="2023">
+            <img src="images/real_human_runner.jpg" alt="Elite marathon runner sprinting in full stride">
+            <div class="photo-wall-hover">
+              <div>
+                <span class="photo-hover-tag">2023 EDITION</span>
+                <h4>Speed & Dedication</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-wall-card" data-year="2025">
+            <img src="images/hero-city-road.png" alt="Runners stretching and advancing along the open highway">
+            <div class="photo-wall-hover">
+              <div>
+                <span class="photo-hover-tag">2025 EDITION</span>
+                <h4>One Road • One Community</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Full-resolution image viewer">
+    <button class="modal-close-btn" id="lightbox-close" style="top: 30px; right: 30px;" aria-label="Close lightbox">✕</button>
+    <img src="" alt="Full view" class="lightbox-img" id="lightbox-img">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div>
+          <div class="footer-brand-title">VIJAYAWADA MARATHON 2026</div>
+          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 20px;">
+            The 10th landmark edition of Andhra Pradesh's premier dawn athletic celebration.
+          </p>
+          <div style="font-family: var(--font-heading); font-size: 12px; color: var(--c-sunrise-orange);">
+            GO LONG • GO STRONG
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">NAVIGATION</div>
+          <ul class="footer-nav-links">
+            <li><a href="index.html">The Walk (Home)</a></li>
+            <li><a href="legacy.html">10 Years Legacy</a></li>
+            <li><a href="races.html">Race Categories</a></li>
+            <li><a href="route.html">Course Route</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">COMMUNITY & SAFETY</div>
+          <ul class="footer-nav-links">
+            <li><a href="community.html">Our Community</a></li>
+            <li><a href="safety.html">Safety & Support</a></li>
+            <li><a href="raceday.html">Race Day Board</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">CONTACT</div>
+          <ul class="footer-nav-links">
+            <li><span>Vijayawada Runners Society</span></li>
+            <li><a href="mailto:info@vijayawadarunners.com">info@vijayawadarunners.com</a></li>
+            <li><a href="partners.html" style="color: var(--c-sunrise-orange);">Become a Partner →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div>© 2026 Vijayawada Runners. All rights reserved. 10th Edition.</div>
+        <div>Designed with a cinematic narrative identity for the runners of Vijayawada.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Registration Modal (Shared) -->
+  <div class="modal-backdrop" id="register-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="register-close">✕</button>
+      <div class="modal-header">
+        <h3 class="modal-title">ENTER THE RACE</h3>
+        <p style="font-size: 12px; color: var(--c-sunrise-orange); font-family: var(--font-heading); margin-top: 4px;">VIJAYAWADA MARATHON 2026 • 10TH EDITION</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-step active" id="reg-step-1">
+          <label class="form-label">Step 1: Choose Your Race Category</label>
+          <div class="distance-select-grid">
+            <div class="distance-radio-card" data-dist="05K"><strong style="display:block; font-size: 16px;">05K</strong><small style="color: rgba(255,255,255,0.7);">Joy Run</small></div>
+            <div class="distance-radio-card" data-dist="10K"><strong style="display:block; font-size: 16px;">10K</strong><small style="color: rgba(255,255,255,0.7);">Timed</small></div>
+            <div class="distance-radio-card selected" data-dist="21K"><strong style="display:block; font-size: 16px; color: var(--c-sunrise-orange);">21K</strong><small style="color: rgba(255,255,255,0.7);">Half Marathon</small></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select Running T-Shirt Size</label>
+            <select class="form-select">
+              <option value="S">S (Chest 38")</option>
+              <option value="M" selected>M (Chest 40")</option>
+              <option value="L">L (Chest 42")</option>
+              <option value="XL">XL (Chest 44")</option>
+            </select>
+          </div>
+          <button class="btn-panel-cta" id="btn-next-step2" style="background: var(--c-sunrise-orange); color: #111; margin-top: 20px;">Continue to Details →</button>
+        </div>
+        <div class="form-step" id="reg-step-2">
+          <label class="form-label">Step 2: Runner Information</label>
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" id="reg-input-name" placeholder="Full name"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="name@example.com"></div>
+          <div class="form-group"><label class="form-label">Mobile</label><input type="tel" class="form-input" placeholder="+91 98765 43210"></div>
+          <button class="btn-panel-cta" id="btn-submit-registration" style="background: linear-gradient(135deg, var(--c-burnt-orange), var(--c-sunrise-orange)); color: #FFF; margin-top: 20px;">Confirm Pre-Registration →</button>
+        </div>
+        <div class="form-step" id="reg-step-3" style="text-align: center; padding: 20px 0;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🏅</div>
+          <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--c-sunrise-orange); margin-bottom: 8px;">YOU'RE ON THE ROAD!</h4>
+          <p style="font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 24px;">Your registration has been recorded for the 10th Edition.</p>
+          <div style="display: inline-block; padding: 14px 28px; border-radius: 8px; background: rgba(243, 154, 82, 0.15); border: 1px dashed var(--c-sunrise-orange); font-family: var(--font-heading); font-size: 16px; font-weight: 800; color: #FFF;" id="generated-bib-num">BIB #2026 • RUNNER</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/marathonConfig.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
