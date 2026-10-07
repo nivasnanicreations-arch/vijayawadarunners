@@ -1,381 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Gallery | Vijayawada Runners</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Photo & Video Gallery — Relive unforgettable moments from sunrise runs on Prakasam Barrage with Vijayawada Runners.">
+  <title>Moments in Motion — Photo Gallery | Vijayawada Runners</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css?v=vibrant">
-  <style>
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .gallery-item {
-      background: #ffffff;
-      border: 2px solid var(--border-color);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-    }
-    .gallery-item:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--primary-red);
-    }
-    .gallery-thumb {
-      height: 220px;
-      background: linear-gradient(135deg, #1e3a8a 0%, #dc2626 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 3rem;
-      position: relative;
-    }
-    .gallery-caption {
-      padding: 18px;
-    }
-    .gallery-caption h4 {
-      font-size: 1.1rem;
-      margin-bottom: 4px;
-      color: var(--primary-blue-dark);
-    }
-    .gallery-caption p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css?v=harinath">
 </head>
-<body class="theme-light">
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Streamlined Modern Navigation Header -->
-  <header class="main-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo-area" title="Vijayawada Runners - Go Long : Go Strong">
-        <img src="images/logo.png" alt="Vijayawada Runners" class="brand-logo-img">
+  <!-- FIXED NAVBAR HEADER -->
+  <nav class="navbar scrolled">
+    <div class="shell" style="display:flex; align-items:center; justify-content:space-between; width:100%;">
+      <a class="official-brand" href="index.html" aria-label="Vijayawada Runners home">
+        <img src="images/logo-transparent.png" alt="Vijayawada Runners — Go Long : Go Strong">
       </a>
-      <nav class="nav-links-menu" id="desktop-nav-menu">
-        <a href="index.html" class="nav-item-link">Home</a>
-        <a href="about.html" class="nav-item-link">About</a>
-        <a href="marathon.html" class="nav-item-link">Race Day</a>
-        <a href="chapters.html" class="nav-item-link">Chapters</a>
-        <a href="pacers.html" class="nav-item-link">Pacers</a>
-        <a href="results.html" class="nav-item-link">Results</a>
-        <a href="gallery.html" class="nav-item-link active">Gallery</a>
-        <a href="contact.html" class="nav-item-link">Contact</a>
-      </nav>
-      <!-- Register CTA & Mobile Toggle -->
-      <div class="nav-action-buttons">
-        <a href="marathon.html#register" class="btn-register-nav"><i class="fa-solid fa-ticket"></i> Register</a>
-        <button class="menu-toggle-btn" id="mobile-menu-toggle"><i class="fa-solid fa-bars"></i></button>
+      
+      <div class="nav-links-wrap">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="runs.html">Runs</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link active" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="contact.html">Join Us</a>
+        <a class="btn-accent" href="contact.html">Join the Community <span>↗</span></a>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Banner -->
-  <section class="hero-athletic" style="padding: 60px 0;">
-    <div class="container" style="text-align: center; max-width: 820px;">
-      <span class="hero-tag-badge"><i class="fa-solid fa-images"></i> Memories In Motion</span>
-      <h1 class="hero-headline" style="font-size: 2.8rem; margin-bottom: 12px;">Photo & Video Gallery</h1>
-      <p class="hero-sub" style="margin: 0 auto;">
-        Relive unforgettable moments from sunrise runs on Prakasam Barrage, electric finish line cheers, and chapter workouts.
-      </p>
-    </div>
-  </section>
-
-  <!-- Gallery Grid with Year Tabs -->
-  <section class="section-wrapper" id="photo-archive">
-    <div class="container">
-      <div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:34px; flex-wrap:wrap;" id="gallery-year-tabs">
-        <button type="button" class="route-tab-btn is-active" data-year="all">All Editions</button>
-        <button type="button" class="route-tab-btn" data-year="2025">2025 (9th Edition)</button>
-        <button type="button" class="route-tab-btn" data-year="2024">2024 (8th Edition)</button>
-        <button type="button" class="route-tab-btn" data-year="2023">2023 (7th Edition)</button>
-        <button type="button" class="route-tab-btn" data-year="2022">2022 (6th Edition)</button>
-        <button type="button" class="route-tab-btn" data-year="2019">2019 (3rd Edition)</button>
+  <main>
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+      <div class="shell">
+        <div class="section-number">04 / MOMENTS IN MOTION</div>
+        <h1 class="display-title">
+          PHOTO ARCHIVE.<br><span>EVERY STRIDE TELLS A STORY.</span>
+        </h1>
+        <p class="banner-lead">
+          Relive unforgettable sunrises across Prakasam Barrage, electric finish line celebrations, and chapter training runs across a decade of motion.
+        </p>
       </div>
+    </section>
 
-      <div class="gallery-grid" id="gallery-items-container">
-        <div class="gallery-item" data-item-year="2025">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
-            <i class="fa-solid fa-bridge-water"></i>
-          </div>
-          <div class="gallery-caption">
-            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2025 Edition</span>
-            <h4>Sunrise Over Prakasam Barrage</h4>
-            <p>21.1K runners crossing the iconic barrage sluice gates at 5:45 AM.</p>
-          </div>
+    <!-- GALLERY FILTER & GRID -->
+    <section class="section-pad">
+      <div class="shell">
+        <!-- Year Filter Tabs -->
+        <div class="gallery-tab-buttons">
+          <button type="button" class="tab-btn active" data-year="all">All Editions</button>
+          <button type="button" class="tab-btn" data-year="2025">2025 (9th Edition)</button>
+          <button type="button" class="tab-btn" data-year="2024">2024 (8th Edition)</button>
+          <button type="button" class="tab-btn" data-year="2023">2023 (7th Edition)</button>
+          <button type="button" class="tab-btn" data-year="2022">2022 (6th Edition)</button>
+          <button type="button" class="tab-btn" data-year="2019">2019 (3rd Edition)</button>
         </div>
 
-        <div class="gallery-item" data-item-year="2025">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #991b1b 0%, #ef4444 100%);">
-            <i class="fa-solid fa-flag-checkered"></i>
+        <div class="gallery-photo-grid">
+          <!-- Photo 1 -->
+          <div class="photo-card" data-year="2025" data-full="images/vijayawada-runners-hero.png" data-caption="2025 9th Edition — Sunrise runners charging across Prakasam Barrage">
+            <img src="images/vijayawada-runners-hero.png" alt="Sunrise Runners Across Barrage">
+            <div class="photo-card-caption">
+              <span>2025 Edition • 21.1 KM</span>
+              <h4>Prakasam Barrage Sunrise Flag-Off</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <span style="font-size:0.75rem; font-weight:800; color:#1d4ed8; text-transform:uppercase;">2025 Edition</span>
-            <h4>Finish Line Glory &amp; Cheers</h4>
-            <p>First-time marathoners celebrating their proud finish at IGMC Stadium.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item" data-item-year="2024">
-          <div class="gallery-thumb" style="overflow:hidden;">
-            <img src="images/real_human_runner.jpg" alt="Real Indian Marathon Runner" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
+          <!-- Photo 2 -->
+          <div class="photo-card" data-year="2025" data-full="images/hero-riverside.png" data-caption="2025 Edition — Krishna Riverfront Half Marathon Pack">
+            <img src="images/hero-riverside.png" alt="Krishna Riverfront Pack">
+            <div class="photo-card-caption">
+              <span>2025 Edition • River Road</span>
+              <h4>Krishna Riverfront Fast Pack</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2024 Edition</span>
-            <h4>Elite Half Marathon Stride</h4>
-            <p>Runner #2101 powering through the 21.1K course in official Red &amp; Blue kit.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item" data-item-year="2024">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #059669 0%, #10b981 100%);">
-            <i class="fa-solid fa-recycle"></i>
+          <!-- Photo 3 -->
+          <div class="photo-card" data-year="2024" data-full="images/hero-city-road.png" data-caption="2024 8th Edition — City Center MG Road Corridor">
+            <img src="images/hero-city-road.png" alt="City Road Running">
+            <div class="photo-card-caption">
+              <span>2024 Edition • MG Road</span>
+              <h4>City Center Corridors</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <span style="font-size:0.75rem; font-weight:800; color:#1d4ed8; text-transform:uppercase;">2024 Edition</span>
-            <h4>#RunClean River Ploggers</h4>
-            <p>Volunteers collecting plastic waste to ensure a zero-pollution marathon.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item" data-item-year="2023">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #d97706 0%, #f59e0b 100%);">
-            <i class="fa-solid fa-medal"></i>
+          <!-- Photo 4 -->
+          <div class="photo-card" data-year="2024" data-full="images/vijayawada-runners-hero.png" data-caption="2024 Edition — 10K Pacer Bus Group">
+            <img src="images/vijayawada-runners-hero.png" alt="10K Pacer Bus Group">
+            <div class="photo-card-caption">
+              <span>2024 Edition • 10K Pacemakers</span>
+              <h4>Sub-60 Minute Pacer Bus</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2023 Edition</span>
-            <h4>Die-Cast Commemorative Medals</h4>
-            <p>Heavy bespoke metallic medals celebrating endurance &amp; grit.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item" data-item-year="2022">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #1e3a8a 0%, #dc2626 100%);">
-            <i class="fa-solid fa-bowl-food"></i>
+          <!-- Photo 5 -->
+          <div class="photo-card" data-year="2023" data-full="images/hero-riverside.png" data-caption="2023 7th Edition — Finish Line Medal Moments">
+            <img src="images/hero-riverside.png" alt="Finish Line Celebration">
+            <div class="photo-card-caption">
+              <span>2023 Edition • IGMC Stadium</span>
+              <h4>Finish Line Euphoria &amp; Medals</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <span style="font-size:0.75rem; font-weight:800; color:#1d4ed8; text-transform:uppercase;">2022 Edition</span>
-            <h4>Post-Run Andhra Breakfast Buffet</h4>
-            <p>Hot idlis, spicy upma, steaming filter coffee, and recovery stretching.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item" data-item-year="2019">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #4338ca 0%, #6366f1 100%);">
-            <i class="fa-solid fa-trophy"></i>
+          <!-- Photo 6 -->
+          <div class="photo-card" data-year="2022" data-full="images/hero-city-road.png" data-caption="2022 6th Edition — Post-Covid Comeback Marathon">
+            <img src="images/hero-city-road.png" alt="Post-Covid Comeback">
+            <div class="photo-card-caption">
+              <span>2022 Edition • Comeback Run</span>
+              <h4>Moving The City Forward</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <span style="font-size:0.75rem; font-weight:800; color:#dc2626; text-transform:uppercase;">2019 Edition</span>
-            <h4>Inaugural 21.1K Podium Celebrations</h4>
-            <p>The dawn of Vijayawada's first certified Half Marathon distance.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #991b1b 0%, #ef4444 100%);">
-            <i class="fa-solid fa-flag-checkered"></i>
+          <!-- Photo 7 -->
+          <div class="photo-card" data-year="2019" data-full="images/vijayawada-runners-hero.png" data-caption="2019 3rd Edition — Early Riverfront Group">
+            <img src="images/vijayawada-runners-hero.png" alt="Early Riverfront Group">
+            <div class="photo-card-caption">
+              <span>2019 Edition • 3rd Milestone</span>
+              <h4>Foundation Years In Motion</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <h4>Finish Line Glory & Tears</h4>
-            <p>First-time marathoners celebrating their proud finish at IGMC Stadium.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="overflow:hidden;">
-            <img src="images/real_human_runner.jpg" alt="Real Indian Marathon Runner" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
+          <!-- Photo 8 -->
+          <div class="photo-card" data-year="2025" data-full="images/hero-riverside.png" data-caption="2025 Edition — Women Runners Power Stride">
+            <img src="images/hero-riverside.png" alt="Women Runners Stride">
+            <div class="photo-card-caption">
+              <span>2025 Edition • Community</span>
+              <h4>Women In Motion Brigade</h4>
+            </div>
           </div>
-          <div class="gallery-caption">
-            <h4>Elite Half Marathon Stride</h4>
-            <p>Runner #2101 powering through the 21.1K course in official Red & Blue kit.</p>
-          </div>
-        </div>
 
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #059669 0%, #10b981 100%);">
-            <i class="fa-solid fa-recycle"></i>
-          </div>
-          <div class="gallery-caption">
-            <h4>#RunClean River Ploggers</h4>
-            <p>Volunteers collecting plastic waste to ensure a zero-pollution marathon.</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #d97706 0%, #f59e0b 100%);">
-            <i class="fa-solid fa-medal"></i>
-          </div>
-          <div class="gallery-caption">
-            <h4>Die-Cast Commemorative Medals</h4>
-            <p>Heavy bespoke metallic medals celebrating the 10th milestone edition.</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="background:linear-gradient(135deg, #1e3a8a 0%, #dc2626 100%);">
-            <i class="fa-solid fa-bowl-food"></i>
-          </div>
-          <div class="gallery-caption">
-            <h4>Post-Run Andhra Breakfast Buffet</h4>
-            <p>Hot idlis, spicy upma, steaming filter coffee, and recovery stretching.</p>
+          <!-- Photo 9 -->
+          <div class="photo-card" data-year="2024" data-full="images/hero-city-road.png" data-caption="2024 Edition — Volunteer Aid Station Crew">
+            <img src="images/hero-city-road.png" alt="Volunteer Aid Station">
+            <div class="photo-card-caption">
+              <span>2024 Edition • Volunteers</span>
+              <h4>Hydration &amp; Cheer Marshals</h4>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PRE-FOOTER ATHLETIC CALLOUT -->
-  <section class="pre-footer-cta reveal-on-scroll">
-    <div class="container pre-footer-container">
-      <div class="pre-footer-text">
-        <span class="pre-footer-badge"><i class="fa-solid fa-person-running"></i> Ready to Lace Up?</span>
-        <h3>Join Vijayawada's Largest Running Movement</h3>
-        <p>Free weekend morning runs every Saturday & Sunday at 5:00 AM • Zero membership fees • Open to everyone from walkers to marathoners!</p>
+    <!-- PRE-FOOTER CTA -->
+    <section class="section-pad join-section">
+      <div class="shell" style="text-align:center;">
+        <span class="section-number" style="justify-content:center;">WRITE YOUR STORY</span>
+        <h2 class="display-title" style="margin-bottom:20px;">
+          BE IN THE 2026 <span>FRAME.</span>
+        </h2>
+        <p style="color:#d0d0d0; font-size:17px; max-width:600px; margin:0 auto 30px;">
+          Create your own finish line memory on 6 December 2026 at the 10th Landmark Edition Vijayawada Marathon.
+        </p>
+        <a class="btn-accent" href="contact.html">Join the Community <span>↗</span></a>
       </div>
-      <div class="pre-footer-actions">
-        <a href="chapters.html" class="btn-footer-whatsapp"><i class="fa-brands fa-whatsapp"></i> Join WhatsApp Chapters</a>
-        <a href="marathon.html#register" class="btn-register-nav"><i class="fa-solid fa-ticket"></i> Register for VRHM 2026</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- MASTER ATHLETIC RED & BLUE FOOTER -->
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Brand & Mission Column -->
-        <div class="footer-brand-col">
-          <a href="index.html" class="footer-logo-link">
-            <img src="images/logo.png" alt="Vijayawada Runners" class="footer-logo-img">
+  <!-- MASTER FOOTER -->
+  <footer>
+    <div class="shell">
+      <div style="display:grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap:40px;">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img src="images/logo-transparent.png" alt="Vijayawada Runners">
           </a>
-          <p class="footer-motto">
-            <strong>"Go Long : Go Strong"</strong><br>
-            A registered non-profit community trust empowering cardiovascular fitness, active longevity, and marathon culture across Andhra Pradesh since 2016.
+          <p class="footer-note">A stronger, healthier and more connected city—one stride at a time.</p>
+        </div>
+        <div class="footer-col">
+          <h3>EXPLORE</h3>
+          <a href="about.html">About Movement</a>
+          <a href="runs.html">Race Categories</a>
+          <a href="events.html">Marathon 2026</a>
+          <a href="gallery.html">Photo Archive</a>
+        </div>
+        <div class="footer-col">
+          <h3>CONNECT</h3>
+          <div class="social-row">
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="mailto:info@vijayawadarunners.com"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>HEADQUARTERS</h3>
+          <p style="color:#8c8c8c; font-size:14px; line-height:1.6;">
+            Vijayawada Runners Club<br>
+            MG Road / Prakasam Barrage<br>
+            Vijayawada, Andhra Pradesh, India
           </p>
-          <div class="footer-social-strip">
-            <a href="#" class="social-icon-btn strava" title="Strava Club"><i class="fa-brands fa-strava"></i></a>
-            <a href="#" class="social-icon-btn instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://chat.whatsapp.com/demo" target="_blank" class="social-icon-btn whatsapp" title="WhatsApp Hub"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" class="social-icon-btn youtube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-
-        <!-- Quick Links: Race Day -->
-        <div class="footer-col">
-          <h5><i class="fa-solid fa-trophy" style="color:var(--primary-red); margin-right:6px;"></i> Race Day</h5>
-          <div class="footer-links-list">
-            <a href="marathon.html">VRHM 2026 Overview</a>
-            <a href="marathon.html#categories">21.1K / 10K / 5K Categories</a>
-            <a href="pacers.html">Official Pacer Buses</a>
-            <a href="pacers.html#calc">Interactive Pace Calculator</a>
-            <a href="results.html">RFID Timing & Leaderboard</a>
-            <a href="results.html#certificate">Finisher Certificates</a>
-          </div>
-        </div>
-
-        <!-- Quick Links: Neighborhood Hubs -->
-        <div class="footer-col">
-          <h5><i class="fa-solid fa-location-dot" style="color:var(--primary-blue); margin-right:6px;"></i> City Chapters</h5>
-          <div class="footer-links-list">
-            <a href="chapters.html">BRTS Road Chapter</a>
-            <a href="chapters.html">Bandar Road / PWD Grounds</a>
-            <a href="chapters.html">Krishna Riverfront Barrage</a>
-            <a href="chapters.html">Loyola & Gunadala Pacers</a>
-            <a href="chapters.html">Bhavanipuram Flyers</a>
-            <a href="about.html">Our 8-Year Origin Story</a>
-          </div>
-        </div>
-
-        <!-- Secretariat & Contact -->
-        <div class="footer-col">
-          <h5><i class="fa-solid fa-headset" style="color:var(--primary-red); margin-right:6px;"></i> Race Secretariat</h5>
-          <div class="footer-contact-list">
-            <div class="footer-contact-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Indira Gandhi Municipal Corporation (IGMC) Stadium, MG Road, Vijayawada - 520010</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fa-solid fa-phone"></i>
-              <span>+91 98480 12345 / 98480 23456</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fa-solid fa-envelope"></i>
-              <span>contact@vijayawadarunners.com</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fa-solid fa-clock"></i>
-              <span>Group Runs: Sat & Sun • 5:00 AM</span>
-            </div>
-          </div>
         </div>
       </div>
-
-      <!-- Footer Bottom Bar -->
-      <div class="footer-bottom">
-        <div class="footer-copy">
-          &copy; 2026 <strong>Vijayawada Runners Foundation</strong>. All Rights Reserved. • <em>"Where Every Stride Tells a Story"</em>
-        </div>
-        <div class="footer-legal-links">
-          <a href="about.html">About Us</a>
-          <span>•</span>
-          <a href="marathon.html#register">Register</a>
-          <span>•</span>
-          <a href="contact.html">Support Desk</a>
-          <span>•</span>
-          <a href="contact.html#faq">FAQs & Guidelines</a>
-        </div>
+      <div class="footer-base">
+        <span>© 2026 VIJAYAWADA RUNNERS. ALL RIGHTS RESERVED.</span>
+        <span>GO LONG · GO STRONG</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const yearBtns = document.querySelectorAll('#gallery-year-tabs .route-tab-btn');
-      const galleryItems = document.querySelectorAll('#gallery-items-container .gallery-item');
+  <!-- LIGHTBOX DIALOG -->
+  <div class="gallery-lightbox" role="dialog" aria-modal="true" hidden style="position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:3000; display:flex; align-items:center; justify-content:center; padding:20px;">
+    <button class="lightbox-close" style="position:absolute; top:20px; right:24px; background:none; border:none; color:#fff; font-size:32px; cursor:pointer;">&times;</button>
+    <figure style="max-width:90vw; max-height:85vh; text-align:center;">
+      <img src="" alt="" style="max-height:75vh; margin:0 auto; border:1px solid #333;">
+      <figcaption style="font-family:var(--display); font-size:18px; color:#fff; margin-top:14px; text-transform:uppercase;"></figcaption>
+    </figure>
+  </div>
 
-      function filterYear(year) {
-        yearBtns.forEach(btn => {
-          if (btn.getAttribute('data-year') === year) {
-            btn.classList.add('is-active');
-          } else {
-            btn.classList.remove('is-active');
-          }
-        });
-
-        galleryItems.forEach(item => {
-          const itemYear = item.getAttribute('data-item-year');
-          if (year === 'all' || itemYear === year) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      }
-
-      yearBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const year = btn.getAttribute('data-year');
-          filterYear(year);
-          window.location.hash = year === 'all' ? '' : year;
-        });
-      });
-
-      // Check hash on load
-      const hash = window.location.hash.replace('#', '');
-      if (hash && ['2025', '2024', '2023', '2022', '2019'].includes(hash)) {
-        filterYear(hash);
-      }
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
