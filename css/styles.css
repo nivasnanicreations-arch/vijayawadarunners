@@ -24,22 +24,34 @@
   --c-muted-peach: #E9C8B2;
 
   /* ===================================================================
-     Master Brand Text Color Hierarchy (Derived from Logo & Palette)
+     Vijayawada Runners Official Logo Colors for Website Text
+     Logo: Red ("VR" & "VIJAYAWADA") | Blue ("RUNNERS" & Runner) | Charcoal
      =================================================================== */
-  /* Text on Light Backgrounds */
-  --text-primary: #292525;          /* Main headings: strong but softened warm dark */
-  --text-secondary: #454040;        /* Secondary headings: slightly lighter warm dark */
-  --text-body: #625B57;             /* Body text: soft medium, comfortable readability */
-  --text-muted: #746C67;            /* Small labels, tags, captions & metadata */
-  --text-accent: #E97827;           /* Medium brand orange accent: highlights & numbers */
-  --text-accent-warm: #C8613F;      /* Refined warm terracotta accent for light badges */
+  /* Official Logo Palette */
+  --logo-red: #E02028;              /* Exact Vijayawada Runners logo red */
+  --logo-red-dark: #C81D25;         /* High-contrast red for text on light backgrounds */
+  --logo-red-light: #FF4750;        /* High-contrast vibrant red for text on dark backgrounds */
+  --logo-blue: #304C9C;             /* Exact Vijayawada Runners logo royal blue */
+  --logo-blue-light: #4D7CFF;       /* High-contrast bright blue for text on dark backgrounds */
+  --logo-charcoal: #1A1D24;         /* Rich charcoal derived from logo tagline */
 
-  /* Text on Dark Backgrounds */
-  --text-light: #FFF4EA;            /* Primary light text: headings & hero titles */
-  --text-light-secondary: #E8D8CC;  /* Secondary light text: readable body on dark */
-  --text-light-muted: #C8B9AE;      /* Muted light text: captions, specs, tags on dark */
+  /* Text on Light Backgrounds (Ivory / Cream / White) */
+  --text-primary: #1A1D24;          /* Main headings: deep crisp charcoal */
+  --text-secondary: #304C9C;        /* Secondary headings & subtitles: Logo Royal Blue */
+  --text-body: #454950;             /* Body text: highly legible, comfortable slate */
+  --text-muted: #6C727D;            /* Small labels, tags, captions & metadata */
+  --text-accent: #C81D25;           /* Primary brand accent: Logo Red */
+  --text-accent-blue: #304C9C;      /* Secondary brand accent: Logo Blue */
+  --text-accent-warm: #C81D25;      /* Logo Red for light badges & tags */
 
-  /* Mapped Core Text Tokens (Ensures 100% theme consistency across entire codebase) */
+  /* Text on Dark Backgrounds (Midnight / Charcoal / Hero) */
+  --text-light: #FFFFFF;            /* Primary light text: headings & titles */
+  --text-light-secondary: #E2E5EA;  /* Secondary light text: clean readable body on dark */
+  --text-light-muted: #A4ABB6;      /* Muted light text: captions, specs, tags on dark */
+  --text-accent-dark: #FF4750;      /* Vibrant Logo Red for highlights on dark */
+  --text-accent-blue-dark: #4D7CFF; /* Vibrant Logo Blue for badges on dark */
+
+  /* Mapped Core Text Tokens */
   --c-text-white: var(--text-light);
   --c-text-dim: var(--text-light-muted);
   --c-text-dark: var(--text-primary);
@@ -249,7 +261,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .nav-link.active {
   opacity: 1;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
 }
 
 .nav-link::after {
@@ -259,7 +271,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   left: 0;
   width: 0%;
   height: 2px;
-  background: var(--text-accent);
+  background: var(--text-accent-dark);
   transition: width 0.3s var(--transition-smooth);
 }
 
@@ -269,7 +281,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .nav-link:hover {
   opacity: 1;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
 }
 
 .nav-link:hover::after {
@@ -394,7 +406,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .mobile-drawer-link:hover {
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
 }
 
 @media (max-width: 1024px) {
@@ -624,7 +636,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1.05;
-  background: linear-gradient(180deg, var(--text-light) 0%, #F5EFE5 45%, var(--text-accent) 100%);
+  background: linear-gradient(180deg, var(--text-light) 0%, #F8F9FA 45%, var(--text-accent-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.95));
@@ -681,7 +693,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 700;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   letter-spacing: 0.1em;
 }
 
@@ -851,7 +863,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   margin-bottom: 16px;
 }
 
@@ -938,11 +950,11 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .tag-dark {
-  color: var(--text-accent-warm);
+  color: var(--logo-red-dark);
 }
 
 .tag-light {
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
 }
 
 .section-title {
@@ -1073,7 +1085,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: 38px;
   font-weight: 900;
-  color: var(--text-accent-warm);
+  color: var(--logo-red-dark);
   line-height: 1;
 }
 
@@ -1093,7 +1105,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--text-secondary);
+  color: var(--logo-blue);
 }
 
 .timeline-card-desc {
@@ -1114,7 +1126,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-accent-warm);
+  color: var(--logo-red-dark);
   padding-top: 14px;
   border-top: 1px dashed rgba(74, 51, 42, 0.15);
 }
@@ -1129,13 +1141,13 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .timeline-card.card-featured .timeline-edition-num {
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   font-size: 48px;
 }
 
 .timeline-card.card-featured .timeline-year-badge {
-  background: rgba(243, 154, 82, 0.2);
-  color: var(--text-accent);
+  background: rgba(224, 32, 40, 0.2);
+  color: var(--text-accent-dark);
 }
 
 .timeline-card.card-featured .timeline-card-title {
@@ -1224,7 +1236,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .panel-05k .panel-dist-giant { color: var(--text-muted); opacity: 0.25; }
-.panel-05k .panel-subtitle { color: var(--text-secondary); }
+.panel-05k .panel-subtitle { color: var(--logo-blue); }
 .panel-05k .btn-panel-cta { background: var(--c-warm-brown); color: var(--text-light); }
 .panel-05k .btn-panel-cta:hover { background: var(--c-terracotta); }
 
@@ -1246,8 +1258,8 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
 }
 
-.panel-21k .panel-dist-giant { color: var(--text-accent); opacity: 0.18; }
-.panel-21k .panel-subtitle { color: var(--text-accent); }
+.panel-21k .panel-dist-giant { color: var(--text-accent-dark); opacity: 0.18; }
+.panel-21k .panel-subtitle { color: var(--text-accent-dark); }
 .panel-21k .btn-panel-cta { background: linear-gradient(135deg, var(--c-burnt-orange), var(--c-sunrise-orange)); color: var(--text-light); }
 
 /* Giant Watermark Distance */
@@ -1440,7 +1452,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   margin-bottom: 12px;
 }
 
@@ -1471,7 +1483,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
 }
 
 .flagoff-item-time {
@@ -1579,7 +1591,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-blue-dark);
 }
 
 .metric-val {
@@ -1619,7 +1631,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 800;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-blue-dark);
   margin-bottom: 12px;
 }
 
@@ -1692,7 +1704,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .community-arrow {
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   font-size: 20px;
 }
 
@@ -1799,12 +1811,12 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   width: 64px;
   height: 64px;
   border-radius: 12px;
-  background: rgba(200, 97, 63, 0.1);
+  background: rgba(224, 32, 40, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--text-accent-warm);
+  color: var(--logo-red-dark);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -1820,7 +1832,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 14px;
-  color: var(--text-secondary);
+  color: var(--logo-blue);
 }
 
 .support-card-desc {
@@ -1889,7 +1901,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-blue-dark);
   margin-bottom: 8px;
 }
 
@@ -1942,7 +1954,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-size: clamp(48px, 6.5vw, 84px);
   font-weight: 900;
   line-height: 1;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   text-shadow: 0 0 30px rgba(243, 154, 82, 0.5);
 }
 
@@ -1960,7 +1972,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: 40px;
   font-weight: 700;
-  color: rgba(233, 120, 39, 0.4);
+  color: rgba(255, 71, 80, 0.4);
   margin-top: -20px;
 }
 
@@ -1993,15 +2005,15 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 .filter-pill {
   padding: 8px 22px;
   border-radius: 30px;
-  background: rgba(74, 51, 42, 0.08);
-  border: 1px solid rgba(74, 51, 42, 0.15);
+  background: rgba(48, 76, 156, 0.08);
+  border: 1px solid rgba(48, 76, 156, 0.18);
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   cursor: pointer;
   transition: all 0.25s ease;
-  color: var(--text-secondary);
+  color: var(--logo-blue);
 }
 
 .filter-pill:hover, .filter-pill.active {
@@ -2072,7 +2084,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
 }
 
 /* Runner Testimonial Quote Cards */
@@ -2097,7 +2109,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 .story-quote-mark {
   font-family: var(--font-display);
   font-size: 54px;
-  color: var(--text-accent-warm);
+  color: var(--logo-red-dark);
   line-height: 0.8;
   margin-bottom: 12px;
 }
@@ -2131,14 +2143,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
-  color: var(--text-secondary);
+  color: var(--logo-blue);
 }
 
 .author-sub {
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 600;
-  color: var(--text-accent-warm);
+  color: var(--logo-red-dark);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -2194,7 +2206,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-accent-warm);
+  color: var(--logo-blue);
   margin-bottom: 12px;
 }
 
@@ -2301,7 +2313,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .faq-icon-arrow {
   font-size: 20px;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   transition: transform 0.3s ease;
 }
 
@@ -2385,7 +2397,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   margin-bottom: 20px;
 }
 
@@ -2397,7 +2409,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   text-transform: uppercase;
   line-height: 1.05;
   margin-bottom: 24px;
-  background: linear-gradient(180deg, var(--text-light) 0%, #F5EFE5 45%, var(--text-accent) 100%);
+  background: linear-gradient(180deg, var(--text-light) 0%, #F8F9FA 45%, var(--text-accent-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.95));
@@ -2464,7 +2476,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   margin-bottom: 20px;
 }
 
@@ -2476,7 +2488,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .footer-nav-links a:hover {
-  color: var(--text-accent);
+  color: var(--text-accent-blue-dark);
 }
 
 .footer-bottom-bar {
@@ -2597,7 +2609,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-accent-dark);
   margin-bottom: 8px;
 }
 
@@ -2747,7 +2759,11 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 .text-body { color: var(--text-body) !important; }
 .text-muted { color: var(--text-muted) !important; }
 .text-accent { color: var(--text-accent) !important; }
+.text-accent-blue { color: var(--text-accent-blue) !important; }
 .text-accent-warm { color: var(--text-accent-warm) !important; }
+
+.text-logo-red { color: var(--logo-red) !important; }
+.text-logo-blue { color: var(--logo-blue) !important; }
 
 .text-light { color: var(--text-light) !important; }
 .text-light-secondary { color: var(--text-light-secondary) !important; }
