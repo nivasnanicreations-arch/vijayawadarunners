@@ -302,7 +302,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   align-items: center;
   gap: 8px;
   padding: 10px 22px;
-  background: linear-gradient(135deg, var(--c-terracotta), var(--c-burnt-orange));
+  background: linear-gradient(135deg, var(--logo-red), var(--logo-red-dark));
   color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 12px;
@@ -310,14 +310,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(200, 97, 63, 0.35);
+  box-shadow: 0 4px 15px rgba(224, 32, 40, 0.4);
   transition: all 0.3s var(--transition-smooth);
 }
 
 .btn-header-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(228, 119, 63, 0.55);
-  background: linear-gradient(135deg, var(--c-burnt-orange), var(--c-sunrise-orange));
+  box-shadow: 0 6px 20px rgba(224, 32, 40, 0.6);
+  background: linear-gradient(135deg, var(--logo-red-light), var(--logo-red));
 }
 
 .btn-header-cta .cta-arrow {
@@ -721,7 +721,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   align-items: center;
   gap: 12px;
   padding: 18px 40px;
-  background: linear-gradient(135deg, var(--c-terracotta), var(--c-burnt-orange));
+  background: linear-gradient(135deg, var(--logo-red), var(--logo-red-dark));
   color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 14px;
@@ -729,14 +729,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   border-radius: 4px;
-  box-shadow: 0 10px 35px rgba(200, 97, 63, 0.55);
+  box-shadow: 0 10px 35px rgba(224, 32, 40, 0.5);
   transition: all 0.35s var(--transition-smooth);
 }
 
 .btn-hero-primary:hover {
   transform: translateY(-3px) scale(1.02);
-  background: linear-gradient(135deg, var(--c-burnt-orange), var(--c-sunrise-orange));
-  box-shadow: 0 15px 45px rgba(243, 154, 82, 0.65);
+  background: linear-gradient(135deg, var(--logo-red-light), var(--logo-red));
+  box-shadow: 0 15px 45px rgba(224, 32, 40, 0.65);
 }
 
 .btn-hero-primary .arrow-icon {
@@ -767,8 +767,8 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .btn-hero-secondary:hover {
-  border-color: var(--c-sunrise-orange);
-  background: rgba(243, 154, 82, 0.15);
+  border-color: var(--logo-blue-light);
+  background: rgba(48, 76, 156, 0.25);
   transform: translateY(-3px);
 }
 
@@ -1237,8 +1237,8 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .panel-05k .panel-dist-giant { color: var(--text-muted); opacity: 0.25; }
 .panel-05k .panel-subtitle { color: var(--logo-blue); }
-.panel-05k .btn-panel-cta { background: var(--c-warm-brown); color: var(--text-light); }
-.panel-05k .btn-panel-cta:hover { background: var(--c-terracotta); }
+.panel-05k .btn-panel-cta { background: var(--logo-blue); color: var(--text-light); }
+.panel-05k .btn-panel-cta:hover { background: var(--logo-red); }
 
 .panel-10k {
   background: linear-gradient(180deg, #C8613F 0%, #A24B2C 100%);
@@ -1248,8 +1248,8 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .panel-10k .panel-dist-giant { color: var(--text-light); opacity: 0.22; }
 .panel-10k .panel-subtitle { color: var(--c-golden-sand); }
-.panel-10k .btn-panel-cta { background: #FFFFFF; color: var(--text-accent-warm); }
-.panel-10k .btn-panel-cta:hover { background: var(--c-soft-cream); color: var(--c-burnt-orange); }
+.panel-10k .btn-panel-cta { background: #FFFFFF; color: var(--logo-blue); }
+.panel-10k .btn-panel-cta:hover { background: #FFFFFF; color: var(--logo-red); }
 
 .panel-21k {
   background: linear-gradient(180deg, #18202C 0%, #17191C 100%);
@@ -1260,7 +1260,8 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .panel-21k .panel-dist-giant { color: var(--text-accent-dark); opacity: 0.18; }
 .panel-21k .panel-subtitle { color: var(--text-accent-dark); }
-.panel-21k .btn-panel-cta { background: linear-gradient(135deg, var(--c-burnt-orange), var(--c-sunrise-orange)); color: var(--text-light); }
+.panel-21k .btn-panel-cta { background: linear-gradient(135deg, var(--logo-red), var(--logo-red-dark)); color: var(--text-light); }
+.panel-21k .btn-panel-cta:hover { background: linear-gradient(135deg, var(--logo-red-light), var(--logo-red)); }
 
 /* Giant Watermark Distance */
 .panel-dist-giant {
@@ -1533,14 +1534,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .btn-route-tab:hover {
-  border-color: var(--c-sunrise-orange);
-  background: rgba(243, 154, 82, 0.15);
+  border-color: var(--logo-blue-light);
+  background: rgba(48, 76, 156, 0.25);
 }
 
 .btn-route-tab.active {
-  background: linear-gradient(135deg, var(--c-terracotta), var(--c-sunrise-orange));
-  border-color: var(--c-sunrise-orange);
-  box-shadow: 0 4px 20px rgba(243, 154, 82, 0.4);
+  background: linear-gradient(135deg, var(--logo-red), var(--logo-blue));
+  border-color: var(--logo-red-light);
+  box-shadow: 0 4px 20px rgba(224, 32, 40, 0.45);
 }
 
 .route-map-viewport {
@@ -2017,9 +2018,9 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .filter-pill:hover, .filter-pill.active {
-  background: var(--c-terracotta);
+  background: var(--logo-blue);
   color: var(--text-light);
-  border-color: var(--c-terracotta);
+  border-color: var(--logo-blue);
 }
 
 /* Masonry Photography Wall */
@@ -2245,7 +2246,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   gap: 12px;
   padding: 16px 36px;
   border-radius: 4px;
-  background: var(--c-warm-brown);
+  background: var(--logo-blue);
   color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 13px;
@@ -2256,7 +2257,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .btn-partner-inquire:hover {
-  background: var(--c-terracotta);
+  background: var(--logo-red);
   transform: translateY(-2px);
 }
 
@@ -2569,7 +2570,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .modal-close-btn:hover {
-  background: var(--c-terracotta);
+  background: var(--logo-red);
 }
 
 .modal-header {
@@ -2703,7 +2704,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .sticky-mobile-cta .btn-mobile-register {
   padding: 10px 22px;
-  background: linear-gradient(135deg, var(--c-terracotta), var(--c-burnt-orange));
+  background: linear-gradient(135deg, var(--logo-red), var(--logo-red-dark));
   color: var(--text-light);
   border-radius: 4px;
   font-family: var(--font-heading);
