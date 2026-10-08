@@ -22,10 +22,28 @@
   --c-warm-ivory: #F5EFE5;
   --c-soft-cream: #FFF9F0;
   --c-muted-peach: #E9C8B2;
-  --c-text-white: #F8F4ED;
-  --c-text-dim: rgba(248, 244, 237, 0.7);
-  --c-text-dark: #1E2229;
-  --c-text-dark-muted: rgba(30, 34, 41, 0.72);
+
+  /* ===================================================================
+     Master Brand Text Color Hierarchy (Derived from Logo & Palette)
+     =================================================================== */
+  /* Text on Light Backgrounds */
+  --text-primary: #292525;          /* Main headings: strong but softened warm dark */
+  --text-secondary: #454040;        /* Secondary headings: slightly lighter warm dark */
+  --text-body: #625B57;             /* Body text: soft medium, comfortable readability */
+  --text-muted: #746C67;            /* Small labels, tags, captions & metadata */
+  --text-accent: #E97827;           /* Medium brand orange accent: highlights & numbers */
+  --text-accent-warm: #C8613F;      /* Refined warm terracotta accent for light badges */
+
+  /* Text on Dark Backgrounds */
+  --text-light: #FFF4EA;            /* Primary light text: headings & hero titles */
+  --text-light-secondary: #E8D8CC;  /* Secondary light text: readable body on dark */
+  --text-light-muted: #C8B9AE;      /* Muted light text: captions, specs, tags on dark */
+
+  /* Mapped Core Text Tokens (Ensures 100% theme consistency across entire codebase) */
+  --c-text-white: var(--text-light);
+  --c-text-dim: var(--text-light-muted);
+  --c-text-dark: var(--text-primary);
+  --c-text-dark-muted: var(--text-body);
 
   /* Borders & Glassmorphism */
   --glass-dark: rgba(23, 25, 28, 0.75);
@@ -55,7 +73,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   background-color: var(--c-dark-primary);
-  color: var(--c-text-white);
+  color: var(--text-light);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -65,7 +83,7 @@ html {
 body {
   overflow-x: hidden;
   background-color: var(--c-dark-primary);
-  color: var(--c-text-white);
+  color: var(--text-light);
   line-height: 1.6;
 }
 
@@ -170,15 +188,15 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .main-header.scrolled-light .nav-link {
-  color: var(--c-text-dark);
+  color: var(--text-primary);
 }
 
 .main-header.scrolled-light .nav-link:hover {
-  color: var(--c-terracotta);
+  color: var(--text-accent);
 }
 
 .main-header.scrolled-light .brand-edition {
-  color: var(--c-terracotta);
+  color: var(--text-accent-warm);
 }
 
 .header-brand {
@@ -222,8 +240,8 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--c-text-white);
-  opacity: 0.8;
+  color: var(--text-light);
+  opacity: 0.85;
   transition: opacity 0.25s ease, color 0.25s ease;
   position: relative;
   padding: 6px 0;
@@ -231,7 +249,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .nav-link.active {
   opacity: 1;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 .nav-link::after {
@@ -241,7 +259,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   left: 0;
   width: 0%;
   height: 2px;
-  background: var(--c-sunrise-orange);
+  background: var(--text-accent);
   transition: width 0.3s var(--transition-smooth);
 }
 
@@ -251,7 +269,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .nav-link:hover {
   opacity: 1;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 .nav-link:hover::after {
@@ -273,7 +291,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   gap: 8px;
   padding: 10px 22px;
   background: linear-gradient(135deg, var(--c-terracotta), var(--c-burnt-orange));
-  color: var(--c-text-white);
+  color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
@@ -367,7 +385,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--c-text-white);
+  color: var(--text-light);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -376,7 +394,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .mobile-drawer-link:hover {
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 @media (max-width: 1024px) {
@@ -571,7 +589,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 600;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 16px;
 }
 
@@ -581,7 +599,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--c-text-white);
+  color: var(--text-light);
   line-height: 1.15;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
 }
@@ -590,7 +608,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-body);
   font-size: clamp(16px, 2vw, 22px);
   font-weight: 300;
-  color: rgba(248, 244, 237, 0.82);
+  color: var(--text-light-secondary);
   margin-top: 14px;
   letter-spacing: 0.04em;
   max-width: 650px;
@@ -606,7 +624,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1.05;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F5EFE5 45%, #F39A52 100%);
+  background: linear-gradient(180deg, var(--text-light) 0%, #F5EFE5 45%, var(--text-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.95));
@@ -619,7 +637,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   border-radius: 40px;
   background: rgba(243, 154, 82, 0.18);
   border: 1px solid var(--c-sunrise-orange);
-  color: var(--c-text-white);
+  color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 700;
@@ -655,7 +673,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 900;
-  color: var(--c-text-white);
+  color: var(--text-light);
   letter-spacing: 0.02em;
 }
 
@@ -663,14 +681,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 700;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   letter-spacing: 0.1em;
 }
 
 .distance-pill .dist-tag {
   font-family: var(--font-body);
   font-size: 11px;
-  color: rgba(248, 244, 237, 0.65);
+  color: var(--text-light-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-left: 6px;
@@ -692,7 +710,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   gap: 12px;
   padding: 18px 40px;
   background: linear-gradient(135deg, var(--c-terracotta), var(--c-burnt-orange));
-  color: var(--c-text-white);
+  color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 800;
@@ -726,7 +744,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   background: rgba(32, 39, 51, 0.7);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(248, 244, 237, 0.3);
-  color: var(--c-text-white);
+  color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 700;
@@ -754,7 +772,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(248, 244, 237, 0.75);
+  color: var(--text-light-muted);
 }
 
 .hero-spec-item {
@@ -780,7 +798,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: rgba(248, 244, 237, 0.65);
+  color: var(--text-light-muted);
   font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 600;
@@ -833,7 +851,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 16px;
 }
 
@@ -844,14 +862,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.1;
-  color: #FFFFFF;
+  color: var(--text-light);
   margin-bottom: 18px;
 }
 
 .page-hero-desc {
   font-family: var(--font-body);
   font-size: clamp(16px, 1.4vw, 20px);
-  color: rgba(248, 244, 237, 0.8);
+  color: var(--text-light-secondary);
   max-width: 780px;
   line-height: 1.7;
 }
@@ -863,7 +881,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
    =================================================================== */
 .section-warm {
   background-color: var(--c-warm-ivory);
-  color: var(--c-text-dark);
+  color: var(--text-primary);
   position: relative;
   padding: 80px 0 120px; /* Reduced top padding to eliminate scroll gap */
   overflow: hidden;
@@ -871,14 +889,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .section-warm-cream {
   background-color: var(--c-soft-cream);
-  color: var(--c-text-dark);
+  color: var(--text-primary);
   position: relative;
   padding: 100px 0 120px;
 }
 
 .section-dark {
   background-color: var(--c-dark-primary);
-  color: var(--c-text-white);
+  color: var(--text-light);
   position: relative;
   padding: 140px 0;
   overflow: hidden;
@@ -886,14 +904,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .section-dark-charcoal {
   background-color: var(--c-charcoal-deep);
-  color: var(--c-text-white);
+  color: var(--text-light);
   position: relative;
   padding: 140px 0;
 }
 
 .section-midnight {
   background-color: var(--c-midnight);
-  color: var(--c-text-white);
+  color: var(--text-light);
   position: relative;
   padding: 140px 0;
 }
@@ -920,11 +938,11 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .tag-dark {
-  color: var(--c-terracotta);
+  color: var(--text-accent-warm);
 }
 
 .tag-light {
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 .section-title {
@@ -937,6 +955,25 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   margin-bottom: 20px;
 }
 
+.section-warm .section-title,
+.section-warm-cream .section-title,
+.support-section .section-title,
+.gallery-section .section-title,
+.partners-section .section-title {
+  color: var(--text-primary);
+}
+
+.section-dark .section-title,
+.section-dark-charcoal .section-title,
+.section-midnight .section-title,
+.experience-section .section-title,
+.community-section .section-title,
+.raceday-section .section-title,
+.faq-section .section-title,
+.finish-callback-section .section-title {
+  color: var(--text-light);
+}
+
 .section-desc {
   font-family: var(--font-body);
   font-size: clamp(16px, 1.4vw, 20px);
@@ -945,11 +982,11 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .desc-dark {
-  color: var(--c-text-dark-muted);
+  color: var(--text-body);
 }
 
 .desc-light {
-  color: var(--c-text-dim);
+  color: var(--text-light-secondary);
 }
 
 /* Road Timeline Layout */
@@ -1036,7 +1073,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: 38px;
   font-weight: 900;
-  color: var(--c-terracotta);
+  color: var(--text-accent-warm);
   line-height: 1;
 }
 
@@ -1048,7 +1085,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   padding: 4px 12px;
   border-radius: 20px;
   background: rgba(200, 97, 63, 0.1);
-  color: var(--c-warm-brown);
+  color: var(--text-muted);
 }
 
 .timeline-card-title {
@@ -1056,13 +1093,13 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--c-text-dark);
+  color: var(--text-secondary);
 }
 
 .timeline-card-desc {
   font-family: var(--font-body);
   font-size: 14px;
-  color: var(--c-text-dark-muted);
+  color: var(--text-body);
   line-height: 1.6;
   margin-bottom: 24px;
   flex-grow: 1;
@@ -1077,7 +1114,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--c-burnt-orange);
+  color: var(--text-accent-warm);
   padding-top: 14px;
   border-top: 1px dashed rgba(74, 51, 42, 0.15);
 }
@@ -1086,27 +1123,27 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 .timeline-card.card-featured {
   flex: 0 0 400px;
   background: linear-gradient(135deg, #17191C 0%, #202733 100%);
-  color: var(--c-text-white);
+  color: var(--text-light);
   border: 2px solid var(--c-sunrise-orange);
   box-shadow: 0 20px 50px rgba(243, 154, 82, 0.25);
 }
 
 .timeline-card.card-featured .timeline-edition-num {
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   font-size: 48px;
 }
 
 .timeline-card.card-featured .timeline-year-badge {
   background: rgba(243, 154, 82, 0.2);
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 .timeline-card.card-featured .timeline-card-title {
-  color: #FFFFFF;
+  color: var(--text-light);
 }
 
 .timeline-card.card-featured .timeline-card-desc {
-  color: rgba(248, 244, 237, 0.85);
+  color: var(--text-light-secondary);
 }
 
 .timeline-card.card-featured .timeline-milestone-tag {
@@ -1144,7 +1181,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: clamp(100px, 18vw, 240px);
   font-weight: 900;
-  color: #FFFFFF;
+  color: var(--text-light);
   line-height: 0.8;
   letter-spacing: -0.05em;
   user-select: none;
@@ -1182,36 +1219,36 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 /* Specific Panel Themes */
 .panel-05k {
   background: linear-gradient(180deg, #E9C8B2 0%, #D9B27C 100%);
-  color: var(--c-text-dark);
+  color: var(--text-primary);
   border-color: rgba(233, 200, 178, 0.4);
 }
 
-.panel-05k .panel-dist-giant { color: var(--c-warm-brown); opacity: 0.25; }
-.panel-05k .panel-subtitle { color: var(--c-warm-brown); }
-.panel-05k .btn-panel-cta { background: var(--c-warm-brown); color: #FFF; }
+.panel-05k .panel-dist-giant { color: var(--text-muted); opacity: 0.25; }
+.panel-05k .panel-subtitle { color: var(--text-secondary); }
+.panel-05k .btn-panel-cta { background: var(--c-warm-brown); color: var(--text-light); }
 .panel-05k .btn-panel-cta:hover { background: var(--c-terracotta); }
 
 .panel-10k {
   background: linear-gradient(180deg, #C8613F 0%, #A24B2C 100%);
-  color: #FFFFFF;
+  color: var(--text-light);
   border-color: rgba(200, 97, 63, 0.6);
 }
 
-.panel-10k .panel-dist-giant { color: #FFFFFF; opacity: 0.22; }
+.panel-10k .panel-dist-giant { color: var(--text-light); opacity: 0.22; }
 .panel-10k .panel-subtitle { color: var(--c-golden-sand); }
-.panel-10k .btn-panel-cta { background: #FFFFFF; color: var(--c-terracotta); }
+.panel-10k .btn-panel-cta { background: #FFFFFF; color: var(--text-accent-warm); }
 .panel-10k .btn-panel-cta:hover { background: var(--c-soft-cream); color: var(--c-burnt-orange); }
 
 .panel-21k {
   background: linear-gradient(180deg, #18202C 0%, #17191C 100%);
-  color: #FFFFFF;
+  color: var(--text-light);
   border-color: rgba(243, 154, 82, 0.45);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
 }
 
-.panel-21k .panel-dist-giant { color: var(--c-sunrise-orange); opacity: 0.18; }
-.panel-21k .panel-subtitle { color: var(--c-sunrise-orange); }
-.panel-21k .btn-panel-cta { background: linear-gradient(135deg, var(--c-burnt-orange), var(--c-sunrise-orange)); color: #FFFFFF; }
+.panel-21k .panel-dist-giant { color: var(--text-accent); opacity: 0.18; }
+.panel-21k .panel-subtitle { color: var(--text-accent); }
+.panel-21k .btn-panel-cta { background: linear-gradient(135deg, var(--c-burnt-orange), var(--c-sunrise-orange)); color: var(--text-light); }
 
 /* Giant Watermark Distance */
 .panel-dist-giant {
@@ -1354,7 +1391,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   position: relative;
   padding: 140px 0;
   background-color: var(--c-charcoal-deep);
-  color: var(--c-text-white);
+  color: var(--text-light);
 }
 
 .exp-stage-block {
@@ -1403,7 +1440,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 12px;
 }
 
@@ -1434,14 +1471,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 .flagoff-item-time {
   font-family: var(--font-display);
   font-size: 13px;
   font-weight: 700;
-  color: var(--c-text-white);
+  color: var(--text-light);
   margin-top: 4px;
 }
 
@@ -1476,7 +1513,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--c-text-white);
+  color: var(--text-light);
   background: rgba(32, 39, 51, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.12);
   cursor: pointer;
@@ -1542,14 +1579,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 .metric-val {
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 800;
-  color: var(--c-text-white);
+  color: var(--text-light);
   margin-top: 4px;
 }
 
@@ -1582,7 +1619,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 800;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 12px;
 }
 
@@ -1632,6 +1669,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   position: relative;
   padding: 140px 0;
   background-color: var(--c-dark-primary);
+  color: var(--text-light);
   overflow: hidden;
 }
 
@@ -1650,11 +1688,11 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--c-text-white);
+  color: var(--text-light);
 }
 
 .community-arrow {
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   font-size: 20px;
 }
 
@@ -1709,7 +1747,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #FFFFFF;
+  color: var(--text-light);
 }
 
 @media (max-width: 900px) {
@@ -1730,7 +1768,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
    =================================================================== */
 .support-section {
   background-color: var(--c-warm-ivory);
-  color: var(--c-text-dark);
+  color: var(--text-primary);
   padding: 140px 0;
 }
 
@@ -1766,13 +1804,13 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--c-terracotta);
+  color: var(--text-accent-warm);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .support-card:hover .support-icon-wrapper {
   background: var(--c-terracotta);
-  color: #FFFFFF;
+  color: var(--text-light);
 }
 
 .support-card-title {
@@ -1782,13 +1820,13 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 14px;
-  color: var(--c-text-dark);
+  color: var(--text-secondary);
 }
 
 .support-card-desc {
   font-family: var(--font-body);
   font-size: 14px;
-  color: var(--c-text-dark-muted);
+  color: var(--text-body);
   line-height: 1.6;
 }
 
@@ -1805,7 +1843,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
    =================================================================== */
 .raceday-section {
   background-color: var(--c-midnight);
-  color: var(--c-text-white);
+  color: var(--text-light);
   padding: 140px 0;
   position: relative;
   overflow: hidden;
@@ -1851,7 +1889,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 8px;
 }
 
@@ -1860,7 +1898,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.06em;
-  color: #FFFFFF;
+  color: var(--text-light);
 }
 
 /* Live Countdown Component */
@@ -1881,7 +1919,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 36px;
-  color: var(--c-text-white);
+  color: var(--text-light);
 }
 
 .countdown-units-grid {
@@ -1904,7 +1942,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-size: clamp(48px, 6.5vw, 84px);
   font-weight: 900;
   line-height: 1;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   text-shadow: 0 0 30px rgba(243, 154, 82, 0.5);
 }
 
@@ -1914,7 +1952,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(248, 244, 237, 0.7);
+  color: var(--text-light-muted);
   margin-top: 8px;
 }
 
@@ -1922,7 +1960,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: 40px;
   font-weight: 700;
-  color: rgba(243, 154, 82, 0.4);
+  color: rgba(233, 120, 39, 0.4);
   margin-top: -20px;
 }
 
@@ -1940,7 +1978,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
    =================================================================== */
 .gallery-section {
   background-color: var(--c-soft-cream);
-  color: var(--c-text-dark);
+  color: var(--text-primary);
   padding: 140px 0;
 }
 
@@ -1963,12 +2001,12 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   letter-spacing: 0.12em;
   cursor: pointer;
   transition: all 0.25s ease;
-  color: var(--c-text-dark);
+  color: var(--text-secondary);
 }
 
 .filter-pill:hover, .filter-pill.active {
   background: var(--c-terracotta);
-  color: #FFFFFF;
+  color: var(--text-light);
   border-color: var(--c-terracotta);
 }
 
@@ -2021,7 +2059,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   padding: 24px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  color: #FFFFFF;
+  color: var(--text-light);
 }
 
 .photo-wall-card:hover .photo-wall-hover {
@@ -2034,7 +2072,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 /* Runner Testimonial Quote Cards */
@@ -2059,7 +2097,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 .story-quote-mark {
   font-family: var(--font-display);
   font-size: 54px;
-  color: var(--c-terracotta);
+  color: var(--text-accent-warm);
   line-height: 0.8;
   margin-bottom: 12px;
 }
@@ -2068,7 +2106,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.7;
-  color: var(--c-text-dark);
+  color: var(--text-body);
   font-style: italic;
   margin-bottom: 28px;
 }
@@ -2093,14 +2131,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
-  color: var(--c-text-dark);
+  color: var(--text-secondary);
 }
 
 .author-sub {
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 600;
-  color: var(--c-terracotta);
+  color: var(--text-accent-warm);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -2120,7 +2158,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
    =================================================================== */
 .partners-section {
   background-color: var(--c-warm-ivory);
-  color: var(--c-text-dark);
+  color: var(--text-primary);
   padding: 140px 0;
 }
 
@@ -2156,7 +2194,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--c-terracotta);
+  color: var(--text-accent-warm);
   margin-bottom: 12px;
 }
 
@@ -2178,7 +2216,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: 14px;
   font-weight: 700;
-  color: var(--c-warm-brown);
+  color: var(--text-muted);
   letter-spacing: 0.12em;
 }
 
@@ -2196,7 +2234,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   padding: 16px 36px;
   border-radius: 4px;
   background: var(--c-warm-brown);
-  color: #FFFFFF;
+  color: var(--text-light);
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 800;
@@ -2223,7 +2261,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
    =================================================================== */
 .faq-section {
   background-color: var(--c-charcoal-deep);
-  color: var(--c-text-white);
+  color: var(--text-light);
   padding: 140px 0;
 }
 
@@ -2257,13 +2295,13 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 17px;
   font-weight: 700;
-  color: var(--c-text-white);
+  color: var(--text-light);
   cursor: pointer;
 }
 
 .faq-icon-arrow {
   font-size: 20px;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   transition: transform 0.3s ease;
 }
 
@@ -2276,7 +2314,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   overflow: hidden;
   transition: max-height 0.35s ease, padding 0.35s ease;
   padding: 0 28px;
-  color: rgba(248, 244, 237, 0.8);
+  color: var(--text-light-secondary);
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.7;
@@ -2300,7 +2338,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   justify-content: center;
   overflow: hidden;
   background: #17191C;
-  color: var(--c-text-white);
+  color: var(--text-light);
   text-align: center;
 }
 
@@ -2347,7 +2385,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 20px;
 }
 
@@ -2359,7 +2397,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   text-transform: uppercase;
   line-height: 1.05;
   margin-bottom: 24px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F5EFE5 45%, #F39A52 100%);
+  background: linear-gradient(180deg, var(--text-light) 0%, #F5EFE5 45%, var(--text-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.95));
@@ -2390,7 +2428,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 800;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(248, 244, 237, 0.7);
+  color: var(--text-light-muted);
 }
 
 /* ===================================================================
@@ -2398,7 +2436,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
    =================================================================== */
 .main-footer {
   background: #0f1114;
-  color: rgba(248, 244, 237, 0.65);
+  color: var(--text-light-muted);
   padding: 80px 0 40px;
   border-top: 1px solid rgba(243, 154, 82, 0.15);
   font-size: 13px;
@@ -2415,7 +2453,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-light);
   letter-spacing: 0.1em;
   margin-bottom: 12px;
 }
@@ -2426,7 +2464,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 20px;
 }
 
@@ -2438,7 +2476,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .footer-nav-links a:hover {
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
 }
 
 .footer-bottom-bar {
@@ -2484,7 +2522,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 
 .modal-dialog {
   background: #17191C;
-  color: var(--c-text-white);
+  color: var(--text-light);
   border-radius: 14px;
   border: 1px solid rgba(243, 154, 82, 0.3);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
@@ -2509,7 +2547,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
-  color: #FFF;
+  color: var(--text-light);
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -2559,7 +2597,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--c-sunrise-orange);
+  color: var(--text-accent);
   margin-bottom: 8px;
 }
 
@@ -2569,7 +2607,7 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   background: rgba(32, 39, 51, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
-  color: #FFF;
+  color: var(--text-light);
   font-family: var(--font-body);
   font-size: 14px;
   transition: border-color 0.25s ease;
@@ -2648,13 +2686,13 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
-  color: #FFF;
+  color: var(--text-light);
 }
 
 .sticky-mobile-cta .btn-mobile-register {
   padding: 10px 22px;
   background: linear-gradient(135deg, var(--c-terracotta), var(--c-burnt-orange));
-  color: #FFF;
+  color: var(--text-light);
   border-radius: 4px;
   font-family: var(--font-heading);
   font-size: 11px;
@@ -2699,3 +2737,18 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
     padding-bottom: 80px;
   }
 }
+
+
+/* ===================================================================
+   Brand Text Hierarchy Utility Classes
+   =================================================================== */
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-body { color: var(--text-body) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.text-accent { color: var(--text-accent) !important; }
+.text-accent-warm { color: var(--text-accent-warm) !important; }
+
+.text-light { color: var(--text-light) !important; }
+.text-light-secondary { color: var(--text-light-secondary) !important; }
+.text-light-muted { color: var(--text-light-muted) !important; }
