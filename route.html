@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Route & Experience | Vijayawada Runners 10th Landmark Edition</title>
+  <meta name="description" content="Explore the official architectural course map of the 10th Landmark Edition Vijayawada Marathon. Trace the Prakasam Barrage and Krishna Riverfront with live telemetry.">
+
+  <!-- Curated Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Strict Tri-Color Harmony Stylesheet -->
+  <link rel="stylesheet" href="css/landmark10.css">
+</head>
+<body>
+
+  <!-- PAGE TRANSITION CURTAIN -->
+  <div class="transition-curtain" id="transition-curtain" aria-hidden="true">
+    <div class="curtain-layer-cream"></div>
+    <div class="curtain-layer-blue">
+      <div class="curtain-text">THE ROUTE • PRAKASAM BARRAGE</div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="site-nav" id="site-nav" aria-label="Main Navigation">
+    <a href="index.html" class="nav-brand" aria-label="Vijayawada Runners Home">
+      <img src="images/logo.png" alt="Vijayawada Runners Emblem" width="44" height="44">
+      <div class="brand-text-col">
+        <span class="brand-title">VIJAYAWADA RUNNERS</span>
+        <span class="brand-edition-tag">10TH LANDMARK EDITION • 2026</span>
+      </div>
+    </a>
+
+    <div class="nav-links-cluster">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="legacy.html" class="nav-link">The Legacy</a>
+      <a href="races.html" class="nav-link">Races</a>
+      <a href="route.html" class="nav-link active">Route</a>
+      <a href="community.html" class="nav-link">Community</a>
+      <a href="safety.html" class="nav-link">Safety</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+    </div>
+
+        <div class="nav-actions">
+      <button type="button" class="btn-nav-register btn-open-register" data-category="21.1k">
+        <i class="fa-solid fa-ticket"></i> ENTER THE RACE
+      </button>
+
+      <button type="button" class="mobile-nav-btn btn-open-register" data-category="21.1k" aria-label="Open Registration">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SUBPAGE HERO: THE ROUTE -->
+  <header class="subpage-hero">
+    <div class="subpage-hero-bg">
+      <img src="images/hero_dawn_runner.jpg" alt="Prakasam Barrage route">
+    </div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="subpage-hero-content">
+      <div class="subpage-breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>The Route</span>
+      </div>
+      <div class="hero-eyebrow-pill reveal-on-scroll is-visible" style="margin-bottom: 16px;">
+        <span class="hero-eyebrow-pulse" aria-hidden="true"></span>
+        <span>ARCHITECTURAL TOPOGRAPHY • FAST & SCENIC</span>
+      </div>
+      <h1 class="subpage-title reveal-on-scroll is-visible">
+        CONQUER THE <span style="color: var(--red);">KRISHNA</span>
+      </h1>
+      <p class="subpage-subtitle reveal-on-scroll is-visible">
+        An epic riverfront circuit traversing the historic Prakasam Barrage. Experience cool river currents, flat asphalt straightaways, and high-energy cheer miles.
+      </p>
+    </div>
+  </header>
+
+  <!-- KINETIC PARALLAX RAIL -->
+  <div class="kinetic-rail-wrap" aria-hidden="true">
+    <div class="kinetic-rail kinetic-rail-dark" data-speed="0.38">
+      <span>PRAKASAM BARRAGE</span>
+      <span class="kinetic-accent">•</span>
+      <span>KANAKA DURGA GHAT</span>
+      <span class="kinetic-accent">•</span>
+      <span>KRISHNA RIVERFRONT</span>
+      <span class="kinetic-accent">•</span>
+      <span>TADEPALLI HIGHWAY</span>
+      <span class="kinetic-accent">•</span>
+      <span>BENZ CIRCLE RETURN</span>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE SVG ROUTE & FEATURES SECTION -->
+  <section class="section-route" id="route" style="padding-top: 100px;">
+    <div class="route-container">
+      <div class="route-header-block reveal-on-scroll">
+        <div>
+          <div class="route-eyebrow">
+            <i class="fa-solid fa-route"></i> INTERACTIVE VECTOR MAP
+          </div>
+          <h2 class="route-title">COURSE TELEMETRY & ELEVATION</h2>
+        </div>
+
+        <!-- Distance Switcher Pills -->
+        <div class="route-selector-buttons" role="tablist">
+          <button type="button" class="btn-route-switch active" data-route="21.1k">21.1K BARRAGE</button>
+          <button type="button" class="btn-route-switch" data-route="10k">10K RIVERFRONT</button>
+          <button type="button" class="btn-route-switch" data-route="5k">05K CANAL</button>
+        </div>
+      </div>
+
+      <!-- Route Interactive Grid: Map + Features -->
+      <div class="route-interactive-grid">
+        
+        <!-- Architectural SVG Canvas Map -->
+        <div class="route-map-viewport reveal-on-scroll" id="map-viewport">
+          <svg viewBox="0 0 1000 750" class="route-svg-canvas" id="route-vector-canvas" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="arch-grid-rt" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(245, 245, 220, 0.05)" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="1000" height="750" fill="url(#arch-grid-rt)" />
+
+            <!-- KRISHNA RIVER MEANDER -->
+            <path class="map-river-shape" d="M 0 350 C 200 370, 320 400, 480 370 C 640 340, 780 280, 1000 320 L 1000 520 C 800 480, 640 520, 460 560 C 300 590, 150 560, 0 540 Z" />
+            
+            <!-- River Contour Waves -->
+            <path class="map-river-contour" d="M 20 420 C 220 435, 340 455, 500 430 C 660 405, 780 360, 980 390" />
+            <path class="map-river-contour" d="M 10 470 C 200 485, 330 500, 480 480 C 650 455, 760 420, 990 450" />
+
+            <!-- Arterial Roadways -->
+            <path class="map-road-grid" d="M 150 120 L 320 280 L 320 700" />
+            <path class="map-road-grid" d="M 320 280 L 850 180" />
+            <path class="map-road-grid" d="M 320 280 L 580 440 L 880 580" />
+            <path class="map-road-grid" d="M 50 680 L 400 540 L 750 680" />
+
+            <!-- PRAKASAM BARRAGE STRUCTURE -->
+            <line x1="380" y1="340" x2="420" y2="580" class="map-barrage-structure" />
+            <g stroke="rgba(245, 245, 220, 0.4)" stroke-width="2">
+              <line x1="385" y1="360" x2="395" y2="362" />
+              <line x1="389" y1="390" x2="399" y2="392" />
+              <line x1="393" y1="420" x2="403" y2="422" />
+              <line x1="397" y1="450" x2="407" y2="452" />
+              <line x1="401" y1="480" x2="411" y2="482" />
+              <line x1="405" y1="510" x2="415" y2="512" />
+              <line x1="409" y1="540" x2="419" y2="542" />
+            </g>
+
+            <!-- WAYPOINT LANDMARKS -->
+            <circle cx="380" cy="340" r="8" fill="var(--red)" stroke="var(--cream)" stroke-width="2" />
+            <text x="360" y="318" class="map-label">PRAKASAM BARRAGE</text>
+            <text x="360" y="330" class="map-label-sub">FLAG-OFF & FINISH GAUNTLET</text>
+
+            <circle cx="750" cy="200" r="5" fill="var(--cream)" />
+            <text x="765" y="200" class="map-label">BENZ CIRCLE</text>
+            <text x="765" y="212" class="map-label-sub">HISTORIC CHEER MILE</text>
+
+            <circle cx="280" cy="300" r="5" fill="var(--cream)" />
+            <text x="200" y="295" class="map-label">KANAKA DURGA GHAT</text>
+            <text x="200" y="307" class="map-label-sub">KM 4 WATER HUB</text>
+
+            <text x="560" y="365" class="map-label" style="fill: rgba(245, 245, 220, 0.45); font-size: 13px;">KRISHNA RIVER</text>
+
+            <circle cx="860" cy="540" r="5" fill="var(--cream)" />
+            <text x="875" y="540" class="map-label">HIGHWAY LOOP</text>
+            <text x="875" y="552" class="map-label-sub">KM 14.5 TIMING SPLIT</text>
+
+            <!-- RACE RED DYNAMIC DRAWING PATH -->
+            <path id="svg-race-path-21k" class="route-race-path" d="M 180 230 C 230 250, 270 265, 320 280 C 390 300, 470 320, 540 338 C 610 355, 680 380, 740 415 C 800 450, 840 490, 860 540 C 880 590, 850 630, 790 650 C 720 670, 630 650, 570 610 C 500 565, 440 500, 390 440 C 340 380, 270 320, 220 280 Z" />
+
+            <!-- Animated Runner Beacon Pin -->
+            <g id="runner-beacon-group" class="runner-beacon-group" transform="translate(180, 230)">
+              <circle class="runner-beacon-pulse" cx="0" cy="0" r="16" />
+              <circle class="runner-beacon-core" cx="0" cy="0" r="7" />
+            </g>
+          </svg>
+
+          <!-- Telemetry HUD Overlay -->
+          <div class="map-hud-telemetry" aria-hidden="true">
+            <div>
+              <div class="hud-km-display" id="hud-km-val">0.0 KM</div>
+              <div class="hud-elevation" id="hud-elevation-val">+42M MAX GRADIENT</div>
+            </div>
+            <div style="border-left: 1px solid var(--cream-border); padding-left: 14px;">
+              <span style="font-size: 0.68rem; color: var(--red); text-transform: uppercase; font-weight: 700;">LIVE TELEMETRY</span>
+              <div style="font-size: 0.78rem; color: var(--cream);">PRAKASAM COURSE</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Features Panel -->
+        <div class="route-features-stack">
+          <div class="feature-float-card reveal-on-scroll">
+            <div class="feature-card-header">
+              <div class="feature-icon-wrapper"><i class="fa-solid fa-seedling"></i></div>
+              <h3 class="feature-title">Eco-Plogging Stations</h3>
+            </div>
+            <p class="feature-desc">
+              Clean running with zero waste along the sacred Krishna banks. Designated volunteer green zones collect and segregate post-race energy gel wrappers, fruit skins, and cartons for 100% eco-reprocessing.
+            </p>
+          </div>
+
+          <div class="feature-float-card reveal-on-scroll">
+            <div class="feature-card-header">
+              <div class="feature-icon-wrapper"><i class="fa-solid fa-droplet"></i></div>
+              <h3 class="feature-title">Zero-Single-Use-Plastic Hydration</h3>
+            </div>
+            <p class="feature-desc">
+              18 high-throughput hydration hubs serving biodegradable sugarcane fiber cups, mineralized electrolyte solutions, and iced orange wedges. Continuous flow water refill pods stationed every 1.5 KM.
+            </p>
+          </div>
+
+          <div class="feature-float-card reveal-on-scroll">
+            <div class="feature-card-header">
+              <div class="feature-icon-wrapper"><i class="fa-solid fa-kit-medical"></i></div>
+              <h3 class="feature-title">Advanced On-Route Medical Grid</h3>
+            </div>
+            <p class="feature-desc">
+              In partnership with Latha Super Speciality Hospitals: 6 mobile cardiac ICU ambulances, 40 paramedical roving pacers equipped with AEDs, and 3 base triage recovery hubs at Barrage, Highway, and Finish.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KM-BY-KM COURSE LOGISTICS TABLE -->
+  <section class="page-section page-section-cream">
+    <div class="section-container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="legacy-section-eyebrow"><i class="fa-solid fa-list-check"></i> MILEAGE BREAKDOWN</div>
+        <h2 style="font-family: var(--font-display); font-size: clamp(2.8rem, 5vw, 4.6rem); color: var(--navy); line-height: 0.95; margin-bottom: 30px;">
+          KM-BY-KM COURSE <span style="color: var(--red);">WAYPOINTS</span>
+        </h2>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="background: rgba(10, 25, 47, 0.04); border: 1.5px solid var(--navy); border-radius: 16px; padding: 20px 24px; display: grid; grid-template-columns: 80px 1fr 180px; align-items: center; gap: 20px;">
+            <div style="font-family: var(--font-display); font-size: 2rem; color: var(--red);">0.0K</div>
+            <div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--navy);">Prakasam Barrage North Head</h4>
+              <p style="font-size: 0.88rem; color: rgba(10, 25, 47, 0.75);">Main Flag-Off Gauntlet, Timing Mats, Emergency Base Triage.</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--navy); background: rgba(10, 25, 47, 0.08); padding: 6px 12px; border-radius: 999px; text-align: center;">START LINE</span>
+          </div>
+
+          <div style="background: rgba(10, 25, 47, 0.04); border: 1.5px solid var(--navy); border-radius: 16px; padding: 20px 24px; display: grid; grid-template-columns: 80px 1fr 180px; align-items: center; gap: 20px;">
+            <div style="font-family: var(--font-display); font-size: 2rem; color: var(--navy);">2.0K</div>
+            <div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--navy);">Sitaramapuram Lock Gates</h4>
+              <p style="font-size: 0.88rem; color: rgba(10, 25, 47, 0.75);">Hydration Hub 1, Fast&Up Electrolyte, Cardiac Paramedic post.</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--red); background: rgba(230, 57, 70, 0.1); padding: 6px 12px; border-radius: 999px; text-align: center;">WATER & AID</span>
+          </div>
+
+          <div style="background: rgba(10, 25, 47, 0.04); border: 1.5px solid var(--navy); border-radius: 16px; padding: 20px 24px; display: grid; grid-template-columns: 80px 1fr 180px; align-items: center; gap: 20px;">
+            <div style="font-family: var(--font-display); font-size: 2rem; color: var(--navy);">5.0K</div>
+            <div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--navy);">Kanaka Durga River Ghat</h4>
+              <p style="font-size: 0.88rem; color: rgba(10, 25, 47, 0.75);">5K Finish Turnaround, Energy gels, Folk percussion cheer squad.</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--navy); background: rgba(10, 25, 47, 0.08); padding: 6px 12px; border-radius: 999px; text-align: center;">TIMING MAT 1</span>
+          </div>
+
+          <div style="background: rgba(10, 25, 47, 0.04); border: 1.5px solid var(--navy); border-radius: 16px; padding: 20px 24px; display: grid; grid-template-columns: 80px 1fr 180px; align-items: center; gap: 20px;">
+            <div style="font-family: var(--font-display); font-size: 2rem; color: var(--navy);">10.0K</div>
+            <div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--navy);">Bhavanipuram Promenade Loop</h4>
+              <p style="font-size: 0.88rem; color: rgba(10, 25, 47, 0.75);">10K Challenge Finish Split, Ice sponges, Fruit slices, Mobile Physio.</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--navy); background: rgba(10, 25, 47, 0.08); padding: 6px 12px; border-radius: 999px; text-align: center;">TIMING MAT 2</span>
+          </div>
+
+          <div style="background: rgba(10, 25, 47, 0.04); border: 1.5px solid var(--navy); border-radius: 16px; padding: 20px 24px; display: grid; grid-template-columns: 80px 1fr 180px; align-items: center; gap: 20px;">
+            <div style="font-family: var(--font-display); font-size: 2rem; color: var(--navy);">14.5K</div>
+            <div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--navy);">Tadepalli Highway Turnaround</h4>
+              <p style="font-size: 0.88rem; color: rgba(10, 25, 47, 0.75);">Half Marathon U-Turn, Highway Cheer Corridor, Red FM DJ stage.</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--red); background: rgba(230, 57, 70, 0.1); padding: 6px 12px; border-radius: 999px; text-align: center;">MIDWAY U-TURN</span>
+          </div>
+
+          <div style="background: rgba(10, 25, 47, 0.04); border: 1.5px solid var(--navy); border-radius: 16px; padding: 20px 24px; display: grid; grid-template-columns: 80px 1fr 180px; align-items: center; gap: 20px;">
+            <div style="font-family: var(--font-display); font-size: 2rem; color: var(--red);">21.1K</div>
+            <div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--navy);">Prakasam Barrage Grand Finish</h4>
+              <p style="font-size: 0.88rem; color: rgba(10, 25, 47, 0.75);">Finisher Arch, Die-Cast 10th Medal Presentation, Hot Breakfast Zone.</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--cream); background: var(--red); padding: 6px 12px; border-radius: 999px; text-align: center;">FINISH LINE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXED LOGISTICS DATA BAR -->
+  <aside class="logistics-data-bar" aria-label="Event Logistics and Countdown">
+    <div class="logistics-core-data">
+      <span class="logistics-segment"><i class="fa-regular fa-calendar-check icon-accent"></i> 06.12.2026</span>
+      <span class="logistics-divider">|</span>
+      <span class="logistics-segment">SUNDAY</span>
+      <span class="logistics-divider">|</span>
+      <span class="logistics-segment"><i class="fa-regular fa-clock icon-accent"></i> 05:00 AM IST</span>
+      <span class="logistics-divider">|</span>
+      <span class="logistics-segment"><i class="fa-solid fa-location-dot icon-accent"></i> PRAKASAM BARRAGE</span>
+    </div>
+    <div class="logistics-countdown-group">
+      <span class="countdown-label">FLAG-OFF IN:</span>
+      <div class="countdown-digits">
+        <div class="countdown-unit"><span id="count-days">--</span> <span>D</span></div>
+        <span>:</span>
+        <div class="countdown-unit"><span id="count-hours">--</span> <span>H</span></div>
+        <span>:</span>
+        <div class="countdown-unit"><span id="count-mins">--</span> <span>M</span></div>
+        <span>:</span>
+        <div class="countdown-unit"><span id="count-secs">--</span> <span>S</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SUPER-FOOTER -->
+  <footer class="super-footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-giant-callout reveal-on-scroll">
+        <h2 class="footer-screen-headline">SEE YOU AT THE START LINE<span class="accent-dot">.</span></h2>
+      </div>
+      <div class="footer-links-grid">
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-person-walking"></i> The Walk</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="races.html">5K Family Fun Walk</a></li>
+            <li class="footer-nav-item"><a href="route.html">Krishna Riverfront Stride</a></li>
+            <li class="footer-nav-item"><a href="races.html">Eco-Plogging Walk</a></li>
+            <li class="footer-nav-item"><a href="races.html">Senior Citizens Joy Lap</a></li>
+            <li class="footer-nav-item"><a href="races.html">Kids 3K Dash</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-clock-rotate-left"></i> Legacy</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="legacy.html">2017 Benz Circle First Steps</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">2019 Prakasam Barrage Odyssey</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">2022 Pacer Bus Fleet</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">10th Finisher Medal Story</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">Vijayawada Runners Hall of Fame</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-flag-checkered"></i> Races</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="races.html">21.1K Half Marathon</a></li>
+            <li class="footer-nav-item"><a href="races.html">10K Timed Challenge</a></li>
+            <li class="footer-nav-item"><a href="races.html">05K Fitness Joy Run</a></li>
+            <li class="footer-nav-item"><a href="races.html">Corporate Relay Trophy</a></li>
+            <li class="footer-nav-item"><a href="races.html">Age Group Podium Awards</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-map"></i> Route</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="route.html">Prakasam Barrage Map</a></li>
+            <li class="footer-nav-item"><a href="route.html">Elevation & Incline Profile</a></li>
+            <li class="footer-nav-item"><a href="route.html">18 Water & Electrolyte Stations</a></li>
+            <li class="footer-nav-item"><a href="route.html">Cheer Mile Spectator Spots</a></li>
+            <li class="footer-nav-item"><a href="route.html">Race Day Traffic Closures</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-people-group"></i> Community</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="community.html">Benz Circle Chapter</a></li>
+            <li class="footer-nav-item"><a href="community.html">Bhavanipuram Riverfront</a></li>
+            <li class="footer-nav-item"><a href="community.html">Autonagar Runners Crew</a></li>
+            <li class="footer-nav-item"><a href="community.html">Meet the 2026 Pacer Fleet</a></li>
+            <li class="footer-nav-item"><a href="community.html">Volunteer Crew Registration</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-heart-pulse"></i> Safety</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="safety.html">Cardiac ICU Ambulances Grid</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Paramedic Roving Pacers</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Physio & Muscle Cramp Stations</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Emergency Toll-Free Helpline</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Weather & Hydration Advisory</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-camera"></i> Gallery</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="gallery.html">Landmark Dawn Photography</a></li>
+            <li class="footer-nav-item"><a href="gallery.html">Finish Line Emotions Archive</a></li>
+            <li class="footer-nav-item"><a href="gallery.html">Prakasam Barrage Drone Video</a></li>
+            <li class="footer-nav-item"><a href="gallery.html">Search Photos by Bib Number</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-circle-question"></i> FAQ</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="faq.html">Bib Expo Collection Timings</a></li>
+            <li class="footer-nav-item"><a href="faq.html">Baggage Drop & Holding Counter</a></li>
+            <li class="footer-nav-item"><a href="faq.html">Designated Parking Corridors</a></li>
+            <li class="footer-nav-item"><a href="faq.html">RFID Timing Certificate Download</a></li>
+            <li class="footer-nav-item"><a href="faq.html">Ticket Transfer & Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-org-meta">
+          © 2026 VIJAYAWADA RUNNERS SOCIETY. ALL RIGHTS RESERVED. <br>
+          REGISTERED NON-PROFIT ATHLETIC FOUNDATION • BENZ CIRCLE, VIJAYAWADA, AP 520010.
+        </div>
+        <div class="footer-social-row">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://strava.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="Strava"><i class="fa-brands fa-strava"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ROTATING BADGE -->
+  <div class="floating-register-badge magnetic-target" id="floating-badge" role="button" aria-label="Open Registration Modal">
+    <svg viewBox="0 0 100 100" class="badge-rotating-svg">
+      <defs>
+        <path id="badge-circle-path-rt" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+      </defs>
+      <text class="badge-text-path">
+        <textPath href="#badge-circle-path-rt" startOffset="0%">
+          10TH EDITION • REGISTER NOW • VIJAYAWADA 2026 •
+        </textPath>
+      </text>
+    </svg>
+    <div class="badge-inner-core">
+      <i class="fa-solid fa-person-running"></i>
+    </div>
+  </div>
+
+  <!-- REGISTRATION MODAL / DRAWER -->
+  <div class="reg-modal-backdrop" id="reg-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="reg-modal-window">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Registration Dialog"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header-block">
+        <span class="modal-tag">10TH LANDMARK EDITION REGISTRATION</span>
+        <h3 class="modal-title" id="modal-title">SECURE YOUR BIB</h3>
+      </div>
+      <div class="modal-category-picker" role="radiogroup">
+        <button type="button" class="modal-cat-btn selected" data-category="21.1k">
+          <div class="modal-cat-dist">21.1K</div>
+          <div style="font-size: 0.72rem; color: var(--cream-muted);">HALF MARATHON</div>
+          <div class="modal-cat-fee">₹1,450</div>
+        </button>
+        <button type="button" class="modal-cat-btn" data-category="10k">
+          <div class="modal-cat-dist">10K</div>
+          <div style="font-size: 0.72rem; color: var(--cream-muted);">TIMED RUN</div>
+          <div class="modal-cat-fee">₹1,150</div>
+        </button>
+        <button type="button" class="modal-cat-btn" data-category="5k">
+          <div class="modal-cat-dist">05K</div>
+          <div style="font-size: 0.72rem; color: var(--cream-muted);">JOY RUN</div>
+          <div class="modal-cat-fee">₹850</div>
+        </button>
+      </div>
+      <div class="bib-preview-card" aria-label="Custom Race Bib Preview">
+        <div>
+          <div class="bib-logo-meta">VIJAYAWADA RUNNERS • 10TH EDITION</div>
+          <div class="bib-runner-name" id="bib-name-val">YOUR NAME</div>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--navy); opacity: 0.7;">PRAKASAM BARRAGE CORRIDOR</div>
+        </div>
+        <div style="text-align: right;">
+          <div class="bib-number-display" id="bib-number-val">21482</div>
+          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--red); font-weight: 700;">RFID CHIP TIMED</div>
+        </div>
+      </div>
+      <form id="landmark-reg-form">
+        <div class="modal-form-grid">
+          <div class="form-field-group">
+            <label for="reg-fullname" class="form-label">Athlete Full Name</label>
+            <input type="text" id="reg-fullname" class="form-input" placeholder="e.g. Nivas Nani" required autocomplete="name">
+          </div>
+          <div class="form-field-group">
+            <label for="reg-email" class="form-label">Email Address</label>
+            <input type="email" id="reg-email" class="form-input" placeholder="runner@example.com" required autocomplete="email">
+          </div>
+          <div class="form-field-group">
+            <label for="reg-phone" class="form-label">Phone (WhatsApp for Bib SMS)</label>
+            <input type="tel" id="reg-phone" class="form-input" placeholder="+91 98765 43210" required autocomplete="tel">
+          </div>
+          <div class="form-field-group">
+            <label for="reg-tshirt" class="form-label">Dry-Fit Race T-Shirt Size</label>
+            <select id="reg-tshirt" class="form-select">
+              <option value="S">Small (38)</option>
+              <option value="M" selected>Medium (40)</option>
+              <option value="L">Large (42)</option>
+              <option value="XL">Extra Large (44)</option>
+              <option value="XXL">XXL (46)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-confirm-reg magnetic-target">
+          <i class="fa-solid fa-lock"></i> PROCEED TO INSTANT RESERVATION
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/landmark10.js"></script>
+</body>
+</html>

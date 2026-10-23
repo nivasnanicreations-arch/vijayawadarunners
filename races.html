@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race Categories & Registration | Vijayawada Runners 10th Landmark Edition</title>
+  <meta name="description" content="Select your race distance for the 10th Landmark Edition Vijayawada Marathon: 21.1K Half Marathon, 10K Timed Challenge, or 05K Fitness Joy Run. Certified chip timing and collector finisher medals.">
+
+  <!-- Curated Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Strict Tri-Color Harmony Stylesheet -->
+  <link rel="stylesheet" href="css/landmark10.css">
+</head>
+<body>
+
+  <!-- PAGE TRANSITION CURTAIN -->
+  <div class="transition-curtain" id="transition-curtain" aria-hidden="true">
+    <div class="curtain-layer-cream"></div>
+    <div class="curtain-layer-blue">
+      <div class="curtain-text">RACES • 21.1K | 10K | 05K</div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="site-nav" id="site-nav" aria-label="Main Navigation">
+    <a href="index.html" class="nav-brand" aria-label="Vijayawada Runners Home">
+      <img src="images/logo.png" alt="Vijayawada Runners Emblem" width="44" height="44">
+      <div class="brand-text-col">
+        <span class="brand-title">VIJAYAWADA RUNNERS</span>
+        <span class="brand-edition-tag">10TH LANDMARK EDITION • 2026</span>
+      </div>
+    </a>
+
+    <div class="nav-links-cluster">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="legacy.html" class="nav-link">The Legacy</a>
+      <a href="races.html" class="nav-link active">Races</a>
+      <a href="route.html" class="nav-link">Route</a>
+      <a href="community.html" class="nav-link">Community</a>
+      <a href="safety.html" class="nav-link">Safety</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+    </div>
+
+        <div class="nav-actions">
+      <button type="button" class="btn-nav-register btn-open-register" data-category="21.1k">
+        <i class="fa-solid fa-ticket"></i> ENTER THE RACE
+      </button>
+
+      <button type="button" class="mobile-nav-btn btn-open-register" data-category="21.1k" aria-label="Open Registration">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SUBPAGE HERO: RACES -->
+  <header class="subpage-hero">
+    <div class="subpage-hero-bg">
+      <img src="images/hero_dawn_runner.jpg" alt="Runner on Prakasam Barrage">
+    </div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="subpage-hero-content">
+      <div class="subpage-breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Race Categories</span>
+      </div>
+      <div class="hero-eyebrow-pill reveal-on-scroll is-visible" style="margin-bottom: 16px;">
+        <span class="hero-eyebrow-pulse" aria-hidden="true"></span>
+        <span>DISCIPLINE • ENDURANCE • REWARD</span>
+      </div>
+      <h1 class="subpage-title reveal-on-scroll is-visible">
+        SELECT YOUR <span style="color: var(--red);">DISTANCE</span>
+      </h1>
+      <p class="subpage-subtitle reveal-on-scroll is-visible">
+        Three certified courses along the Krishna River and Prakasam Barrage. Engineered for beginners seeking their first milestone to veteran pacers conquering personal records.
+      </p>
+    </div>
+  </header>
+
+  <!-- KINETIC PARALLAX RAIL -->
+  <div class="kinetic-rail-wrap" aria-hidden="true">
+    <div class="kinetic-rail kinetic-rail-dark" data-speed="0.4">
+      <span>21.1K HALF MARATHON</span>
+      <span class="kinetic-accent">•</span>
+      <span>10K TIMED CHALLENGE</span>
+      <span class="kinetic-accent">•</span>
+      <span>05K FITNESS JOY RUN</span>
+      <span class="kinetic-accent">•</span>
+      <span>RFID CHIP TIMED</span>
+      <span class="kinetic-accent">•</span>
+      <span>PRAKASAM BARRAGE</span>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE GLASSMORPHISM CARDS SECTION -->
+  <section class="section-categories" id="categories" style="padding-top: 100px;">
+    <div class="categories-container">
+      <div class="categories-header-cluster reveal-on-scroll">
+        <div>
+          <div class="categories-eyebrow">
+            <i class="fa-solid fa-cubes"></i> THREE TIERS OF GLORY
+          </div>
+          <h2 class="categories-main-title">OFFICIAL RACE CATEGORIES</h2>
+        </div>
+        <p class="categories-header-note">
+          Hover over each card to reveal race specifications, elevation gradients, and prize qualifications. Tap any card to open instant bib booking.
+        </p>
+      </div>
+
+      <!-- Asymmetrical 3-Card Grid -->
+      <div class="categories-asym-grid">
+
+        <!-- 05K FITNESS -->
+        <article class="race-card magnetic-target reveal-on-scroll" data-category="5k">
+          <div>
+            <div class="card-top-row">
+              <span class="card-distance-badge">05K</span>
+              <span class="card-tag-pill">JOY RUN</span>
+            </div>
+            <div class="card-title-group">
+              <h3 class="card-race-title">05K FITNESS</h3>
+              <div class="card-tagline">Flat Scenic Canal Route</div>
+            </div>
+            <div class="card-specs-list">
+              <div class="card-spec-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Flag-off: <strong>06:30 AM IST</strong> (60 Min Cutoff)</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <span>Elevation: Flat scenic canal embankment (+6m)</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-medal"></i>
+                <span>Commemorative Finisher Medal & Certificate</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-utensils"></i>
+                <span>Hot nutritious riverfront runners breakfast</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Ideal for families, youth, and beginner striders</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card-slot-tracker">
+              <div class="slot-meta">
+                <span>Slots Filled</span>
+                <span>88% Full</span>
+              </div>
+              <div class="slot-progress-bar">
+                <div class="slot-progress-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+            <div class="card-bottom-cluster">
+              <div class="card-price-block">
+                <span class="card-price-value">₹850</span>
+                <span class="card-price-label">ENTRY FEE</span>
+              </div>
+              <button type="button" class="btn-card-register btn-open-register" data-category="5k">
+                REGISTER 05K <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10K TIMED -->
+        <article class="race-card magnetic-target reveal-on-scroll" data-category="10k">
+          <div>
+            <div class="card-top-row">
+              <span class="card-distance-badge">10K</span>
+              <span class="card-tag-pill">TIMED CHALLENGE</span>
+            </div>
+            <div class="card-title-group">
+              <h3 class="card-race-title">10K TIMED</h3>
+              <div class="card-tagline">Running Enthusiasts</div>
+            </div>
+            <div class="card-specs-list">
+              <div class="card-spec-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Flag-off: <strong>06:00 AM IST</strong> (1h 45m Cutoff)</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span>+24m Riverfront gradient challenge course</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-microchip"></i>
+                <span>RFID Bib Chip Timing with instant SMS split</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-bus"></i>
+                <span>Official Pacer Buses (50m, 55m, 60m, 65m, 70m)</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-trophy"></i>
+                <span>₹75,000 Cash Podium Awards across Age Groups</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card-slot-tracker">
+              <div class="slot-meta">
+                <span>Slots Filled</span>
+                <span>79% Full</span>
+              </div>
+              <div class="slot-progress-bar">
+                <div class="slot-progress-fill" style="width: 79%;"></div>
+              </div>
+            </div>
+            <div class="card-bottom-cluster">
+              <div class="card-price-block">
+                <span class="card-price-value">₹1,150</span>
+                <span class="card-price-label">TIMED ENTRY</span>
+              </div>
+              <button type="button" class="btn-card-register btn-open-register" data-category="10k">
+                REGISTER 10K <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 21.1K HALF MARATHON (Featured Landmark) -->
+        <article class="race-card featured-card magnetic-target reveal-on-scroll" data-category="21.1k">
+          <div>
+            <div class="card-top-row">
+              <span class="card-distance-badge" style="color: var(--red);">21.1K</span>
+              <span class="card-tag-pill" style="border: 1px solid var(--red); color: var(--red);">LANDMARK RACE</span>
+            </div>
+            <div class="card-title-group">
+              <h3 class="card-race-title">21.1K HALF MARATHON</h3>
+              <div class="card-tagline">Endurance Pilgrimage</div>
+            </div>
+            <div class="card-specs-list">
+              <div class="card-spec-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Flag-off: <strong>05:00 AM IST</strong> (3h 30m Cutoff)</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-bridge-water"></i>
+                <span>Prakasam Barrage & Highway River Loop (+42m)</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-medal"></i>
+                <span>Heavy 10th Edition Metallic Collector Finisher Medal</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-trophy"></i>
+                <span>₹1,50,000 Cash Purse for Top Open & Masters Finishers</span>
+              </div>
+              <div class="card-spec-item">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Premium Technical Dry-Fit Landmark Race Jersey</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card-slot-tracker">
+              <div class="slot-meta">
+                <span>Slots Filled</span>
+                <span style="color: var(--red); font-weight: 700;">92% Full</span>
+              </div>
+              <div class="slot-progress-bar">
+                <div class="slot-progress-fill" style="width: 92%; background: var(--red);"></div>
+              </div>
+            </div>
+            <div class="card-bottom-cluster">
+              <div class="card-price-block">
+                <span class="card-price-value">₹1,450</span>
+                <span class="card-price-label">CHIP TIMED • 10TH MEDAL</span>
+              </div>
+              <button type="button" class="btn-card-register btn-open-register" data-category="21.1k">
+                ENTER 21.1K <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINISHER MEDAL & RUNNER REWARDS SHOWCASE -->
+  <section class="page-section page-section-cream">
+    <div class="section-container">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center;">
+        <div class="reveal-on-scroll">
+          <div style="border-radius: 24px; overflow: hidden; border: 3px solid var(--navy); box-shadow: 0 24px 60px rgba(10, 25, 47, 0.2); background: var(--navy);">
+            <img src="images/landmark_finisher_medal.jpg" alt="10th Landmark Edition Metallic Finisher Medal" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <div class="reveal-on-scroll">
+          <div class="legacy-section-eyebrow">
+            <i class="fa-solid fa-award"></i> THE 10TH EDITION KEEPSAKE
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2.8rem, 5vw, 4.8rem); line-height: 0.95; color: var(--navy); margin-bottom: 20px;">
+            DIE-CAST COLLECTOR <span style="color: var(--red);">FINISHER MEDAL</span>
+          </h2>
+          <p style="font-size: 1.05rem; color: rgba(10, 25, 47, 0.82); line-height: 1.65; margin-bottom: 24px;">
+            Forged in antique brushed brass with deep crimson race red enamel inlay. Embossed with 3D architectural relief of the 70 locks of Prakasam Barrage and the rolling currents of Krishna River.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px;">
+            <div style="background: rgba(10, 25, 47, 0.05); border: 1px solid var(--navy); border-radius: 14px; padding: 18px;">
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--red); font-weight: 700; text-transform: uppercase;">WEIGHT & BUILD</div>
+              <div style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--navy);">140g Heavy Metal</div>
+            </div>
+            <div style="background: rgba(10, 25, 47, 0.05); border: 1px solid var(--navy); border-radius: 14px; padding: 18px;">
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--red); font-weight: 700; text-transform: uppercase;">RIBBON LANYARD</div>
+              <div style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--navy);">Woven Navy & Red Gold</div>
+            </div>
+          </div>
+          <button type="button" class="btn-enter-race magnetic-target btn-open-register" data-category="21.1k" style="background-color: var(--navy); border-color: var(--navy); color: var(--cream);">
+            <span>CLAIM YOUR MEDAL</span>
+            <span class="btn-arrow" style="background: rgba(245, 245, 220, 0.15);"><i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASH AWARDS & PRIZE PURSE MATRIX -->
+  <section class="page-section page-section-deep">
+    <div class="section-container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;" class="reveal-on-scroll">
+        <div class="categories-eyebrow"><i class="fa-solid fa-trophy"></i> PODIUM PURSE</div>
+        <h2 style="font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 5.2rem); color: var(--cream); line-height: 0.95;">
+          ₹2,25,000 TOTAL <span style="color: var(--red);">CASH PRIZES</span>
+        </h2>
+        <p style="color: var(--cream-muted); font-size: 1rem; margin-top: 14px;">
+          Honoring athletic supremacy across Open Men, Open Women, and Veteran Masters categories. Awarded immediately following verified chip timing mat verification.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px;" class="reveal-on-scroll">
+        <!-- 21.1K Half Marathon Purse -->
+        <div style="background: var(--navy-card); border: 2px solid var(--cream-border); border-radius: 24px; padding: 36px 32px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--cream-border); padding-bottom: 16px;">
+            <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--red);">21.1K OPEN (MEN & WOMEN)</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--cream); background: rgba(230, 57, 70, 0.2); padding: 4px 12px; border-radius: 999px;">₹1,50,000 PURSE</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-family: var(--font-mono); font-size: 0.95rem;">
+            <div style="display: flex; justify-content: space-between; color: var(--cream); padding: 8px 0; border-bottom: 1px dashed var(--cream-faint);">
+              <span>🥇 1st Place Champion</span>
+              <strong style="color: var(--red);">₹35,000 + Trophy</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: var(--cream-dim); padding: 8px 0; border-bottom: 1px dashed var(--cream-faint);">
+              <span>🥈 2nd Place Runner-up</span>
+              <strong>₹25,000 + Trophy</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: var(--cream-dim); padding: 8px 0; border-bottom: 1px dashed var(--cream-faint);">
+              <span>🥉 3rd Place Podium</span>
+              <strong>₹15,000 + Trophy</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: var(--cream-muted); padding: 8px 0;">
+              <span>🎖️ Masters 45+ Category 1st</span>
+              <strong>₹15,000</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10K Timed Challenge Purse -->
+        <div style="background: var(--navy-card); border: 2px solid var(--cream-border); border-radius: 24px; padding: 36px 32px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--cream-border); padding-bottom: 16px;">
+            <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--cream);">10K TIMED (MEN & WOMEN)</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--cream); background: rgba(245, 245, 220, 0.1); padding: 4px 12px; border-radius: 999px;">₹75,000 PURSE</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-family: var(--font-mono); font-size: 0.95rem;">
+            <div style="display: flex; justify-content: space-between; color: var(--cream); padding: 8px 0; border-bottom: 1px dashed var(--cream-faint);">
+              <span>🥇 1st Place Champion</span>
+              <strong style="color: var(--red);">₹20,000 + Trophy</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: var(--cream-dim); padding: 8px 0; border-bottom: 1px dashed var(--cream-faint);">
+              <span>🥈 2nd Place Runner-up</span>
+              <strong>₹12,000 + Trophy</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: var(--cream-dim); padding: 8px 0; border-bottom: 1px dashed var(--cream-faint);">
+              <span>🥉 3rd Place Podium</span>
+              <strong>₹8,000 + Trophy</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: var(--cream-muted); padding: 8px 0;">
+              <span>🎖️ Junior U-18 Category 1st</span>
+              <strong>₹7,500</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXED LOGISTICS DATA BAR -->
+  <aside class="logistics-data-bar" aria-label="Event Logistics and Countdown">
+    <div class="logistics-core-data">
+      <span class="logistics-segment"><i class="fa-regular fa-calendar-check icon-accent"></i> 06.12.2026</span>
+      <span class="logistics-divider">|</span>
+      <span class="logistics-segment">SUNDAY</span>
+      <span class="logistics-divider">|</span>
+      <span class="logistics-segment"><i class="fa-regular fa-clock icon-accent"></i> 05:00 AM IST</span>
+      <span class="logistics-divider">|</span>
+      <span class="logistics-segment"><i class="fa-solid fa-location-dot icon-accent"></i> PRAKASAM BARRAGE</span>
+    </div>
+    <div class="logistics-countdown-group">
+      <span class="countdown-label">FLAG-OFF IN:</span>
+      <div class="countdown-digits">
+        <div class="countdown-unit"><span id="count-days">--</span> <span>D</span></div>
+        <span>:</span>
+        <div class="countdown-unit"><span id="count-hours">--</span> <span>H</span></div>
+        <span>:</span>
+        <div class="countdown-unit"><span id="count-mins">--</span> <span>M</span></div>
+        <span>:</span>
+        <div class="countdown-unit"><span id="count-secs">--</span> <span>S</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SUPER-FOOTER -->
+  <footer class="super-footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-giant-callout reveal-on-scroll">
+        <h2 class="footer-screen-headline">SEE YOU AT THE START LINE<span class="accent-dot">.</span></h2>
+      </div>
+      <div class="footer-links-grid">
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-person-walking"></i> The Walk</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="races.html">5K Family Fun Walk</a></li>
+            <li class="footer-nav-item"><a href="route.html">Krishna Riverfront Stride</a></li>
+            <li class="footer-nav-item"><a href="races.html">Eco-Plogging Walk</a></li>
+            <li class="footer-nav-item"><a href="races.html">Senior Citizens Joy Lap</a></li>
+            <li class="footer-nav-item"><a href="races.html">Kids 3K Dash</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-clock-rotate-left"></i> Legacy</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="legacy.html">2017 Benz Circle First Steps</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">2019 Prakasam Barrage Odyssey</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">2022 Pacer Bus Fleet</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">10th Finisher Medal Story</a></li>
+            <li class="footer-nav-item"><a href="legacy.html">Vijayawada Runners Hall of Fame</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-flag-checkered"></i> Races</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="races.html">21.1K Half Marathon</a></li>
+            <li class="footer-nav-item"><a href="races.html">10K Timed Challenge</a></li>
+            <li class="footer-nav-item"><a href="races.html">05K Fitness Joy Run</a></li>
+            <li class="footer-nav-item"><a href="races.html">Corporate Relay Trophy</a></li>
+            <li class="footer-nav-item"><a href="races.html">Age Group Podium Awards</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-map"></i> Route</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="route.html">Prakasam Barrage Map</a></li>
+            <li class="footer-nav-item"><a href="route.html">Elevation & Incline Profile</a></li>
+            <li class="footer-nav-item"><a href="route.html">18 Water & Electrolyte Stations</a></li>
+            <li class="footer-nav-item"><a href="route.html">Cheer Mile Spectator Spots</a></li>
+            <li class="footer-nav-item"><a href="route.html">Race Day Traffic Closures</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-people-group"></i> Community</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="community.html">Benz Circle Chapter</a></li>
+            <li class="footer-nav-item"><a href="community.html">Bhavanipuram Riverfront</a></li>
+            <li class="footer-nav-item"><a href="community.html">Autonagar Runners Crew</a></li>
+            <li class="footer-nav-item"><a href="community.html">Meet the 2026 Pacer Fleet</a></li>
+            <li class="footer-nav-item"><a href="community.html">Volunteer Crew Registration</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-heart-pulse"></i> Safety</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="safety.html">Cardiac ICU Ambulances Grid</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Paramedic Roving Pacers</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Physio & Muscle Cramp Stations</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Emergency Toll-Free Helpline</a></li>
+            <li class="footer-nav-item"><a href="safety.html">Weather & Hydration Advisory</a></li>
+          </ul>
+        </div>
+        <div class="footer-col reveal-on-scroll">
+          <h4 class="footer-column-title"><i class="fa-solid fa-camera"></i> Gallery</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="gallery.html">Landmark Dawn Photography</a></li>
+            <li class="footer-nav-item"><a href="gallery.html">Finish Line Emotions Archive</a></li>
+            <li class="footer-nav-item"><a href="gallery.html">Prakasam Barrage Drone Video</a></li>
+            <li class="footer-nav-item"><a href="gallery.html">Search Photos by Bib Number</a></li>
+          </ul>
+          <h4 class="footer-column-title" style="margin-top: 36px;"><i class="fa-solid fa-circle-question"></i> FAQ</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="faq.html">Bib Expo Collection Timings</a></li>
+            <li class="footer-nav-item"><a href="faq.html">Baggage Drop & Holding Counter</a></li>
+            <li class="footer-nav-item"><a href="faq.html">Designated Parking Corridors</a></li>
+            <li class="footer-nav-item"><a href="faq.html">RFID Timing Certificate Download</a></li>
+            <li class="footer-nav-item"><a href="faq.html">Ticket Transfer & Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-org-meta">
+          © 2026 VIJAYAWADA RUNNERS SOCIETY. ALL RIGHTS RESERVED. <br>
+          REGISTERED NON-PROFIT ATHLETIC FOUNDATION • BENZ CIRCLE, VIJAYAWADA, AP 520010.
+        </div>
+        <div class="footer-social-row">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://strava.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="Strava"><i class="fa-brands fa-strava"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-circle-link magnetic-target" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ROTATING BADGE -->
+  <div class="floating-register-badge magnetic-target" id="floating-badge" role="button" aria-label="Open Registration Modal">
+    <svg viewBox="0 0 100 100" class="badge-rotating-svg">
+      <defs>
+        <path id="badge-circle-path-rc" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+      </defs>
+      <text class="badge-text-path">
+        <textPath href="#badge-circle-path-rc" startOffset="0%">
+          10TH EDITION • REGISTER NOW • VIJAYAWADA 2026 •
+        </textPath>
+      </text>
+    </svg>
+    <div class="badge-inner-core">
+      <i class="fa-solid fa-person-running"></i>
+    </div>
+  </div>
+
+  <!-- REGISTRATION MODAL / DRAWER -->
+  <div class="reg-modal-backdrop" id="reg-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="reg-modal-window">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Registration Dialog"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header-block">
+        <span class="modal-tag">10TH LANDMARK EDITION REGISTRATION</span>
+        <h3 class="modal-title" id="modal-title">SECURE YOUR BIB</h3>
+      </div>
+      <div class="modal-category-picker" role="radiogroup">
+        <button type="button" class="modal-cat-btn selected" data-category="21.1k">
+          <div class="modal-cat-dist">21.1K</div>
+          <div style="font-size: 0.72rem; color: var(--cream-muted);">HALF MARATHON</div>
+          <div class="modal-cat-fee">₹1,450</div>
+        </button>
+        <button type="button" class="modal-cat-btn" data-category="10k">
+          <div class="modal-cat-dist">10K</div>
+          <div style="font-size: 0.72rem; color: var(--cream-muted);">TIMED RUN</div>
+          <div class="modal-cat-fee">₹1,150</div>
+        </button>
+        <button type="button" class="modal-cat-btn" data-category="5k">
+          <div class="modal-cat-dist">05K</div>
+          <div style="font-size: 0.72rem; color: var(--cream-muted);">JOY RUN</div>
+          <div class="modal-cat-fee">₹850</div>
+        </button>
+      </div>
+      <div class="bib-preview-card" aria-label="Custom Race Bib Preview">
+        <div>
+          <div class="bib-logo-meta">VIJAYAWADA RUNNERS • 10TH EDITION</div>
+          <div class="bib-runner-name" id="bib-name-val">YOUR NAME</div>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--navy); opacity: 0.7;">PRAKASAM BARRAGE CORRIDOR</div>
+        </div>
+        <div style="text-align: right;">
+          <div class="bib-number-display" id="bib-number-val">21482</div>
+          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--red); font-weight: 700;">RFID CHIP TIMED</div>
+        </div>
+      </div>
+      <form id="landmark-reg-form">
+        <div class="modal-form-grid">
+          <div class="form-field-group">
+            <label for="reg-fullname" class="form-label">Athlete Full Name</label>
+            <input type="text" id="reg-fullname" class="form-input" placeholder="e.g. Nivas Nani" required autocomplete="name">
+          </div>
+          <div class="form-field-group">
+            <label for="reg-email" class="form-label">Email Address</label>
+            <input type="email" id="reg-email" class="form-input" placeholder="runner@example.com" required autocomplete="email">
+          </div>
+          <div class="form-field-group">
+            <label for="reg-phone" class="form-label">Phone (WhatsApp for Bib SMS)</label>
+            <input type="tel" id="reg-phone" class="form-input" placeholder="+91 98765 43210" required autocomplete="tel">
+          </div>
+          <div class="form-field-group">
+            <label for="reg-tshirt" class="form-label">Dry-Fit Race T-Shirt Size</label>
+            <select id="reg-tshirt" class="form-select">
+              <option value="S">Small (38)</option>
+              <option value="M" selected>Medium (40)</option>
+              <option value="L">Large (42)</option>
+              <option value="XL">Extra Large (44)</option>
+              <option value="XXL">XXL (46)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-confirm-reg magnetic-target">
+          <i class="fa-solid fa-lock"></i> PROCEED TO INSTANT RESERVATION
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/landmark10.js"></script>
+</body>
+</html>
