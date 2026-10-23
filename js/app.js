@@ -10,12 +10,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Permanent Clean Light Theme Enforcement
-  try {
-    localStorage.removeItem('vr_theme');
-  } catch (e) {}
-  document.body.classList.add('theme-light');
-  document.body.classList.remove('theme-crimson');
 
   initRunnerAnimationControls();
   initCountdownTimer();
@@ -23,17 +17,36 @@ document.addEventListener('DOMContentLoaded', () => {
   initBibSearch();
   initMobileMenu();
   initRegistrationModal();
+  initRouteCarousel();
+  initFaqAccordion();
+  initSponsorModal();
   initScrollAnimations();
+  initHeaderScrollAnimation();
 });
+
+function initHeaderScrollAnimation() {
+  const header = document.querySelector('.main-header');
+  if (!header) return;
+
+  const onScroll = () => {
+    if (window.scrollY > 20) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 function initRunnerAnimationControls() {
   const speedBtns = document.querySelectorAll('.btn-pace-speed');
-  const runnerEl = document.querySelector('.real-runner-stage') || document.querySelector('.runner-boy-svg');
-  const roadDashes = document.querySelector('.road-dashes');
+  const runnerImg = document.querySelector('.runner-photo-img') || document.querySelector('.real-runner-stage') || document.querySelector('.runner-boy-svg');
   const speedPaceDisplay = document.getElementById('runner-live-pace');
   const speedKmhDisplay = document.getElementById('runner-live-kmh');
   const speedCadenceDisplay = document.getElementById('runner-live-cadence');
 
-  if (!runnerEl || !roadDashes) return;
+  if (!speedBtns.length) return;
 
   speedBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -43,21 +56,18 @@ function initRunnerAnimationControls() {
       const mode = btn.getAttribute('data-speed');
 
       if (mode === 'sprint') {
-        runnerEl.style.animationDuration = '0.3s';
-        roadDashes.style.animationDuration = '0.22s';
+        if (runnerImg) runnerImg.style.transform = 'scale(1.06)';
         if (speedPaceDisplay) speedPaceDisplay.textContent = '3:20 /km';
         if (speedKmhDisplay) speedKmhDisplay.textContent = '18.0 km/h';
         if (speedCadenceDisplay) speedCadenceDisplay.textContent = '195 SPM';
-      } else if (mode === 'jog') {
-        runnerEl.style.animationDuration = '0.85s';
-        roadDashes.style.animationDuration = '0.85s';
+      } else if (mode === 'walk' || mode === 'jog') {
+        if (runnerImg) runnerImg.style.transform = 'scale(1.0)';
         if (speedPaceDisplay) speedPaceDisplay.textContent = '6:30 /km';
         if (speedKmhDisplay) speedKmhDisplay.textContent = '9.2 km/h';
         if (speedCadenceDisplay) speedCadenceDisplay.textContent = '162 SPM';
       } else {
         // Marathon default
-        runnerEl.style.animationDuration = '0.55s';
-        roadDashes.style.animationDuration = '0.45s';
+        if (runnerImg) runnerImg.style.transform = 'scale(1.03)';
         if (speedPaceDisplay) speedPaceDisplay.textContent = '4:58 /km';
         if (speedKmhDisplay) speedKmhDisplay.textContent = '12.1 km/h';
         if (speedCadenceDisplay) speedCadenceDisplay.textContent = '178 SPM';
@@ -67,12 +77,10 @@ function initRunnerAnimationControls() {
 }
 
 /* ===================================================================
-   2. LIVE RACE DAY COUNTDOWN TIMER
+   2. LIVE RACE DAY COUNTDOWN TIMER - 6 DECEMBER 2026 | 5:00 AM
    =================================================================== */
 function initCountdownTimer() {
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 42);
-  targetDate.setHours(5, 15, 0, 0);
+  const targetDate = new Date('2026-12-06T05:00:00+05:30');
 
   const daysEl = document.getElementById('count-days');
   const hoursEl = document.getElementById('count-hours');
@@ -370,3 +378,90 @@ function initScrollAnimations() {
   }
 }
 
+/* ===================================================================
+   8. RACE ROUTE CAROUSEL SWITCHER (5KM, 10KM, 21KM)
+   =================================================================== */
+function initRouteCarousel() {
+  const tabBtns = document.querySelectorAll('.route-tab-btn');
+  const slides = document.querySelectorAll('.route-slide');
+  if (!tabBtns.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const routeId = btn.getAttribute('data-route');
+      tabBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      slides.forEach(slide => {
+        if (slide.getAttribute('data-slide') === routeId) {
+          slide.classList.add('is-active');
+        } else {
+          slide.classList.remove('is-active');
+        }
+      });
+    });
+  });
+}
+
+/* ===================================================================
+   9. INTERACTIVE FAQ ACCORDION HANDLER
+   =================================================================== */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-card-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const header = item.querySelector('.faq-card-header');
+    if (!header) return;
+    header.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('is-open');
+      faqItems.forEach(i => i.classList.remove('is-open'));
+      if (!wasOpen) {
+        item.classList.add('is-open');
+      }
+    });
+  });
+}
+
+/* ===================================================================
+   10. SPONSOR & PARTNER MODAL HANDLER
+   =================================================================== */
+function initSponsorModal() {
+  const sponsorModal = document.getElementById('sponsorModal');
+  const openBtns = document.querySelectorAll('.btn-open-sponsor');
+  const closeBtn = document.getElementById('sponsorModalClose');
+  const sponsorForm = document.getElementById('sponsorForm');
+  const sponsorSuccess = document.getElementById('sponsorSuccess');
+
+  if (!sponsorModal) return;
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      sponsorModal.classList.add('is-active');
+      if (sponsorForm) sponsorForm.style.display = 'block';
+      if (sponsorSuccess) sponsorSuccess.style.display = 'none';
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      sponsorModal.classList.remove('is-active');
+    });
+  }
+
+  sponsorModal.addEventListener('click', (e) => {
+    if (e.target === sponsorModal) {
+      sponsorModal.classList.remove('is-active');
+    }
+  });
+
+  if (sponsorForm) {
+    sponsorForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (sponsorForm) sponsorForm.style.display = 'none';
+      if (sponsorSuccess) sponsorSuccess.style.display = 'block';
+    });
+  }
+}
