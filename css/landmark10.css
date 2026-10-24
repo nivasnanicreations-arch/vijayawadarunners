@@ -15,46 +15,65 @@
 
 :root {
   /* ==========================================
-     STRICT PALETTE TOKENS (#0A0A0A, #007BA7, #E31B23)
-     LIGHT THEME ARCHITECTURE
+     OFFICIAL BRAND IDENTITY & COLOUR SYSTEM
+     Primary running red: #E01F27
+     Primary royal blue : #2F4D9E
+     Deep background    : #090B13
+     Dark navy surface  : #111629
+     White              : #FFFFFF
+     Soft neutral bg    : #F5F6FA
+     Secondary text     : #A7AEC2
      ========================================== */
-  --navy: #FAFAF8;            /* Primary Architectural Light Canvas #FAFAF8 */
-  --navy-deep: #F1F5F9;       /* Soft Slate-100 for Section Alternation & Footer */
-  --navy-surface: #FFFFFF;    /* Crisp Elevated White Surface for Cards & Panels */
-  --navy-card: #FFFFFF;       /* Card Background */
-  --navy-card-hover: #FFFFFF; /* Card Hover Background */
-  --navy-overlay: rgba(255, 255, 255, 0.95);
-  --navy-translucent: rgba(255, 255, 255, 0.88);
-  --navy-faint: rgba(10, 10, 10, 0.04);
-  --navy-border: rgba(10, 10, 10, 0.10);
-  --navy-text: #0A0A0A;
-  --navy-muted: #64748B;
+  --red: #E01F27;
+  --red-hover: #c41820;
+  --red-subtle: rgba(224, 31, 39, 0.12);
+  --red-faint: rgba(224, 31, 39, 0.05);
+  --red-border: rgba(224, 31, 39, 0.40);
+  --red-glow: 0 0 35px rgba(224, 31, 39, 0.45);
 
-  --red: #E31B23;             /* Official Race Red Accent #E31B23 */
-  --red-hover: #c9141b;
-  --red-subtle: rgba(227, 27, 35, 0.10);
-  --red-faint: rgba(227, 27, 35, 0.05);
-  --red-border: rgba(227, 27, 35, 0.35);
-  --red-glow: 0 4px 16px rgba(227, 27, 35, 0.25);
+  --blue: #2F4D9E;
+  --blue-hover: #263e80;
+  --blue-dark: #1b2d5e;
+  --blue-subtle: rgba(47, 77, 158, 0.14);
+  --blue-faint: rgba(47, 77, 158, 0.06);
+  --blue-border: rgba(47, 77, 158, 0.40);
+  --blue-glow: 0 0 40px rgba(47, 77, 158, 0.50);
 
-  --blue: #007BA7;            /* Official Cerulean Athletic & River Blue #007BA7 */
-  --blue-hover: #0093c7;
-  --blue-dark: #005f82;
-  --blue-subtle: rgba(0, 123, 167, 0.10);
-  --blue-faint: rgba(0, 123, 167, 0.05);
-  --blue-border: rgba(0, 123, 167, 0.35);
-  --blue-glow: 0 4px 16px rgba(0, 123, 167, 0.20);
+  /* Deep Cinematic Backgrounds & Dark Navy Surfaces */
+  --bg-deep: #090B13;
+  --navy-surface: #111629;
+  --navy-surface-hover: #161d36;
+  --navy: #090B13;
+  --navy-deep: #111629;
+  --navy-card: #111629;
+  --navy-card-hover: #171e38;
+  --navy-overlay: rgba(9, 11, 19, 0.94);
+  --navy-translucent: rgba(17, 22, 41, 0.88);
+  --navy-faint: rgba(255, 255, 255, 0.04);
+  --navy-border: rgba(255, 255, 255, 0.12);
+  --navy-text: #FFFFFF;
+  --navy-muted: #A7AEC2;
 
-  /* High-Contrast Typography Tokens (Derived from #0A0A0A) */
-  --cream: #0A0A0A;           /* Deepest Pitch Onyx #0A0A0A for Headlines & Key Accents */
-  --cream-soft: #1E293B;      /* High-Contrast Dark Slate for Primary Body Text */
-  --cream-pure: #000000;      /* Jet Black */
-  --cream-deep: #0F172A;      /* Rich Slate 900 */
-  --cream-dim: #334155;       /* Slate 700 for Secondary Paragraphs */
-  --cream-muted: #64748B;     /* Slate 500 for Subtitles, Captions & Meta */
-  --cream-faint: rgba(10, 10, 10, 0.05);
-  --cream-border: rgba(10, 10, 10, 0.12);
-  --cream-card: #FFFFFF;
+  /* High-Contrast Typography & Soft Neutral Surfaces */
+  --white: #FFFFFF;
+  --neutral-bg: #F5F6FA;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A7AEC2;
+  --cream: #FFFFFF;
+  --cream-soft: #F5F6FA;
+  --cream-pure: #FFFFFF;
+  --cream-deep: #090B13;
+  --cream-dim: #D1D5DB;
+  --cream-muted: #A7AEC2;
+  --cream-faint: rgba(255, 255, 255, 0.06);
+  --cream-border: rgba(255, 255, 255, 0.14);
+  --cream-card: #111629;
+
+  /* Red-and-Blue Atmospheric Lighting Gradients */
+  --atm-dual-glow: radial-gradient(circle at 65% 20%, rgba(47, 77, 158, 0.32) 0%, rgba(224, 31, 39, 0.20) 45%, transparent 75%);
+  --atm-blue-spot: radial-gradient(circle at 18% 30%, rgba(47, 77, 158, 0.35) 0%, transparent 60%);
+  --atm-red-spot: radial-gradient(circle at 82% 40%, rgba(224, 31, 39, 0.30) 0%, transparent 60%);
+  --stadium-grid: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 
   /* ==========================================
      ATHLETIC & COMMEMORATIVE TYPOGRAPHY
@@ -135,7 +154,7 @@ button {
 }
 
 /* ==========================================================================
-   NAVIGATION BAR — Clean Executive Light Navigation
+   NAVIGATION BAR — Cinematic Executive Navigation
    ========================================================================== */
 .site-nav {
   position: fixed;
@@ -143,23 +162,23 @@ button {
   left: 0;
   right: 0;
   z-index: 950;
-  padding: 16px 48px;
+  padding: 18px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+  background: rgba(9, 11, 19, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: padding 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .site-nav.scrolled {
   padding: 12px 48px;
-  background: rgba(255, 255, 255, 0.98);
-  border-bottom-color: var(--blue-border);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  background: rgba(9, 11, 19, 0.98);
+  border-bottom-color: rgba(47, 77, 158, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 .nav-brand {
@@ -179,10 +198,6 @@ button {
   transform: scale(1.03);
 }
 
-.brand-text-col {
-  display: none !important;
-}
-
 .nav-links-cluster {
   display: flex;
   align-items: center;
@@ -194,7 +209,7 @@ button {
   font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  color: var(--cream-muted);
+  color: var(--text-secondary);
   padding: 6px 0;
   position: relative;
   transition: color 0.2s ease;
@@ -212,7 +227,7 @@ button {
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #0A0A0A;
+  color: #FFFFFF;
   font-weight: 700;
 }
 
@@ -235,41 +250,41 @@ button {
   font-size: 0.84rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 999px;
   border: 1px solid var(--red);
   transition: all 0.25s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 14px rgba(227, 27, 35, 0.35);
+  box-shadow: 0 4px 18px rgba(224, 31, 39, 0.45);
 }
 
 .btn-nav-register:hover {
   background-color: var(--blue);
   color: #FFFFFF;
   border-color: var(--blue);
-  box-shadow: 0 4px 18px rgba(0, 123, 167, 0.45);
+  box-shadow: 0 4px 22px rgba(47, 77, 158, 0.55);
 }
 
 .mobile-nav-btn {
   display: none;
-  color: #0A0A0A;
+  color: #FFFFFF;
   font-size: 1.3rem;
   padding: 6px;
 }
 
 /* ==========================================================================
-   PAGE HERO (The Awakening / Homepage — LIGHT THEME)
+   PAGE HERO (Cinematic Homepage Hero — Signature Moment 1)
    ========================================================================== */
 .hero-awakening {
-  min-height: 94vh;
+  min-height: 96vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 150px 48px 110px;
-  background-color: var(--navy);
-  color: var(--cream);
+  padding: 160px 48px 110px;
+  background-color: var(--bg-deep);
+  color: #FFFFFF;
   overflow: hidden;
 }
 
@@ -281,9 +296,6 @@ button {
   overflow: hidden;
 }
 
-/* FLIPPED BACKGROUND VIDEO & IMAGE:
-   Runner & bridge piers positioned on the right side,
-   opening up the sunrise river canvas on the left for the typography */
 .hero-media-video,
 .hero-media-img {
   width: 100%;
@@ -291,26 +303,26 @@ button {
   object-fit: cover;
   object-position: center 30%;
   transform: scaleX(-1);
-  filter: brightness(1.02) contrast(1.05);
-  opacity: 0.90;
+  filter: brightness(0.92) contrast(1.15) saturate(1.1);
+  opacity: 0.85;
   pointer-events: none;
 }
 
 .hero-overlay-tint {
   position: absolute;
   inset: 0;
-  /* Dual light gradient: Solid crisp light on the left so typography in #0A0A0A is 100% legible,
-     gradually feathering to transparent so the flipped runner & sunrise river lights on the right show beautifully */
-  background: linear-gradient(90deg, 
-    rgba(250, 250, 248, 0.96) 0%, 
-    rgba(250, 250, 248, 0.90) 42%, 
-    rgba(250, 250, 248, 0.50) 75%, 
-    rgba(250, 250, 248, 0.25) 100%),
-    linear-gradient(180deg, 
-    rgba(250, 250, 248, 0.85) 0%, 
-    transparent 45%, 
-    rgba(250, 250, 248, 0.92) 85%, 
-    var(--navy) 100%);
+  background: 
+    radial-gradient(circle at 20% 40%, rgba(9, 11, 19, 0.94) 0%, rgba(9, 11, 19, 0.82) 45%, rgba(9, 11, 19, 0.55) 75%, transparent 100%),
+    radial-gradient(circle at 85% 25%, rgba(47, 77, 158, 0.28) 0%, transparent 60%),
+    radial-gradient(circle at 60% 75%, rgba(224, 31, 39, 0.20) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(9, 11, 19, 0.75) 0%, transparent 35%, rgba(9, 11, 19, 0.92) 80%, var(--bg-deep) 100%);
+}
+
+.hero-particles-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero-container {
@@ -326,17 +338,18 @@ button {
   align-items: center;
   gap: 10px;
   padding: 8px 18px;
-  background: #FFFFFF;
-  border: 1.5px solid #E2E8F0;
+  background: rgba(17, 22, 41, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   font-family: var(--font-heading);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #0A0A0A;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
   text-transform: uppercase;
   margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
 }
 
 .badge-dot-live {
@@ -344,7 +357,7 @@ button {
   height: 8px;
   border-radius: 50%;
   background-color: var(--red);
-  box-shadow: 0 0 0 3px rgba(227, 27, 35, 0.25);
+  box-shadow: 0 0 0 3px rgba(224, 31, 39, 0.35);
   animation: badge-pulse 2s infinite ease-in-out;
   flex-shrink: 0;
 }
@@ -354,16 +367,35 @@ button {
   50% { transform: scale(1.3); opacity: 0.7; }
 }
 
+.hero-tagline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(47, 77, 158, 0.25);
+  border: 1px solid var(--blue-border);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
 .hero-headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.9rem, 6.2vw, 5.8rem);
-  font-weight: 800;
-  font-style: normal;
-  line-height: 1.08;
-  letter-spacing: -0.015em;
-  color: #0A0A0A;
+  font-size: clamp(3.2rem, 7vw, 6.2rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
   max-width: 1100px;
   margin-bottom: 22px;
+}
+
+.hero-headline-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5F6FA 40%, var(--red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-headline-italic {
@@ -371,18 +403,18 @@ button {
   font-style: italic;
   font-weight: 800;
   color: var(--red);
+  text-shadow: 0 0 30px rgba(224, 31, 39, 0.4);
 }
 
-/* COMMANDING UPRIGHT ATHLETIC DISPLAY SUBTAG */
 .hero-headline-subtag {
   display: block;
   font-family: var(--font-athletic);
   font-size: clamp(0.95rem, 2vw, 1.3rem);
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--blue);
-  margin-top: 10px;
+  color: #799be4;
+  margin-top: 12px;
 }
 
 .hero-subtext-block {
@@ -391,40 +423,41 @@ button {
 }
 
 .hero-narrative-detail {
-  font-size: 1.05rem;
-  color: #475569;
+  font-size: 1.12rem;
+  color: var(--text-secondary);
   line-height: 1.7;
 }
 
-/* SOCIAL PROOF & TRUST BADGES (Reference Styling) */
+/* SOCIAL PROOF & TRUST BADGES */
 .hero-trust-badges-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-top: 18px;
-  margin-bottom: 28px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .trust-badge-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 999px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: rgba(17, 22, 41, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 600;
-  color: #1E293B;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  color: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
 }
 
 .trust-badge-pill.trust-badge-verified {
-  background: rgba(16, 185, 129, 0.08);
-  border-color: rgba(16, 185, 129, 0.28);
-  color: #065F46;
+  background: rgba(47, 77, 158, 0.20);
+  border-color: rgba(47, 77, 158, 0.45);
+  color: #FFFFFF;
 }
 
 .hero-cta-cluster {
@@ -439,7 +472,7 @@ button {
   align-items: center;
   gap: 12px;
   padding: 16px 38px;
-  border-radius: 4px;
+  border-radius: 999px;
   background-color: var(--red);
   color: #FFFFFF;
   font-family: var(--font-heading);
@@ -449,38 +482,40 @@ button {
   text-transform: uppercase;
   border: 2px solid var(--red);
   transition: all 0.25s ease;
-  box-shadow: 0 8px 24px rgba(227, 27, 35, 0.35);
+  box-shadow: 0 8px 28px rgba(224, 31, 39, 0.45);
 }
 
 .btn-enter-race:hover {
-  background-color: #0A0A0A;
+  background-color: var(--blue);
+  border-color: var(--blue);
   color: #FFFFFF;
-  border-color: #0A0A0A;
-  box-shadow: 0 8px 30px rgba(10, 10, 10, 0.35);
+  box-shadow: 0 8px 32px rgba(47, 77, 158, 0.55);
+  transform: translateY(-2px);
 }
 
 .btn-hero-secondary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 16px 30px;
-  border-radius: 4px;
-  background: #FFFFFF;
-  border: 1.5px solid var(--blue);
-  color: var(--blue);
+  padding: 16px 32px;
+  border-radius: 999px;
+  background: rgba(17, 22, 41, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
   transition: all 0.25s ease;
-  box-shadow: 0 2px 10px rgba(0, 123, 167, 0.12);
+  backdrop-filter: blur(8px);
 }
 
 .btn-hero-secondary:hover {
-  background: var(--blue);
-  color: #FFFFFF;
+  background: rgba(47, 77, 158, 0.35);
   border-color: var(--blue);
-  box-shadow: 0 6px 20px rgba(0, 123, 167, 0.35);
+  color: #FFFFFF;
+  box-shadow: 0 6px 24px rgba(47, 77, 158, 0.45);
+  transform: translateY(-2px);
 }
 
 /* STATS CREDENTIALS STRIP */
@@ -999,12 +1034,183 @@ button {
 }
 
 /* ==========================================================================
-   TIMELINE / THE 10-YEAR LEGACY (LIGHT THEME)
+   TEN-YEAR ANNIVERSARY — SIGNATURE VISUAL SECTION (Signature Moment 2)
+   "VIJAYAWADA IN MOTION — A DECADE OF RUNNING TOGETHER"
    ========================================================================== */
-.section-legacy {
-  background-color: var(--navy);
-  color: var(--cream);
-  padding: 110px 48px;
+.section-legacy,
+.section-anniversary {
+  position: relative;
+  background-color: var(--bg-deep);
+  color: #FFFFFF;
+  padding: 130px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.anniversary-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 50% 30%, rgba(47, 77, 158, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 20% 70%, rgba(224, 31, 39, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(47, 77, 158, 0.20) 0%, transparent 55%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  opacity: 0.85;
+}
+
+.anniversary-centerpiece {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+/* Oversized 3D Dimensional "10" Numeral */
+.anniversary-3d-numeral-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  perspective: 1200px;
+}
+
+.anniversary-3d-numeral {
+  font-family: var(--font-landmark);
+  font-size: clamp(7.5rem, 18vw, 15rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+}
+
+/* Layered Red and Blue lighting across the numeral */
+.numeral-digit-1 {
+  background: linear-gradient(135deg, #FFFFFF 20%, #799BE4 60%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 40px rgba(47, 77, 158, 0.8)) drop-shadow(0 15px 25px rgba(0, 0, 0, 0.85));
+  display: inline-block;
+  transform: translateZ(25px);
+  margin-right: -0.05em;
+}
+
+.numeral-digit-0 {
+  background: linear-gradient(135deg, #FFFFFF 20%, #FFA4A8 60%, var(--red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 40px rgba(224, 31, 39, 0.8)) drop-shadow(0 15px 25px rgba(0, 0, 0, 0.85));
+  display: inline-block;
+  transform: translateZ(25px);
+}
+
+/* Glowing route orbit track */
+.anniversary-orbit-svg {
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  top: -20%;
+  left: -20%;
+  pointer-events: none;
+  animation: orbit-spin 30s linear infinite;
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.anniversary-tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 22px;
+  border-radius: 999px;
+  background: rgba(17, 22, 41, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.anniversary-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+}
+
+.anniversary-supporting-copy {
+  font-size: 1.12rem;
+  color: var(--text-secondary);
+  max-width: 820px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.anniversary-stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 32px;
+  padding: 24px 30px;
+  background: rgba(17, 22, 41, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+}
+
+.anniversary-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+}
+
+.anniversary-stat-num {
+  font-family: var(--font-athletic);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.anniversary-stat-num.stat-red {
+  color: var(--red);
+  text-shadow: 0 0 25px rgba(224, 31, 39, 0.5);
+}
+
+.anniversary-stat-num.stat-blue {
+  color: #799BE4;
+  text-shadow: 0 0 25px rgba(47, 77, 158, 0.6);
+}
+
+.anniversary-stat-lbl {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
 }
 
 .timeline-track-container {
@@ -1427,64 +1633,243 @@ button {
 }
 
 /* ==========================================================================
-   PARTNERS & OFFICIAL CERTIFICATION TIERS (LIGHT THEME)
+   PREMIUM SPONSOR & PARTNER SHOWCASE — STADIUM ILLUMINATED (Signature Moment 3)
+   "POWERING EVERY STEP."
    ========================================================================== */
-.section-marquee-hub {
-  background-color: #FFFFFF;
-  color: var(--cream);
-  padding: 90px 48px;
-  border-top: 1px solid #E2E8F0;
-  border-bottom: 1px solid #E2E8F0;
+.section-marquee-hub,
+.section-sponsors-stadium {
+  position: relative;
+  background-color: var(--bg-deep);
+  color: #FFFFFF;
+  padding: 120px 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sponsors-stadium-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(47, 77, 158, 0.35) 0%, transparent 65%),
+    radial-gradient(circle at 15% 85%, rgba(224, 31, 39, 0.20) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(47, 77, 158, 0.22) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+.sponsors-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.sponsors-header-block {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 50px;
+}
+
+.sponsors-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.sponsors-subcopy {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Tiered Hierarchy */
+.sponsor-tier-group {
+  margin-bottom: 40px;
+}
+
+.sponsor-tier-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.sponsor-tier-line {
+  height: 1px;
+  flex: 1;
+  max-width: 140px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.sponsor-tier-label {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #A7AEC2;
+  padding: 4px 16px;
+  border-radius: 999px;
+  background: rgba(17, 22, 41, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sponsor-tier-label.tier-title {
+  color: #FBBF24;
+  border-color: rgba(251, 191, 36, 0.4);
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.15);
+}
+
+.sponsors-stadium-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sponsors-stadium-grid.grid-title-partner {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sponsor-stadium-card,
+.partner-logo-item {
+  background: rgba(17, 22, 41, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 24px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsor-stadium-card::before,
+.partner-logo-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(47, 77, 158, 0.25) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.sponsor-stadium-card:hover,
+.partner-logo-item:hover {
+  background: rgba(23, 30, 56, 0.95);
+  border-color: rgba(47, 77, 158, 0.55);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 30px rgba(47, 77, 158, 0.3);
+}
+
+.sponsor-stadium-card:hover::before,
+.partner-logo-item:hover::before {
+  opacity: 1;
+}
+
+.sponsor-stadium-card.card-title-partner {
+  padding: 34px 30px;
+  border-color: rgba(251, 191, 36, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(251, 191, 36, 0.12);
+}
+
+.sponsor-card-logo,
+.partner-logo-img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.05) contrast(1.05);
+  transition: transform 0.25s ease;
+}
+
+.sponsor-stadium-card:hover .sponsor-card-logo,
+.partner-logo-item:hover .partner-logo-img {
+  transform: scale(1.04);
+}
+
+.sponsor-card-text,
+.partner-text-stamp {
+  display: flex;
+  flex-direction: column;
+}
+
+.sponsor-card-name {
+  font-family: var(--font-landmark);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.sponsor-card-tier-text,
+.partner-sub-text {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #799BE4;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.sponsor-enquiry-banner {
+  margin-top: 50px;
+  padding: 34px 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(17, 22, 41, 0.95) 0%, rgba(27, 45, 94, 0.6) 100%);
+  border: 1px solid rgba(47, 77, 158, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.sponsor-enquiry-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  background-color: var(--red);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--red);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(224, 31, 39, 0.4);
+}
+
+.sponsor-enquiry-cta-btn:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 4px 24px rgba(47, 77, 158, 0.5);
+  transform: translateY(-2px);
 }
 
 .partners-prestige-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 40px;
-}
-
-.partner-logo-item {
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 6px;
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  transition: all 0.25s ease;
-}
-
-.partner-logo-item:hover {
-  background: #FFFFFF;
-  border-color: var(--blue);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
-}
-
-.partner-logo-img {
-  height: 38px;
-  width: auto;
-}
-
-.partner-text-stamp {
-  font-family: var(--font-landmark);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--cream);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  line-height: 1.1;
-  display: flex;
-  flex-direction: column;
-}
-
-.partner-sub-text {
-  font-family: var(--font-heading);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--cream-muted);
+  margin-top: 30px;
 }
 
 /* ==========================================================================
