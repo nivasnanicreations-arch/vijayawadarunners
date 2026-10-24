@@ -96,6 +96,9 @@ html {
   color: var(--cream-soft);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
@@ -104,6 +107,9 @@ body {
   color: var(--cream-soft);
   line-height: 1.68;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
 }
 
 ::selection {
@@ -679,6 +685,38 @@ button {
   color: var(--cream-soft);
   max-width: 780px;
   line-height: 1.65;
+}
+
+/* ==========================================================================
+   KINETIC PARALLAX RAIL (Continuous Ticker)
+   ========================================================================== */
+.kinetic-rail-wrap {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  background: var(--navy-deep);
+  border-top: 1px solid var(--cream-border);
+  border-bottom: 1px solid var(--cream-border);
+  padding: 14px 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.kinetic-rail {
+  display: flex;
+  white-space: nowrap;
+  gap: 24px;
+  font-family: var(--font-landmark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--cream);
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.kinetic-accent {
+  color: var(--red);
 }
 
 /* ==========================================================================
@@ -2516,39 +2554,47 @@ button {
     font-size: 2.1rem;
   }
 
-  /* Fixed Mobile App Dock (Reference Styling) */
+  /* Fixed Mobile App Dock (Reference Styling - Always Fits 100% Screen) */
   .mobile-app-dock {
     display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 940;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    z-index: 9990;
     background: rgba(10, 10, 10, 0.96);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 20px 20px 0 0;
-    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
-    justify-content: space-around;
+    padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
   }
 
   .dock-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
     gap: 3px;
     color: #94A3B8;
     font-family: var(--font-heading);
     font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     transition: all 0.2s ease;
-    padding: 4px 8px;
+    padding: 4px 2px;
     border-radius: 8px;
+    text-decoration: none;
   }
 
   .dock-item i {
@@ -2571,18 +2617,24 @@ button {
     padding: 0;
     margin-top: -18px;
     cursor: pointer;
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .dock-highlight-ring {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--red) 0%, #c9141b 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     box-shadow: 0 4px 18px rgba(227, 27, 35, 0.5), 0 0 0 3px rgba(10, 10, 10, 0.96);
     margin-bottom: 2px;
     transition: transform 0.2s ease;
@@ -2602,6 +2654,50 @@ button {
 
   .floating-register-badge {
     display: none !important;
+  }
+
+  .categories-container {
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .categories-asym-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .race-card {
+    padding: 28px 18px 22px;
+    min-height: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-distance-badge {
+    font-size: 2.8rem;
+  }
+
+  .card-race-title {
+    font-size: 1.45rem;
+  }
+
+  .card-bottom-cluster {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .medal-showcase-grid,
+  .purse-matrix-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .medal-specs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
   }
 
   .logistics-data-bar {
