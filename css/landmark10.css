@@ -163,32 +163,18 @@ button {
 }
 
 .nav-brand img {
-  height: 42px;
+  height: 48px;
   width: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.nav-brand:hover img {
+  transform: scale(1.03);
 }
 
 .brand-text-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-family: var(--font-landmark);
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--cream);
-  line-height: 1;
-}
-
-.brand-edition-tag {
-  font-family: var(--font-heading);
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  color: var(--red);
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 3px;
+  display: none !important;
 }
 
 .nav-links-cluster {
