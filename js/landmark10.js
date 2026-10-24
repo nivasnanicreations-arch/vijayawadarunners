@@ -392,6 +392,43 @@
   }
 
   // =========================================================================
+  // 10. MOBILE NAVIGATION DRAWER
+  // =========================================================================
+  function initMobileDrawer() {
+    const openBtns = document.querySelectorAll('.mobile-nav-btn');
+    const drawer = document.getElementById('mobile-nav-drawer');
+    const overlay = document.getElementById('mobile-drawer-overlay');
+    const closeBtn = document.getElementById('drawer-close-btn');
+
+    if (!drawer) return;
+
+    function openDrawer(e) {
+      if (e) e.preventDefault();
+      drawer.classList.add('open');
+      if (overlay) overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer(e) {
+      if (e) e.preventDefault();
+      drawer.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', openDrawer);
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
+
+    drawer.querySelectorAll('.drawer-link').forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
+  }
+
+  // =========================================================================
   // BOOTSTRAP ALL SYSTEMS
   // =========================================================================
   document.addEventListener('DOMContentLoaded', () => {
@@ -403,6 +440,7 @@
     initNavScroll();
     initFaqAccordion();
     initGalleryFilters();
+    initMobileDrawer();
   });
 
 })();
