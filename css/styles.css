@@ -7,49 +7,48 @@
 
 /* --- Root Color Tokens & Atmospheric Variables --- */
 :root {
-  /* Master Palette */
-  --c-dark-primary: #17191C;
-  --c-charcoal-deep: #202733;
-  --c-midnight: #18202C;
-  --c-indigo-muted: #303348;
-  --c-warm-brown: #4A332A;
+  /* Master Palette (#0A0A0A, #007BA7, #E31B23) - Light Theme Architecture */
+  --c-dark-primary: #FAFAF8;
+  --c-charcoal-deep: #F1F5F9;
+  --c-midnight: #FFFFFF;
+  --c-indigo-muted: #F8FAFC;
+  --c-warm-brown: #FFFFFF;
 
-  --c-terracotta: #C8613F;
-  --c-burnt-orange: #E4773F;
-  --c-sunrise-orange: #F39A52;
-  --c-golden-sand: #D9B27C;
+  --c-terracotta: #E31B23;
+  --c-burnt-orange: #007BA7;
+  --c-sunrise-orange: #0093c7;
+  --c-golden-sand: #007BA7;
 
-  --c-warm-ivory: #F5EFE5;
-  --c-soft-cream: #FFF9F0;
-  --c-muted-peach: #E9C8B2;
+  --c-warm-ivory: #0A0A0A;
+  --c-soft-cream: #1E293B;
+  --c-muted-peach: #64748B;
 
   /* ===================================================================
-     Vijayawada Runners Official Logo Colors for Website Text
-     Logo: Red ("VR" & "VIJAYAWADA") | Blue ("RUNNERS" & Runner) | Charcoal
+     Vijayawada Runners Official Brand Colors: #0A0A0A, #007BA7, #E31B23
      =================================================================== */
-  /* Official Logo Palette */
-  --logo-red: #E02028;              /* Exact Vijayawada Runners logo red */
-  --logo-red-dark: #C81D25;         /* High-contrast red for text on light backgrounds */
-  --logo-red-light: #FF4750;        /* High-contrast vibrant red for text on dark backgrounds */
-  --logo-blue: #304C9C;             /* Exact Vijayawada Runners logo royal blue */
-  --logo-blue-light: #4D7CFF;       /* High-contrast bright blue for text on dark backgrounds */
-  --logo-charcoal: #1A1D24;         /* Rich charcoal derived from logo tagline */
+  /* Official Palette */
+  --logo-red: #E31B23;              /* Official Brand Red #E31B23 */
+  --logo-red-dark: #c9141b;         /* High-contrast red for text */
+  --logo-red-light: #ff4d55;        /* High-contrast vibrant red */
+  --logo-blue: #007BA7;             /* Official Brand Cerulean Blue #007BA7 */
+  --logo-blue-light: #0093c7;       /* Bright cerulean blue */
+  --logo-charcoal: #0A0A0A;         /* Pitch Onyx Canvas #0A0A0A */
 
-  /* Text on Light Backgrounds (Ivory / Cream / White) */
-  --text-primary: #1A1D24;          /* Main headings: deep crisp charcoal */
-  --text-secondary: #304C9C;        /* Secondary headings & subtitles: Logo Royal Blue */
-  --text-body: #454950;             /* Body text: highly legible, comfortable slate */
-  --text-muted: #6C727D;            /* Small labels, tags, captions & metadata */
-  --text-accent: #C81D25;           /* Primary brand accent: Logo Red */
-  --text-accent-blue: #304C9C;      /* Secondary brand accent: Logo Blue */
-  --text-accent-warm: #C81D25;      /* Logo Red for light badges & tags */
+  /* Text on Light Backgrounds */
+  --text-primary: #0A0A0A;          /* Main headings: deep onyx */
+  --text-secondary: #007BA7;        /* Secondary headings & subtitles: Cerulean Blue */
+  --text-body: #334155;             /* Body text */
+  --text-muted: #64748B;            /* Small labels, tags, captions & metadata */
+  --text-accent: #E31B23;           /* Primary brand accent: Red */
+  --text-accent-blue: #007BA7;      /* Secondary brand accent: Cerulean Blue */
+  --text-accent-warm: #E31B23;      /* Red for light badges & tags */
 
-  /* Text on Dark Backgrounds (Midnight / Charcoal / Hero) */
-  --text-light: #FFFFFF;            /* Primary light text: headings & titles */
-  --text-light-secondary: #E2E5EA;  /* Secondary light text: clean readable body on dark */
-  --text-light-muted: #A4ABB6;      /* Muted light text: captions, specs, tags on dark */
-  --text-accent-dark: #FF4750;      /* Vibrant Logo Red for highlights on dark */
-  --text-accent-blue-dark: #4D7CFF; /* Vibrant Logo Blue for badges on dark */
+  /* Light Theme Text Tokens */
+  --text-light: #0A0A0A;            /* Primary dark text: headings & titles */
+  --text-light-secondary: #1E293B;  /* Secondary text: clean readable body */
+  --text-light-muted: #64748B;      /* Muted text: captions, specs, tags */
+  --text-accent-dark: #E31B23;      /* Vibrant Red for highlights */
+  --text-accent-blue-dark: #007BA7; /* Vibrant Blue for badges */
 
   /* Mapped Core Text Tokens */
   --c-text-white: var(--text-light);
@@ -58,10 +57,10 @@
   --c-text-dark-muted: var(--text-body);
 
   /* Borders & Glassmorphism */
-  --glass-dark: rgba(23, 25, 28, 0.75);
-  --glass-dark-border: rgba(243, 154, 82, 0.15);
-  --glass-light: rgba(245, 239, 229, 0.82);
-  --glass-light-border: rgba(200, 97, 63, 0.2);
+  --glass-dark: rgba(255, 255, 255, 0.94);
+  --glass-dark-border: rgba(10, 10, 10, 0.08);
+  --glass-light: rgba(255, 255, 255, 0.96);
+  --glass-light-border: rgba(0, 123, 167, 0.2);
 
   /* Fonts */
   --font-display: 'Cinzel', serif;
@@ -133,8 +132,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   height: 100vh;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.55;
-  mix-blend-mode: screen;
+  opacity: 0.25;
+  mix-blend-mode: multiply;
 }
 
 /* Film Grain Overlay */
@@ -185,11 +184,11 @@ a, button, [role="button"], input[type="submit"], input[type="button"], select {
 }
 
 .main-header.scrolled {
-  background: rgba(23, 25, 28, 0.88);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(243, 154, 82, 0.15);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .main-header.scrolled-light {

@@ -168,23 +168,23 @@
     <div class="section-container">
       <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal-on-scroll">
         <div class="legacy-section-eyebrow"><i class="fa-solid fa-camera-retro"></i> SMART BIB RECOGNITION</div>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2.8rem, 5vw, 4.8rem); color: var(--navy); line-height: 0.95; margin-bottom: 16px;">
+        <h2 style="font-family: var(--font-display); font-size: clamp(2.8rem, 5vw, 4.8rem); color: var(--cream); line-height: 0.95; margin-bottom: 16px;">
           FIND YOUR RACE DAY <span style="color: var(--red);">PHOTOS</span>
         </h2>
-        <p style="color: rgba(10, 25, 47, 0.82); font-size: 1.05rem; line-height: 1.6; margin-bottom: 32px;">
+        <p style="color: var(--cream-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 32px;">
           Our 18 on-course drone and mirrorless camera rigs use automated AI bib recognition. Enter your 2026 Bib Number to preview your official race highlights.
         </p>
 
-        <div style="background: rgba(10, 25, 47, 0.05); border: 2px solid var(--navy); border-radius: 20px; padding: 28px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; align-items: center;">
-          <input type="text" id="bib-search-input" placeholder="Enter Bib Number (e.g. 21098)" style="flex-grow: 1; min-width: 260px; padding: 14px 20px; border-radius: 999px; border: 1.5px solid var(--navy); background: var(--cream); color: var(--navy); font-family: var(--font-mono); font-size: 1rem; outline: none;">
-          <button type="button" class="btn-enter-race magnetic-target" id="btn-search-photos" style="padding: 14px 34px; font-size: 0.92rem;">
+        <div style="background: #161616; border: 1.5px solid var(--blue-border); border-radius: 20px; padding: 28px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; align-items: center;">
+          <input type="text" id="bib-search-input" placeholder="Enter Bib Number (e.g. 21098)" style="flex-grow: 1; min-width: 260px; padding: 14px 20px; border-radius: 999px; border: 1.5px solid var(--blue-border); background: #0A0A0A; color: var(--cream); font-family: var(--font-mono); font-size: 1rem; outline: none;">
+          <button type="button" class="btn-enter-race magnetic-target" id="btn-search-photos" style="padding: 14px 34px; font-size: 0.92rem; background-color: var(--red); color: #FFFFFF; border-color: var(--red);">
             <span>FIND MY PHOTOS</span>
-            <span class="btn-arrow"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span class="btn-arrow" style="background: rgba(255, 255, 255, 0.2);"><i class="fa-solid fa-magnifying-glass"></i></span>
           </button>
         </div>
 
-        <div id="bib-search-result" style="margin-top: 24px; font-family: var(--font-mono); font-size: 0.95rem; color: var(--navy); display: none;">
-          <div style="background: rgba(230, 57, 70, 0.1); border: 1px solid var(--red); border-radius: 14px; padding: 16px; color: var(--navy);">
+        <div id="bib-search-result" style="margin-top: 24px; font-family: var(--font-mono); font-size: 0.95rem; color: var(--cream); display: none;">
+          <div style="background: rgba(227, 27, 35, 0.12); border: 1px solid var(--red); border-radius: 14px; padding: 16px; color: var(--cream);">
             <i class="fa-solid fa-circle-check" style="color: var(--red);"></i> Found 12 high-resolution photos for Bib #<span id="result-bib-num" style="font-weight: 700; color: var(--red);">21098</span> at Prakasam Barrage (KM 1.8), Riverfront (KM 10.0), and the Grand Finish Line!
           </div>
         </div>
